@@ -24,14 +24,14 @@ namespace Interfaz_de_usuario
 
         private void buttonVenta_Click(object sender, EventArgs e)
         {
-            Login_Cliente login_cliente = new Login_Cliente(1);
-            login_cliente.ShowDialog();
+            Menu_Venta menu_venta = new Menu_Venta();
+            menu_venta.ShowDialog();
         }
 
         private void buttonCompra_Click(object sender, EventArgs e)
         {
-            Login_Cliente login_cliente = new Login_Cliente(2);
-            login_cliente.ShowDialog();
+            Menu_Compra menu_compra = new Menu_Compra();
+            menu_compra.ShowDialog();
         }
 
         private void buttonInventario_Click(object sender, EventArgs e)
