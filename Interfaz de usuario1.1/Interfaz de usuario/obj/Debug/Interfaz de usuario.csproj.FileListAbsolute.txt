@@ -1,0 +1,109 @@
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.exe.config
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.exe
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.pdb
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.csprojResolveAssemblyReference.cache
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Logo.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Properties.Resources.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.csproj.GenerateResource.Cache
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.exe
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.pdb
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Venta.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Login_Cliente.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Compra.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Principal_Administrador.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Clientes.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Principal_Empleado.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Empleado.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Inventario.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.exe.config
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.exe
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.pdb
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.exe
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.pdb
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.csprojResolveAssemblyReference.cache
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Login_Cliente.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Empleado.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Inventario.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Principal_Administrador.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Clientes.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Compra.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Principal_Empleado.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Logo.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Venta.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Properties.Resources.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.csproj.GenerateResource.Cache
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Cliente.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Factura.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Empleado.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Producto.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Factura.resources
+C:\Users\kyo_9\Desktop\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Reporte_Inventario.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.exe.config
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.exe
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.pdb
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.exe
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.pdb
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.csprojResolveAssemblyReference.cache
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Cliente.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Empleado.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Factura.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Producto.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Login_Cliente.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Empleado.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Factura.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Inventario.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Principal_Administrador.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Clientes.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Compra.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Principal_Empleado.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Logo.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Venta.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Properties.Resources.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Reporte_Inventario.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.csproj.GenerateResource.Cache
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.exe.config
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.exe
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.pdb
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.exe
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\bin\Debug\Interfaz de usuario.pdb
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.csprojResolveAssemblyReference.cache
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Cliente.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Empleado.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Factura.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Producto.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Login_Cliente.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Empleado.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Factura.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Inventario.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Principal_Administrador.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Clientes.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Compra.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Principal_Empleado.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Logo.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Venta.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Properties.Resources.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Reporte_Inventario.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 4 (Interfaz de usuario)\Interfaz de usuario\Interfaz de usuario\obj\Debug\Interfaz de usuario.csproj.GenerateResource.Cache
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\bin\Debug\Interfaz de usuario.exe.config
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz de usuario.exe
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz de usuario.pdb
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\bin\Debug\Interfaz de usuario.exe
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\bin\Debug\Interfaz de usuario.pdb
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz de usuario.csprojResolveAssemblyReference.cache
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Cliente.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Empleado.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Factura.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Producto.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Login_Cliente.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Empleado.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Factura.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Inventario.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Principal_Administrador.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Clientes.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Compra.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Principal_Empleado.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Logo.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Menu_Venta.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Properties.Resources.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Reporte_Inventario.resources
+C:\Users\kyo_9\Desktop\Ing. Software\Actividades\Actividad 7 (Interfaz de usuario version 1.1\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz de usuario.csproj.GenerateResource.Cache
