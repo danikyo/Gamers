@@ -7,32 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Interfaz_de_usuario
 {
     public partial class Menu_Logo : Form
     {
+        Class_.Connection CConnection = new Class_.Connection();
         public Menu_Logo()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonEntrar_Click(object sender, EventArgs e)
         {
-            if (textBoxNombre.Text == "admin" && textBoxContraseña.Text == "123")
+            CConnection.OpenConnection();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM empleado WHERE idEmpleado = '" + textBoxNombre.Text + "' AND eContrasena = '" + textBoxContraseña.Text + "'",CConnection.myConnection);
+            MySqlDataReader Reader = command.ExecuteReader();
+            if(Reader.Read())
             {
-                Menu_Principal_Administrador menu_principal_administrador = new Menu_Principal_Administrador();
-                menu_principal_administrador.ShowDialog();
-            }
-            else if (textBoxNombre.Text == "empleado" && textBoxContraseña.Text == "123")
-            {
-                Menu_Principal_Empleado menu_principal_empleado = new Menu_Principal_Empleado();
-                menu_principal_empleado.ShowDialog();
+                if(Reader.GetString(3) == "Gerente")
+                {
+                    Menu_Principal_Administrador menu_principal_adm = new Menu_Principal_Administrador(Reader.GetString(1) + " " + Reader.GetString(2), CConnection);
+                    CConnection.CloseConnection();
+                    menu_principal_adm.ShowDialog();
+                }
+                else if(Reader.GetString(3) == "Cajero")
+                {
+                    Menu_Principal_Empleado menu_principal_emp = new Menu_Principal_Empleado(Reader.GetString(1) + " " + Reader.GetString(2));
+                    menu_principal_emp.ShowDialog();
+                }
             }
             else
             {
-                MessageBox.Show("Nombre de usuario o Contraseña incorrectos","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("ID o Contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            CConnection.CloseConnection();
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)

@@ -38,10 +38,8 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelStockNuevo = new System.Windows.Forms.Label();
-            this.labelStockSeminuevo = new System.Windows.Forms.Label();
             this.buttonAddstock = new System.Windows.Forms.Button();
             this.buttonDeleteStock = new System.Windows.Forms.Button();
             this.textBoxCantidad = new System.Windows.Forms.TextBox();
@@ -78,11 +76,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 237);
+            this.label2.Location = new System.Drawing.Point(125, 237);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 21);
+            this.label2.Size = new System.Drawing.Size(66, 21);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Precio de nuevo:";
+            this.label2.Text = "Precio:";
             // 
             // labelIDProducto
             // 
@@ -90,7 +88,7 @@
             this.labelIDProducto.BackColor = System.Drawing.Color.Transparent;
             this.labelIDProducto.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIDProducto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelIDProducto.Location = new System.Drawing.Point(217, 31);
+            this.labelIDProducto.Location = new System.Drawing.Point(88, 31);
             this.labelIDProducto.Name = "labelIDProducto";
             this.labelIDProducto.Size = new System.Drawing.Size(106, 21);
             this.labelIDProducto.TabIndex = 19;
@@ -101,7 +99,7 @@
             this.labelNombre.AutoSize = true;
             this.labelNombre.BackColor = System.Drawing.Color.Transparent;
             this.labelNombre.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.Location = new System.Drawing.Point(103, 70);
+            this.labelNombre.Location = new System.Drawing.Point(117, 70);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(73, 21);
             this.labelNombre.TabIndex = 15;
@@ -149,23 +147,12 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Tipo:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 267);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 21);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Precio de seminuevo:";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(39, 295);
+            this.label6.Location = new System.Drawing.Point(39, 299);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 21);
             this.label6.TabIndex = 26;
@@ -176,22 +163,11 @@
             this.labelStockNuevo.AutoSize = true;
             this.labelStockNuevo.BackColor = System.Drawing.Color.Transparent;
             this.labelStockNuevo.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStockNuevo.Location = new System.Drawing.Point(322, 237);
+            this.labelStockNuevo.Location = new System.Drawing.Point(130, 267);
             this.labelStockNuevo.Name = "labelStockNuevo";
             this.labelStockNuevo.Size = new System.Drawing.Size(60, 21);
             this.labelStockNuevo.TabIndex = 27;
             this.labelStockNuevo.Text = "Stock:";
-            // 
-            // labelStockSeminuevo
-            // 
-            this.labelStockSeminuevo.AutoSize = true;
-            this.labelStockSeminuevo.BackColor = System.Drawing.Color.Transparent;
-            this.labelStockSeminuevo.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStockSeminuevo.Location = new System.Drawing.Point(322, 267);
-            this.labelStockSeminuevo.Name = "labelStockSeminuevo";
-            this.labelStockSeminuevo.Size = new System.Drawing.Size(60, 21);
-            this.labelStockSeminuevo.TabIndex = 29;
-            this.labelStockSeminuevo.Text = "Stock:";
             // 
             // buttonAddstock
             // 
@@ -284,10 +260,8 @@
             this.Controls.Add(this.textBoxCantidad);
             this.Controls.Add(this.buttonDeleteStock);
             this.Controls.Add(this.buttonAddstock);
-            this.Controls.Add(this.labelStockSeminuevo);
             this.Controls.Add(this.labelStockNuevo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -317,10 +291,8 @@
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelStockNuevo;
-        private System.Windows.Forms.Label labelStockSeminuevo;
         private System.Windows.Forms.Button buttonAddstock;
         private System.Windows.Forms.Button buttonDeleteStock;
         private System.Windows.Forms.TextBox textBoxCantidad;

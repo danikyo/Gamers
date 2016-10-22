@@ -36,9 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxFechaNacE = new System.Windows.Forms.TextBox();
-            this.textBoxEmailE = new System.Windows.Forms.TextBox();
-            this.textBoxDireccionE = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxCPassword = new System.Windows.Forms.TextBox();
             this.textBoxNombreE = new System.Windows.Forms.TextBox();
             this.buttonAgregarE = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.buttonConsultaE = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxPuesto = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -125,26 +125,19 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Nombre/s";
             // 
-            // textBoxFechaNacE
+            // textBoxPassword
             // 
-            this.textBoxFechaNacE.Location = new System.Drawing.Point(84, 138);
-            this.textBoxFechaNacE.Name = "textBoxFechaNacE";
-            this.textBoxFechaNacE.Size = new System.Drawing.Size(208, 20);
-            this.textBoxFechaNacE.TabIndex = 22;
+            this.textBoxPassword.Location = new System.Drawing.Point(84, 138);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(208, 20);
+            this.textBoxPassword.TabIndex = 22;
             // 
-            // textBoxEmailE
+            // textBoxCPassword
             // 
-            this.textBoxEmailE.Location = new System.Drawing.Point(84, 172);
-            this.textBoxEmailE.Name = "textBoxEmailE";
-            this.textBoxEmailE.Size = new System.Drawing.Size(208, 20);
-            this.textBoxEmailE.TabIndex = 21;
-            // 
-            // textBoxDireccionE
-            // 
-            this.textBoxDireccionE.Location = new System.Drawing.Point(84, 103);
-            this.textBoxDireccionE.Name = "textBoxDireccionE";
-            this.textBoxDireccionE.Size = new System.Drawing.Size(208, 20);
-            this.textBoxDireccionE.TabIndex = 20;
+            this.textBoxCPassword.Location = new System.Drawing.Point(84, 172);
+            this.textBoxCPassword.Name = "textBoxCPassword";
+            this.textBoxCPassword.Size = new System.Drawing.Size(208, 20);
+            this.textBoxCPassword.TabIndex = 21;
             // 
             // textBoxNombreE
             // 
@@ -209,11 +202,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.comboBoxPuesto);
             this.groupBox1.Controls.Add(this.textBoxNombreE);
             this.groupBox1.Controls.Add(this.buttonAgregarE);
-            this.groupBox1.Controls.Add(this.textBoxDireccionE);
-            this.groupBox1.Controls.Add(this.textBoxEmailE);
-            this.groupBox1.Controls.Add(this.textBoxFechaNacE);
+            this.groupBox1.Controls.Add(this.textBoxCPassword);
+            this.groupBox1.Controls.Add(this.textBoxPassword);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBoxApellidosE);
@@ -240,6 +233,18 @@
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edición Empleado";
+            // 
+            // comboBoxPuesto
+            // 
+            this.comboBoxPuesto.FormattingEnabled = true;
+            this.comboBoxPuesto.Items.AddRange(new object[] {
+            "Gerente",
+            "Cajero"});
+            this.comboBoxPuesto.Location = new System.Drawing.Point(84, 105);
+            this.comboBoxPuesto.Name = "comboBoxPuesto";
+            this.comboBoxPuesto.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPuesto.TabIndex = 30;
+            this.comboBoxPuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxPuesto_KeyPress);
             // 
             // Menu_Empleado
             // 
@@ -275,9 +280,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxFechaNacE;
-        private System.Windows.Forms.TextBox textBoxEmailE;
-        private System.Windows.Forms.TextBox textBoxDireccionE;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.TextBox textBoxCPassword;
         private System.Windows.Forms.TextBox textBoxNombreE;
         private System.Windows.Forms.Button buttonAgregarE;
         private System.Windows.Forms.Label label4;
@@ -286,5 +290,6 @@
         private System.Windows.Forms.Button buttonConsultaE;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox comboBoxPuesto;
     }
 }

@@ -12,9 +12,10 @@ namespace Interfaz_de_usuario
 {
     public partial class Menu_Principal_Empleado : Form
     {
-        public Menu_Principal_Empleado()
+        public Menu_Principal_Empleado(String Name)
         {
             InitializeComponent();
+            labelName.Text = "Bienvenido\n" + Name;
         }
 
         private void buttonVenta_Click(object sender, EventArgs e)

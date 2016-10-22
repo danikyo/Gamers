@@ -12,9 +12,12 @@ namespace Interfaz_de_usuario
 {
     public partial class Menu_Principal_Administrador : Form
     {
-        public Menu_Principal_Administrador()
+        Class_.Connection CConnection;
+        public Menu_Principal_Administrador(String Nombre, Class_.Connection CConnection)
         {
             InitializeComponent();
+            labelName.Text = "Bienvenido\n" + Nombre;
+            this.CConnection = CConnection;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -48,7 +51,7 @@ namespace Interfaz_de_usuario
 
         private void buttonEmpleado_Click(object sender, EventArgs e)
         {
-            Menu_Empleado menu_empleado = new Menu_Empleado();
+            Menu_Empleado menu_empleado = new Menu_Empleado(CConnection);
             menu_empleado.ShowDialog();
         }
 
@@ -56,6 +59,18 @@ namespace Interfaz_de_usuario
         {
             Menu_Factura menu_factura = new Menu_Factura();
             menu_factura.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reporte_Venta reporte_venta = new Reporte_Venta();
+            reporte_venta.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Reporte_Compra reporte_compra = new Reporte_Compra();
+            reporte_compra.ShowDialog();
         }
     }
 }
