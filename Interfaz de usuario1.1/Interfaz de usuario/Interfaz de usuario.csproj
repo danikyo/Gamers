@@ -47,70 +47,70 @@
   <ItemGroup>
     <Compile Include="Class_\Connection.cs" />
     <Compile Include="Class_\Empleado.cs" />
-    <Compile Include="Consulta_Cliente.cs">
+    <Compile Include="Form Consultas\Consulta_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consulta_Cliente.Designer.cs">
+    <Compile Include="Form Consultas\Consulta_Cliente.Designer.cs">
       <DependentUpon>Consulta_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consulta_Empleado.cs">
+    <Compile Include="Form Consultas\Consulta_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consulta_Empleado.Designer.cs">
+    <Compile Include="Form Consultas\Consulta_Empleado.Designer.cs">
       <DependentUpon>Consulta_Empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consulta_Factura.cs">
+    <Compile Include="Form Consultas\Consulta_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consulta_Factura.Designer.cs">
+    <Compile Include="Form Consultas\Consulta_Factura.Designer.cs">
       <DependentUpon>Consulta_Factura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consulta_Producto.cs">
+    <Compile Include="Form Consultas\Consulta_Producto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consulta_Producto.Designer.cs">
+    <Compile Include="Form Consultas\Consulta_Producto.Designer.cs">
       <DependentUpon>Consulta_Producto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Empleado.cs">
+    <Compile Include="Form Menus\Menu_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Empleado.Designer.cs">
+    <Compile Include="Form Menus\Menu_Empleado.Designer.cs">
       <DependentUpon>Menu_Empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Factura.cs">
+    <Compile Include="Form Menus\Menu_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Factura.Designer.cs">
+    <Compile Include="Form Menus\Menu_Factura.Designer.cs">
       <DependentUpon>Menu_Factura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Inventario.cs">
+    <Compile Include="Form Menus\Menu_Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Inventario.Designer.cs">
+    <Compile Include="Form Menus\Menu_Inventario.Designer.cs">
       <DependentUpon>Menu_Inventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Principal_Administrador.cs">
+    <Compile Include="Form Menus\Menu_Principal_Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Principal_Administrador.Designer.cs">
+    <Compile Include="Form Menus\Menu_Principal_Administrador.Designer.cs">
       <DependentUpon>Menu_Principal_Administrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Clientes.cs">
+    <Compile Include="Form Menus\Menu_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Clientes.Designer.cs">
+    <Compile Include="Form Menus\Menu_Clientes.Designer.cs">
       <DependentUpon>Menu_Clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Compra.cs">
+    <Compile Include="Form Menus\Menu_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Compra.Designer.cs">
+    <Compile Include="Form Menus\Menu_Compra.Designer.cs">
       <DependentUpon>Menu_Compra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Principal_Empleado.cs">
+    <Compile Include="Form Menus\Menu_Principal_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Principal_Empleado.Designer.cs">
+    <Compile Include="Form Menus\Menu_Principal_Empleado.Designer.cs">
       <DependentUpon>Menu_Principal_Empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Login_Empleado.cs">
@@ -119,69 +119,69 @@
     <Compile Include="Login_Empleado.Designer.cs">
       <DependentUpon>Login_Empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Venta.cs">
+    <Compile Include="Form Menus\Menu_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Venta.Designer.cs">
+    <Compile Include="Form Menus\Menu_Venta.Designer.cs">
       <DependentUpon>Menu_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reporte_Compra.cs">
+    <Compile Include="Form Reportes\Reporte_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reporte_Compra.Designer.cs">
+    <Compile Include="Form Reportes\Reporte_Compra.Designer.cs">
       <DependentUpon>Reporte_Compra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reporte_Venta.cs">
+    <Compile Include="Form Reportes\Reporte_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reporte_Venta.Designer.cs">
+    <Compile Include="Form Reportes\Reporte_Venta.Designer.cs">
       <DependentUpon>Reporte_Venta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reporte_Inventario.cs">
+    <Compile Include="Form Reportes\Reporte_Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reporte_Inventario.Designer.cs">
+    <Compile Include="Form Reportes\Reporte_Inventario.Designer.cs">
       <DependentUpon>Reporte_Inventario.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Consulta_Cliente.resx">
+    <EmbeddedResource Include="Form Consultas\Consulta_Cliente.resx">
       <DependentUpon>Consulta_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consulta_Empleado.resx">
+    <EmbeddedResource Include="Form Consultas\Consulta_Empleado.resx">
       <DependentUpon>Consulta_Empleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consulta_Factura.resx">
+    <EmbeddedResource Include="Form Consultas\Consulta_Factura.resx">
       <DependentUpon>Consulta_Factura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consulta_Producto.resx">
+    <EmbeddedResource Include="Form Consultas\Consulta_Producto.resx">
       <DependentUpon>Consulta_Producto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Empleado.resx">
+    <EmbeddedResource Include="Form Menus\Menu_Empleado.resx">
       <DependentUpon>Menu_Empleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Factura.resx">
+    <EmbeddedResource Include="Form Menus\Menu_Factura.resx">
       <DependentUpon>Menu_Factura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Inventario.resx">
+    <EmbeddedResource Include="Form Menus\Menu_Inventario.resx">
       <DependentUpon>Menu_Inventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Principal_Administrador.resx">
+    <EmbeddedResource Include="Form Menus\Menu_Principal_Administrador.resx">
       <DependentUpon>Menu_Principal_Administrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Clientes.resx">
+    <EmbeddedResource Include="Form Menus\Menu_Clientes.resx">
       <DependentUpon>Menu_Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Compra.resx">
+    <EmbeddedResource Include="Form Menus\Menu_Compra.resx">
       <DependentUpon>Menu_Compra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Principal_Empleado.resx">
+    <EmbeddedResource Include="Form Menus\Menu_Principal_Empleado.resx">
       <DependentUpon>Menu_Principal_Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Empleado.resx">
       <DependentUpon>Login_Empleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Venta.resx">
+    <EmbeddedResource Include="Form Menus\Menu_Venta.resx">
       <DependentUpon>Menu_Venta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -194,13 +194,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reporte_Compra.resx">
+    <EmbeddedResource Include="Form Reportes\Reporte_Compra.resx">
       <DependentUpon>Reporte_Compra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporte_Inventario.resx">
+    <EmbeddedResource Include="Form Reportes\Reporte_Inventario.resx">
       <DependentUpon>Reporte_Inventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporte_Venta.resx">
+    <EmbeddedResource Include="Form Reportes\Reporte_Venta.resx">
       <DependentUpon>Reporte_Venta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
