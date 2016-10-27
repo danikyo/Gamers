@@ -42,11 +42,11 @@
             this.buttonAgregarE = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxIDEmpleado = new System.Windows.Forms.TextBox();
+            this.textBoxQuery = new System.Windows.Forms.TextBox();
             this.buttonConsultaE = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxPuesto = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -180,13 +180,13 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "Codigo de empleado:";
             // 
-            // textBoxIDEmpleado
+            // textBoxQuery
             // 
-            this.textBoxIDEmpleado.Location = new System.Drawing.Point(45, 49);
-            this.textBoxIDEmpleado.Name = "textBoxIDEmpleado";
-            this.textBoxIDEmpleado.Size = new System.Drawing.Size(136, 20);
-            this.textBoxIDEmpleado.TabIndex = 31;
-            this.textBoxIDEmpleado.TextChanged += new System.EventHandler(this.textBoxIDEmpleado_TextChanged);
+            this.textBoxQuery.Location = new System.Drawing.Point(45, 49);
+            this.textBoxQuery.Name = "textBoxQuery";
+            this.textBoxQuery.Size = new System.Drawing.Size(136, 20);
+            this.textBoxQuery.TabIndex = 31;
+            this.textBoxQuery.TextChanged += new System.EventHandler(this.textBoxIDEmpleado_TextChanged);
             // 
             // buttonConsultaE
             // 
@@ -221,19 +221,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Empleado";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.buttonConsultaE);
-            this.groupBox2.Controls.Add(this.textBoxIDEmpleado);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(368, 152);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(222, 139);
-            this.groupBox2.TabIndex = 34;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Edición Empleado";
-            // 
             // comboBoxPuesto
             // 
             this.comboBoxPuesto.FormattingEnabled = true;
@@ -245,6 +232,19 @@
             this.comboBoxPuesto.Size = new System.Drawing.Size(121, 21);
             this.comboBoxPuesto.TabIndex = 30;
             this.comboBoxPuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxPuesto_KeyPress);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.buttonConsultaE);
+            this.groupBox2.Controls.Add(this.textBoxQuery);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Location = new System.Drawing.Point(368, 152);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(222, 139);
+            this.groupBox2.TabIndex = 34;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Edición Empleado";
             // 
             // Menu_Empleado
             // 
@@ -286,7 +286,7 @@
         private System.Windows.Forms.Button buttonAgregarE;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxIDEmpleado;
+        private System.Windows.Forms.TextBox textBoxQuery;
         private System.Windows.Forms.Button buttonConsultaE;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
