@@ -66,9 +66,22 @@ namespace Interfaz_de_usuario.Class_
 
         public static int AgregarEmpleado(MySqlConnection Connection, Empleado empleado)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO empleado (eNombre, eApellido, ePuesto, eContrasena, eStatus) VALUES ('{0}','{1}','{2}','{3}', 'True')",empleado.Nombre,empleado.Apellido,empleado.Puesto,empleado.Contrasena), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO empleado (eNombre, eApellido, ePuesto, eContrasena, eStatus) VALUES ('{0}','{1}','{2}','{3}','True')",empleado.Nombre,empleado.Apellido,empleado.Puesto,empleado.Contrasena), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
+        }
+
+        public IList<Empleado> MostrarEmpleado(MySqlConnection Connection)
+        {
+            List<Empleado> Nempleado = new List<Empleado>();
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM empleado"), Connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Empleado empleado = new Empleado(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetBoolean(5));
+                Nempleado.Add(empleado);
+            }
+            return Nempleado;
         }
 
         public static MySqlDataReader BuscarEmpleado(MySqlConnection Connection, string IDempleado)

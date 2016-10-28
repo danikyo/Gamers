@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Interfaz_de_usuario
 {
     public partial class Menu_Clientes : Form
     {
+        Class_.Connection CConnection = new Class_.Connection();
         public Menu_Clientes()
         {
             InitializeComponent();
@@ -28,6 +30,12 @@ namespace Interfaz_de_usuario
             if (textBoxNombreC.Text == "" || textBoxApellidosC.Text == "" || textBoxDireccionC.Text == "" || textBoxFechaNacC.Text == "" || textBoxEmailC.Text == "")
             {
                 MessageBox.Show("Favor de llenar\nlos campos requeridos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                CConnection.OpenConnection();
+                
+                CConnection.CloseConnection();
             }
         }
 
