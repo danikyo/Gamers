@@ -133,3 +133,4 @@ C:\Users\kyo_9\Documents\GitHub\Gamers\Interfaz de usuario1.1\Interfaz de usuari
 C:\Users\kyo_9\Documents\GitHub\Gamers\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Reporte_Venta.resources
 C:\Users\kyo_9\Documents\GitHub\Gamers\Interfaz de usuario1.1\Interfaz de usuario\bin\Debug\MySql.Data.dll
 C:\Users\kyo_9\Documents\GitHub\Gamers\Interfaz de usuario1.1\Interfaz de usuario\bin\Debug\MySql.Data.xml
+C:\Users\kyo_9\Documents\GitHub\Gamers\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Form_Reportes.Reporte_Empleado.resources

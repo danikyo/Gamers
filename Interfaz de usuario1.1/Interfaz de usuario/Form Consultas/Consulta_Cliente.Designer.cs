@@ -82,7 +82,7 @@
             // 
             this.buttonRegresar.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegresar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonRegresar.Location = new System.Drawing.Point(647, 232);
+            this.buttonRegresar.Location = new System.Drawing.Point(647, 344);
             this.buttonRegresar.Name = "buttonRegresar";
             this.buttonRegresar.Size = new System.Drawing.Size(89, 48);
             this.buttonRegresar.TabIndex = 17;

@@ -65,7 +65,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(68, 292);
+            this.label3.Location = new System.Drawing.Point(478, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 21);
             this.label3.TabIndex = 22;
@@ -110,7 +110,7 @@
             // buttonRegresar
             // 
             this.buttonRegresar.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegresar.Location = new System.Drawing.Point(612, 216);
+            this.buttonRegresar.Location = new System.Drawing.Point(612, 355);
             this.buttonRegresar.Name = "buttonRegresar";
             this.buttonRegresar.Size = new System.Drawing.Size(160, 44);
             this.buttonRegresar.TabIndex = 14;
@@ -121,9 +121,9 @@
             // buttonModificar
             // 
             this.buttonModificar.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModificar.Location = new System.Drawing.Point(612, 38);
+            this.buttonModificar.Location = new System.Drawing.Point(140, 355);
             this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(160, 44);
+            this.buttonModificar.Size = new System.Drawing.Size(122, 44);
             this.buttonModificar.TabIndex = 12;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = true;
@@ -132,9 +132,9 @@
             // buttonBaja
             // 
             this.buttonBaja.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBaja.Location = new System.Drawing.Point(612, 160);
+            this.buttonBaja.Location = new System.Drawing.Point(12, 355);
             this.buttonBaja.Name = "buttonBaja";
-            this.buttonBaja.Size = new System.Drawing.Size(160, 44);
+            this.buttonBaja.Size = new System.Drawing.Size(122, 44);
             this.buttonBaja.TabIndex = 24;
             this.buttonBaja.Text = "Baja";
             this.buttonBaja.UseVisualStyleBackColor = true;
@@ -159,7 +159,7 @@
             // textBoxStatus
             // 
             this.textBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStatus.Location = new System.Drawing.Point(62, 316);
+            this.textBoxStatus.Location = new System.Drawing.Point(472, 128);
             this.textBoxStatus.Name = "textBoxStatus";
             this.textBoxStatus.Size = new System.Drawing.Size(178, 20);
             this.textBoxStatus.TabIndex = 27;
@@ -200,9 +200,9 @@
             // buttonCancelar
             // 
             this.buttonCancelar.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(612, 119);
+            this.buttonCancelar.Location = new System.Drawing.Point(268, 376);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(160, 23);
+            this.buttonCancelar.Size = new System.Drawing.Size(91, 23);
             this.buttonCancelar.TabIndex = 32;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -211,9 +211,9 @@
             // buttonListo
             // 
             this.buttonListo.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonListo.Location = new System.Drawing.Point(612, 95);
+            this.buttonListo.Location = new System.Drawing.Point(268, 355);
             this.buttonListo.Name = "buttonListo";
-            this.buttonListo.Size = new System.Drawing.Size(160, 23);
+            this.buttonListo.Size = new System.Drawing.Size(91, 23);
             this.buttonListo.TabIndex = 33;
             this.buttonListo.Text = "Listo";
             this.buttonListo.UseVisualStyleBackColor = true;

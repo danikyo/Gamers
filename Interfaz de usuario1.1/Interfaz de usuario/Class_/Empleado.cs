@@ -10,68 +10,68 @@ namespace Interfaz_de_usuario.Class_
     public class Empleado
     {
         int idempleado;
-        string Nombre;
-        string Apellido;
-        string Puesto;
-        string Contrasena;
-        bool Status;
+        string eNombre;
+        string eApellido;
+        string ePuesto;
+        string eContrasena;
+        bool eStatus;
         
         public Empleado() { }
 
         public Empleado(int idempleado, string Nombre, string Apellido, string Puesto, string Contrasena, bool Status)
         {
             this.idempleado = idempleado;
-            this.Nombre = Nombre;
-            this.Apellido = Apellido;
-            this.Puesto = Puesto;
-            this.Contrasena = Contrasena;
-            this.Status = Status;
+            this.eNombre = Nombre;
+            this.eApellido = Apellido;
+            this.ePuesto = Puesto;
+            this.eContrasena = Contrasena;
+            this.eStatus = Status;
         }
 
-        public int idEmpleado
+        public int ID
         {
             get { return idempleado; }
             set { idempleado = value; }
         }
 
-        public string eNombre
+        public string Nombre
         {
-            get { return Nombre; }
-            set { Nombre = value; }
+            get { return eNombre; }
+            set { eNombre = value; }
         }
 
-        public string eApellido
+        public string Apellido
         {
-            get { return Apellido; }
-            set { Apellido = value; }
+            get { return eApellido; }
+            set { eApellido = value; }
         }
 
-        public string ePuesto
+        public string Puesto
         {
-            get { return Puesto; }
-            set { Puesto = value; }
+            get { return ePuesto; }
+            set { ePuesto = value; }
         }
 
-        public string eContrasena
+        public string Contrasena
         {
-            get { return Contrasena; }
-            set { Contrasena = value; }
+            get { return eContrasena; }
+            set { eContrasena = value; }
         }
 
-        public bool eStatus
+        public bool Status
         {
-            get { return Status; }
-            set { Status = value; }
+            get { return eStatus; }
+            set { eStatus = value; }
         }
 
         public static int AgregarEmpleado(MySqlConnection Connection, Empleado empleado)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO empleado (eNombre, eApellido, ePuesto, eContrasena, eStatus) VALUES ('{0}','{1}','{2}','{3}','True')",empleado.Nombre,empleado.Apellido,empleado.Puesto,empleado.Contrasena), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO empleado (eNombre, eApellido, ePuesto, eContrasena, eStatus) VALUES ('{0}','{1}','{2}','{3}',True)",empleado.Nombre,empleado.Apellido,empleado.Puesto,empleado.Contrasena), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }
 
-        public IList<Empleado> MostrarEmpleado(MySqlConnection Connection)
+        public static IList<Empleado> MostrarEmpleado(MySqlConnection Connection)
         {
             List<Empleado> Nempleado = new List<Empleado>();
             MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM empleado"), Connection);
@@ -79,7 +79,8 @@ namespace Interfaz_de_usuario.Class_
             while (reader.Read())
             {
                 Empleado empleado = new Empleado(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetBoolean(5));
-                Nempleado.Add(empleado);
+                if(empleado.Status)
+                { Nempleado.Add(empleado); }
             }
             return Nempleado;
         }

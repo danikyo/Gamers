@@ -85,5 +85,14 @@ namespace Interfaz_de_usuario
             }
             CConnection.CloseConnection();
         }
+
+        private void Menu_Clientes_Load(object sender, EventArgs e)
+        {
+            CConnection.OpenConnection();
+            dataGridView1.DataSource = Class_.Cliente.MostrarClientes(CConnection.myConnection);
+            dataGridView1.Columns[15].Visible = false;
+            dataGridView1.Columns[0].Width = 40;
+            CConnection.CloseConnection();
+        }
     }
 }

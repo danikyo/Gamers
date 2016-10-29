@@ -32,8 +32,8 @@ namespace Interfaz_de_usuario
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Consulta_Producto consulta_producto = new Consulta_Producto(2);
-            consulta_producto.ShowDialog();
+            //Consulta_Producto consulta_producto = new Consulta_Producto(2);
+            //consulta_producto.ShowDialog();
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)

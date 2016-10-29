@@ -20,7 +20,7 @@ namespace Interfaz_de_usuario
             InitializeComponent();
             this.CConnection = CConnection;
             this.Nempleado = Nempleado;
-            if(!Nempleado.eStatus) { buttonBaja.Enabled = false; }
+            if(!Nempleado.Status) { buttonBaja.Enabled = false; }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -30,15 +30,15 @@ namespace Interfaz_de_usuario
 
         private void Consulta_Empleado_Load(object sender, EventArgs e)
         {
-            labelIDCliente.Text = "ID: " + Nempleado.idEmpleado;
-            textBoxApellido.Text = Nempleado.eApellido;
-            textBoxContrasena.Text = Nempleado.eContrasena;
-            textBoxNombre.Text = Nempleado.eNombre;
-            if (Nempleado.eStatus)
+            labelIDCliente.Text = "ID: " + Nempleado.ID;
+            textBoxApellido.Text = Nempleado.Apellido;
+            textBoxContrasena.Text = Nempleado.Contrasena;
+            textBoxNombre.Text = Nempleado.Nombre;
+            if (Nempleado.Status)
             { textBoxStatus.Text = "Activo"; }
             else
             { textBoxStatus.Text = "Inactivo"; }
-            comboBoxPuesto.Text = Nempleado.ePuesto;
+            comboBoxPuesto.Text = Nempleado.Puesto;
             textBoxApellido.Enabled = false;
             textBoxContrasena.Enabled = false;
             textBoxNombre.Enabled = false;
@@ -54,7 +54,7 @@ namespace Interfaz_de_usuario
             if(result == DialogResult.Yes)
             {
                 CConnection.OpenConnection();
-                Class_.Empleado.BajaEmpleado(CConnection.myConnection, Nempleado.idEmpleado);
+                Class_.Empleado.BajaEmpleado(CConnection.myConnection, Nempleado.ID);
                 CConnection.CloseConnection();
                 this.Close();
             }
@@ -86,21 +86,21 @@ namespace Interfaz_de_usuario
             buttonModificar.Enabled = true;
             buttonBaja.Enabled = true;
             buttonRegresar.Enabled = true;
-            labelIDCliente.Text = "ID: " + Nempleado.idEmpleado;
-            textBoxApellido.Text = Nempleado.eApellido;
-            textBoxContrasena.Text = Nempleado.eContrasena;
-            textBoxNombre.Text = Nempleado.eNombre;
-            if (Nempleado.eStatus)
+            labelIDCliente.Text = "ID: " + Nempleado.ID;
+            textBoxApellido.Text = Nempleado.Apellido;
+            textBoxContrasena.Text = Nempleado.Contrasena;
+            textBoxNombre.Text = Nempleado.Nombre;
+            if (Nempleado.Status)
             { textBoxStatus.Text = "Activo"; }
             else
             { textBoxStatus.Text = "Inactivo"; }
-            comboBoxPuesto.Text = Nempleado.ePuesto;
+            comboBoxPuesto.Text = Nempleado.Puesto;
         }
 
         private void buttonListo_Click(object sender, EventArgs e)
         {
             CConnection.OpenConnection();
-            Class_.Empleado Nuempleado = new Class_.Empleado(Nempleado.idEmpleado, textBoxNombre.Text,textBoxApellido.Text,comboBoxPuesto.Text,textBoxContrasena.Text,true);
+            Class_.Empleado Nuempleado = new Class_.Empleado(Nempleado.ID, textBoxNombre.Text,textBoxApellido.Text,comboBoxPuesto.Text,textBoxContrasena.Text,true);
             int retorno = Class_.Empleado.ModificarEmpleado(CConnection.myConnection, Nuempleado);
             CConnection.CloseConnection();
             this.Close();

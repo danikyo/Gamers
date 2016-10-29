@@ -31,8 +31,27 @@ namespace Interfaz_de_usuario
 
         private void buttonConsultaP_Click(object sender, EventArgs e)
         {
-            Consulta_Producto consulta_producto = new Consulta_Producto(1);
-            consulta_producto.ShowDialog();
+            Connection.OpenConnection();
+            MySqlDataReader reader = Class_.Producto.BuscarProducto(Connection.myConnection, textBoxIDproducto.Text);
+            if(reader.Read())
+            {
+                if(reader.GetBoolean(8))
+                {
+                    Class_.Producto nProducto = new Class_.Producto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetFloat(6), reader.GetInt32(7), reader.GetBoolean(8));
+                    Consulta_Producto consulta_producto = new Consulta_Producto(nProducto, Connection);
+                    Connection.CloseConnection();
+                    consulta_producto.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("ID no existe");
+                }
+            }
+            else
+            {
+                MessageBox.Show("ID no existe");
+            }
+            Connection.CloseConnection();
         }
 
         private void textBoxIDproducto_TextChanged(object sender, EventArgs e)
@@ -71,11 +90,20 @@ namespace Interfaz_de_usuario
             else
             {
                 Connection.OpenConnection();
-                Class_.Producto nProducto = new Class_.Producto(1, textBoxNombreP.Text, comboBoxTipo.Text, comboBoxConsola.Text, comboBoxStatus.Text, textBoxPrecio.Text, 0, true);
+                Class_.Producto nProducto = new Class_.Producto(1, textBoxNombreP.Text, comboBoxTipo.Text, comboBoxConsola.Text,comboBoxGenero.Text, comboBoxStatus.Text, float.Parse(textBoxPrecio.Text), 0, true);
                 Class_.Producto.AgregarProducto(Connection.myConnection, nProducto);
                 Connection.CloseConnection();
                 this.Close();
             }
+        }
+
+        private void Menu_Inventario_Load(object sender, EventArgs e)
+        {
+            Connection.OpenConnection();
+            dataGridView1.DataSource = Class_.Producto.MostrarProductos(Connection.myConnection);
+            dataGridView1.Columns[0].Width = 40;
+            dataGridView1.Columns[8].Visible = false;
+            Connection.CloseConnection();
         }
     }
 }

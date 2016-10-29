@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Clientes));
             this.buttonAgregarC = new System.Windows.Forms.Button();
             this.buttonConsultaC = new System.Windows.Forms.Button();
@@ -65,10 +67,13 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBoxReportes = new System.Windows.Forms.GroupBox();
             this.buttonReportes = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxReportes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAgregarC
@@ -98,9 +103,9 @@
             // buttonRegresar
             // 
             this.buttonRegresar.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegresar.Location = new System.Drawing.Point(692, 393);
+            this.buttonRegresar.Location = new System.Drawing.Point(632, 386);
             this.buttonRegresar.Name = "buttonRegresar";
-            this.buttonRegresar.Size = new System.Drawing.Size(98, 69);
+            this.buttonRegresar.Size = new System.Drawing.Size(120, 69);
             this.buttonRegresar.TabIndex = 18;
             this.buttonRegresar.Text = "Regresar";
             this.buttonRegresar.UseVisualStyleBackColor = true;
@@ -212,7 +217,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Interfaz_de_usuario.Properties.Resources.logook;
-            this.pictureBox1.Location = new System.Drawing.Point(234, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(590, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(336, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -448,12 +453,52 @@
             this.buttonReportes.Text = "Generar";
             this.buttonReportes.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Location = new System.Drawing.Point(796, 163);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(563, 297);
+            this.dataGridView1.TabIndex = 25;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label15.Location = new System.Drawing.Point(806, 147);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(51, 13);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "Registros";
+            // 
             // Menu_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(799, 472);
+            this.ClientSize = new System.Drawing.Size(1362, 472);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBoxReportes);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -463,12 +508,14 @@
             this.Name = "Menu_Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Clientes";
+            this.Load += new System.EventHandler(this.Menu_Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBoxReportes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,5 +559,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaNac;
         private System.Windows.Forms.GroupBox groupBoxReportes;
         private System.Windows.Forms.Button buttonReportes;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label15;
     }
 }

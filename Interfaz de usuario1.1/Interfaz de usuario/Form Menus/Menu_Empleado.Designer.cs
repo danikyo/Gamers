@@ -47,17 +47,21 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBoxPuesto = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewEmpleado = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonRegresar
             // 
             this.buttonRegresar.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegresar.Location = new System.Drawing.Point(492, 352);
+            this.buttonRegresar.Location = new System.Drawing.Point(405, 352);
             this.buttonRegresar.Name = "buttonRegresar";
-            this.buttonRegresar.Size = new System.Drawing.Size(98, 74);
+            this.buttonRegresar.Size = new System.Drawing.Size(158, 74);
             this.buttonRegresar.TabIndex = 7;
             this.buttonRegresar.Text = "Regresar";
             this.buttonRegresar.UseVisualStyleBackColor = true;
@@ -67,10 +71,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Interfaz_de_usuario.Properties.Resources.logook;
-            this.pictureBox1.Location = new System.Drawing.Point(139, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(301, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(336, 118);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(495, 155);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -136,6 +140,7 @@
             // 
             this.textBoxCPassword.Location = new System.Drawing.Point(84, 172);
             this.textBoxCPassword.Name = "textBoxCPassword";
+            this.textBoxCPassword.PasswordChar = '*';
             this.textBoxCPassword.Size = new System.Drawing.Size(208, 20);
             this.textBoxCPassword.TabIndex = 21;
             // 
@@ -248,13 +253,50 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edición Empleado";
             // 
+            // dataGridViewEmpleado
+            // 
+            this.dataGridViewEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEmpleado.Location = new System.Drawing.Point(607, 173);
+            this.dataGridViewEmpleado.Name = "dataGridViewEmpleado";
+            this.dataGridViewEmpleado.ReadOnly = true;
+            this.dataGridViewEmpleado.RowHeadersVisible = false;
+            this.dataGridViewEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewEmpleado.Size = new System.Drawing.Size(441, 251);
+            this.dataGridViewEmpleado.TabIndex = 35;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(608, 157);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 13);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Registros";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(9, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(179, 32);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "BIENVENIDO AL \r\nMENU DE EMPLEADO";
+            // 
             // Menu_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.WallpaperPacman;
-            this.ClientSize = new System.Drawing.Size(604, 436);
+            this.ClientSize = new System.Drawing.Size(1058, 436);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dataGridViewEmpleado);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonRegresar);
@@ -263,11 +305,13 @@
             this.Name = "Menu_Empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Empleado";
+            this.Load += new System.EventHandler(this.Menu_Empleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpleado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,5 +337,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox comboBoxPuesto;
+        private System.Windows.Forms.DataGridView dataGridViewEmpleado;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

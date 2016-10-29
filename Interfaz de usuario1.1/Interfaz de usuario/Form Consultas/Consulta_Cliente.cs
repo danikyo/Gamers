@@ -23,26 +23,26 @@ namespace Interfaz_de_usuario
             this.Connection = Connection;
 
             LoadC();
-            if(!Cliente.cDisponible) { buttonBaja.Enabled = false; }
+            if(!Cliente.Disponible) { buttonBaja.Enabled = false; }
         }
 
         public void LoadC()
         {
-            labelIDCliente.Text = "ID " + Cliente.cidcliente;
-            textBoxApellidos.Text = Cliente.cApellido;
-            textBoxNombre.Text = Cliente.cNombre;
-            dateTimePicker1.Text = Cliente.cFechaNac;
-            textBoxDireccion.Text = Cliente.cDireccion;
-            textBoxEmail.Text = Cliente.cE_mail;
-            textBoxSaldo.Text = Cliente.cSaldo.ToString();
-            textBoxTel.Text = Cliente.cTel;
-            textBoxCP.Text = Cliente.cCP;
-            textBoxRFC.Text = Cliente.cRFC;
-            textBoxRazonSocial.Text = Cliente.cRazonSocial;
-            textBoxDomFiscal.Text = Cliente.cDomFiscal;
-            textBoxPais.Text = Cliente.cPais;
-            textBoxEstado.Text = Cliente.cEstado;
-            textBoxMunicipio.Text = Cliente.cMunicipio;
+            labelIDCliente.Text = "ID: " + Cliente.ID;
+            textBoxApellidos.Text = Cliente.Apellido;
+            textBoxNombre.Text = Cliente.Nombre;
+            dateTimePicker1.Text = Cliente.FechaNac;
+            textBoxDireccion.Text = Cliente.Direccion;
+            textBoxEmail.Text = Cliente.E_mail;
+            textBoxSaldo.Text = Cliente.Saldo.ToString();
+            textBoxTel.Text = Cliente.Tel;
+            textBoxCP.Text = Cliente.CP;
+            textBoxRFC.Text = Cliente.RFC;
+            textBoxRazonSocial.Text = Cliente.RazonSocial;
+            textBoxDomFiscal.Text = Cliente.DomFiscal;
+            textBoxPais.Text = Cliente.Pais;
+            textBoxEstado.Text = Cliente.Estado;
+            textBoxMunicipio.Text = Cliente.Municipio;
 
             textBoxApellidos.Enabled = false;
             textBoxNombre.Enabled = false;
@@ -106,7 +106,7 @@ namespace Interfaz_de_usuario
         private void buttonListo_Click(object sender, EventArgs e)
         {
             Connection.OpenConnection();
-            Class_.Cliente nCliente = new Class_.Cliente(Cliente.cidcliente, textBoxNombre.Text, textBoxApellidos.Text, textBoxDireccion.Text,
+            Class_.Cliente nCliente = new Class_.Cliente(Cliente.ID, textBoxNombre.Text, textBoxApellidos.Text, textBoxDireccion.Text,
             dateTimePicker1.Text, textBoxEmail.Text, textBoxTel.Text, textBoxRFC.Text, textBoxDomFiscal.Text, textBoxRazonSocial.Text, textBoxCP.Text,
             textBoxPais.Text, textBoxEstado.Text, textBoxMunicipio.Text, float.Parse(textBoxSaldo.Text), true);
             Class_.Cliente.ModificarCliente(Connection.myConnection, nCliente);
@@ -120,7 +120,7 @@ namespace Interfaz_de_usuario
             if (result == DialogResult.Yes)
             {
                 Connection.OpenConnection();
-                Class_.Cliente.BajaCliente(Connection.myConnection, Cliente.cidcliente);
+                Class_.Cliente.BajaCliente(Connection.myConnection, Cliente.ID);
                 Connection.CloseConnection();
                 this.Close();
             }

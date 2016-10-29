@@ -71,14 +71,16 @@ namespace Interfaz_de_usuario
                 {
                     CConnection.OpenConnection();
                     Class_.Empleado Nempleado = new Class_.Empleado();
-                    Nempleado.eNombre = textBoxNombreE.Text;
-                    Nempleado.eApellido = textBoxApellidosE.Text;
-                    Nempleado.ePuesto = comboBoxPuesto.Text;
-                    Nempleado.eContrasena = textBoxPassword.Text;
+                    Nempleado.Nombre = textBoxNombreE.Text;
+                    Nempleado.Apellido = textBoxApellidosE.Text;
+                    Nempleado.Puesto = comboBoxPuesto.Text;
+                    Nempleado.Contrasena = textBoxPassword.Text;
                     int OK = Class_.Empleado.AgregarEmpleado(CConnection.myConnection, Nempleado);
                     if(OK == 1)
                     {
                         MessageBox.Show("Empleado Capturado\nCon Éxito", "Exito", MessageBoxButtons.OK);
+                        CConnection.CloseConnection();
+                        this.Close();
                     }
                     else
                     {
@@ -97,6 +99,15 @@ namespace Interfaz_de_usuario
         private void comboBoxPuesto_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void Menu_Empleado_Load(object sender, EventArgs e)
+        {
+            CConnection.OpenConnection();
+            dataGridViewEmpleado.DataSource = Class_.Empleado.MostrarEmpleado(CConnection.myConnection);
+            dataGridViewEmpleado.Columns[0].Width = 40;
+            dataGridViewEmpleado.Columns[5].Visible = false;
+            CConnection.CloseConnection();
         }
     }
 }

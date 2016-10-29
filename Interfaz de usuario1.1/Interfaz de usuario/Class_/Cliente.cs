@@ -10,154 +10,145 @@ namespace Interfaz_de_usuario.Class_
     public class Cliente
     {
         int idcliente;
-        string Nombre;
-        string Apellidos;
-        string Direccion;
-        string FechaNac;
-        string e_mail;
-        string Tel;
-        string RFC;
-        string DomFiscal;
-        string RazonSocial;
-        string CP;
-        string Pais;
-        string Estado;
-        string Municipio;
-        float Saldo;
-        bool disponible;
-
-        /*public Cliente(int idcliente, string Nombre, string Apellidos, DateTime FechaNac, float Saldo)
-        {
-            this.idcliente = idcliente;
-            this.Nombre = Nombre;
-            this.Apellidos = Apellidos;
-            this.FechaNac = FechaNac;
-            this.Saldo = Saldo;
-        }*/
+        string cNombre;
+        string cApellidos;
+        string cDireccion;
+        string cFechaNac;
+        string ce_mail;
+        string cTel;
+        string cRFC;
+        string cDomFiscal;
+        string cRazonSocial;
+        string cCP;
+        string cPais;
+        string cEstado;
+        string cMunicipio;
+        float cSaldo;
+        bool cdisponible;
 
         public Cliente(int idcliente, string Nombre, string Apellidos, string Direccion, string FechaNac, string e_mail, string Tel,
             string RFC, string DomFiscal, string RazonSocial, string CP, string Pais, string Estado, string Municipio, float Saldo, bool disponible)
         {
             this.idcliente = idcliente;
-            this.Nombre = Nombre;
-            this.Apellidos = Apellidos;
-            this.Direccion = Direccion;
-            this.FechaNac = FechaNac;
-            this.e_mail = e_mail;
-            this.Tel = Tel;
-            this.RFC = RFC;
-            this.DomFiscal = DomFiscal;
-            this.RazonSocial = RazonSocial;
-            this.CP = CP;
-            this.Pais = Pais;
-            this.Estado = Estado;
-            this.Municipio = Municipio;
-            this.Saldo = Saldo;
-            this.disponible = disponible;
+            this.cNombre = Nombre;
+            this.cApellidos = Apellidos;
+            this.cDireccion = Direccion;
+            this.cFechaNac = FechaNac;
+            this.ce_mail = e_mail;
+            this.cTel = Tel;
+            this.cRFC = RFC;
+            this.cDomFiscal = DomFiscal;
+            this.cRazonSocial = RazonSocial;
+            this.cCP = CP;
+            this.cPais = Pais;
+            this.cEstado = Estado;
+            this.cMunicipio = Municipio;
+            this.cSaldo = Saldo;
+            this.cdisponible = disponible;
         }
 
         public Cliente() { }
 
-        public int cidcliente
+        public int ID
         {
             get { return idcliente; }
             set { idcliente = value; }
         }
 
-        public string cNombre
+        public string Nombre
         {
-            get { return Nombre; }
-            set { Nombre = value; }
+            get { return cNombre; }
+            set { cNombre = value; }
         }
 
-        public string cApellido
+        public string Apellido
         {
-            get { return Apellidos; }
-            set { Apellidos = value; }
+            get { return cApellidos; }
+            set { cApellidos = value; }
         }
 
-        public string cDireccion
+        public string Direccion
         {
-            get { return Direccion; }
-            set { Direccion = value; }
+            get { return cDireccion; }
+            set { cDireccion = value; }
         }
 
-        public string cFechaNac
+        public string FechaNac
         {
-            get { return FechaNac; }
-            set { FechaNac = value; }
+            get { return cFechaNac; }
+            set { cFechaNac = value; }
         }
 
-        public string cE_mail
+        public string E_mail
         {
-            get { return e_mail; }
-            set { e_mail = value; }
+            get { return ce_mail; }
+            set { ce_mail = value; }
         }
 
-        public string cTel
+        public string Tel
         {
-            get { return Tel; }
-            set { Tel = value; }
+            get { return cTel; }
+            set { cTel = value; }
         }
 
-        public string cRFC
+        public string RFC
         {
-            get { return RFC; }
-            set { RFC = value; }
+            get { return cRFC; }
+            set { cRFC = value; }
         }
 
-        public string cDomFiscal
+        public string DomFiscal
         {
-            get { return DomFiscal; }
-            set { DomFiscal = value; }
+            get { return cDomFiscal; }
+            set { cDomFiscal = value; }
         }
 
-        public string cRazonSocial
+        public string RazonSocial
         {
-            get { return RazonSocial; }
-            set { RazonSocial = value; }
+            get { return cRazonSocial; }
+            set { cRazonSocial = value; }
         }
 
-        public string cCP
+        public string CP
         {
-            get { return CP; }
-            set { CP = value; }
+            get { return cCP; }
+            set { cCP = value; }
         }
 
-        public string cPais
+        public string Pais
         {
-            get { return Pais; }
-            set { Pais = value; }
+            get { return cPais; }
+            set { cPais = value; }
         }
 
-        public string cEstado
+        public string Estado
         {
-            get { return Estado; }
-            set { Estado = value; }
+            get { return cEstado; }
+            set { cEstado = value; }
         }
 
-        public string cMunicipio
+        public string Municipio
         {
-            get { return Municipio; }
-            set { Municipio = value; }
+            get { return cMunicipio; }
+            set { cMunicipio = value; }
         }
 
-        public float cSaldo
+        public float Saldo
         {
-            get { return Saldo; }
-            set { Saldo = value; }
+            get { return cSaldo; }
+            set { cSaldo = value; }
         }
 
-        public bool cDisponible
+        public bool Disponible
         {
-            get { return disponible; }
-            set { disponible = value; }
+            get { return cdisponible; }
+            set { cdisponible = value; }
         }
 
         public static int AgregarCliente(MySqlConnection Connection, Cliente cliente)
         {
             MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO cliente (cNombre, cApellido, cDireccion, cFechaNac, cEmail, cTel, cRFC, cDomFiscal, cRazonSocial, cCP, cPais, cEstado, cMunicipio, cSaldo, cDisponible) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','0','1')",
-            cliente.Nombre, cliente.Apellidos, cliente.Direccion, cliente.FechaNac, cliente.e_mail, cliente.Tel, cliente.RFC, cliente.DomFiscal, cliente.RazonSocial, cliente.CP, cliente.Pais, cliente.Estado, cliente.Municipio, cliente.Saldo), Connection);
+            cliente.Nombre, cliente.cApellidos, cliente.cDireccion, cliente.cFechaNac, cliente.ce_mail, cliente.cTel, cliente.cRFC, cliente.cDomFiscal, cliente.cRazonSocial, cliente.cCP, cliente.cPais, cliente.cEstado, cliente.cMunicipio, cliente.cSaldo), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }
@@ -178,7 +169,7 @@ namespace Interfaz_de_usuario.Class_
         public static int ModificarCliente(MySqlConnection Connection, Cliente cliente)
         {
             MySqlCommand command = new MySqlCommand(String.Format("UPDATE cliente SET cNombre = '{0}', cApellido = '{1}', cDireccion = '{2}', cFechaNac = '{3}', cEmail = '{4}', cTel = '{5}', cRFC = '{6}', cDomFiscal = '{7}', cRazonSocial = '{8}', cCP = '{9}', cPais = '{10}', cEstado = '{11}', cMunicipio = '{12}', cSaldo = '{13}' WHERE idCliente = {14}",
-            cliente.Nombre, cliente.Apellidos, cliente.Direccion, cliente.FechaNac, cliente.e_mail, cliente.Tel, cliente.RFC, cliente.DomFiscal, cliente.RazonSocial, cliente.CP, cliente.Pais, cliente.Estado, cliente.Municipio, cliente.Saldo, cliente.idcliente), Connection);
+            cliente.Nombre, cliente.cApellidos, cliente.cDireccion, cliente.cFechaNac, cliente.ce_mail, cliente.cTel, cliente.cRFC, cliente.cDomFiscal, cliente.cRazonSocial, cliente.cCP, cliente.cPais, cliente.cEstado, cliente.cMunicipio, cliente.cSaldo, cliente.idcliente), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }
