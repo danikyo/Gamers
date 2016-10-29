@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Interfaz_de_usuario
 {
     public partial class Menu_Inventario : Form
     {
-        public Menu_Inventario()
+        Class_.Connection Connection;
+
+        public Menu_Inventario(Class_.Connection Connection)
         {
             InitializeComponent();
+
+            this.Connection = Connection;
             buttonConsultaP.Enabled = false;
             buttonGenerar.Enabled = false;
         }
@@ -55,6 +60,22 @@ namespace Interfaz_de_usuario
         {
             Reporte_Inventario reporte_inventario = new Reporte_Inventario();
             reporte_inventario.ShowDialog();
+        }
+
+        private void buttonAgregarP_Click(object sender, EventArgs e)
+        {
+            if(textBoxNombreP.Text == "" || textBoxPrecio.Text == "" || comboBoxTipo.Text == "" || comboBoxConsola.Text == "" || comboBoxGenero.Text == "" || comboBoxStatus.Text == "")
+            {
+                MessageBox.Show("Rellenar todos los campos");
+            }
+            else
+            {
+                Connection.OpenConnection();
+                Class_.Producto nProducto = new Class_.Producto(1, textBoxNombreP.Text, comboBoxTipo.Text, comboBoxConsola.Text, comboBoxStatus.Text, textBoxPrecio.Text, 0, true);
+                Class_.Producto.AgregarProducto(Connection.myConnection, nProducto);
+                Connection.CloseConnection();
+                this.Close();
+            }
         }
     }
 }

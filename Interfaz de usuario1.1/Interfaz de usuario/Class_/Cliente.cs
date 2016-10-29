@@ -13,7 +13,7 @@ namespace Interfaz_de_usuario.Class_
         string Nombre;
         string Apellidos;
         string Direccion;
-        DateTime FechaNac;
+        string FechaNac;
         string e_mail;
         string Tel;
         string RFC;
@@ -26,17 +26,17 @@ namespace Interfaz_de_usuario.Class_
         float Saldo;
         bool disponible;
 
-        public Cliente(int idcliente, string Nombre, string Apellidos, DateTime FechaNac, float Saldo)
+        /*public Cliente(int idcliente, string Nombre, string Apellidos, DateTime FechaNac, float Saldo)
         {
             this.idcliente = idcliente;
             this.Nombre = Nombre;
             this.Apellidos = Apellidos;
             this.FechaNac = FechaNac;
             this.Saldo = Saldo;
-        }
+        }*/
 
-        public Cliente(int idcliente, string Nombre, string Apellidos, string Direccion, DateTime FechaNac, string e_mail, string Tel,
-            string RFC, string DomFiscal, string RazonSocial, string CP, string Pais, string Estado, string Municipio, float Saldo)
+        public Cliente(int idcliente, string Nombre, string Apellidos, string Direccion, string FechaNac, string e_mail, string Tel,
+            string RFC, string DomFiscal, string RazonSocial, string CP, string Pais, string Estado, string Municipio, float Saldo, bool disponible)
         {
             this.idcliente = idcliente;
             this.Nombre = Nombre;
@@ -53,7 +53,10 @@ namespace Interfaz_de_usuario.Class_
             this.Estado = Estado;
             this.Municipio = Municipio;
             this.Saldo = Saldo;
+            this.disponible = disponible;
         }
+
+        public Cliente() { }
 
         public int cidcliente
         {
@@ -79,7 +82,7 @@ namespace Interfaz_de_usuario.Class_
             set { Direccion = value; }
         }
 
-        public DateTime cFechaNac
+        public string cFechaNac
         {
             get { return FechaNac; }
             set { FechaNac = value; }
@@ -145,45 +148,51 @@ namespace Interfaz_de_usuario.Class_
             set { Saldo = value; }
         }
 
-        public int AgregarCliente(MySqlConnection Connection, Cliente cliente)
+        public bool cDisponible
         {
-            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO clientes (idCliente, cNombre, cApellido, cDireccion, cFechaNac, cEmail, cTel, cRFC, cDomFiscal, cRazonSocial, cCP, cPais, cEstado, cMunicipio, cSaldo, cDisponible) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','0','true')",
+            get { return disponible; }
+            set { disponible = value; }
+        }
+
+        public static int AgregarCliente(MySqlConnection Connection, Cliente cliente)
+        {
+            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO cliente (cNombre, cApellido, cDireccion, cFechaNac, cEmail, cTel, cRFC, cDomFiscal, cRazonSocial, cCP, cPais, cEstado, cMunicipio, cSaldo, cDisponible) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','0','1')",
             cliente.Nombre, cliente.Apellidos, cliente.Direccion, cliente.FechaNac, cliente.e_mail, cliente.Tel, cliente.RFC, cliente.DomFiscal, cliente.RazonSocial, cliente.CP, cliente.Pais, cliente.Estado, cliente.Municipio, cliente.Saldo), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }
 
-        public IList<Cliente> MostrarClientes(MySqlConnection Connection)
+        public static IList<Cliente> MostrarClientes(MySqlConnection Connection)
         {
             List<Cliente> Ncliente = new List<Cliente>();
             MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM cliente"),Connection);
             MySqlDataReader reader = command.ExecuteReader();
             while(reader.Read())
             {
-                Cliente cliente = new Cliente(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetDateTime(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(9), reader.GetString(10), reader.GetString(11), reader.GetString(12), reader.GetString(13), reader.GetFloat(14));
+                Cliente cliente = new Cliente(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(9), reader.GetString(10), reader.GetString(11), reader.GetString(12), reader.GetString(13), reader.GetFloat(14), reader.GetBoolean(15));
                 Ncliente.Add(cliente);
             }
             return Ncliente;
         }
 
-        public int ModificarCliente(MySqlConnection Connection, Cliente cliente)
+        public static int ModificarCliente(MySqlConnection Connection, Cliente cliente)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("UPDATE cliente cNombre = '{0}', cApellido = '{1}', cDireccion = '{2}', cFechaNac = '{3}', cEmail = '{4}', cTel = '{5}', cRFC = '{6}', cDomFiscal = '{7}', cRazonSocial = '{8}', cCP = '{9}', cPais = '{10}', cEstado = '{11}', cMunicipio = '{12}', Saldo = {13})",
-            cliente.Apellidos, cliente.Direccion, cliente.FechaNac, cliente.e_mail, cliente.Tel, cliente.RFC, cliente.DomFiscal, cliente.RazonSocial, cliente.CP, cliente.Pais, cliente.Estado, cliente.Municipio, cliente.Saldo), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("UPDATE cliente SET cNombre = '{0}', cApellido = '{1}', cDireccion = '{2}', cFechaNac = '{3}', cEmail = '{4}', cTel = '{5}', cRFC = '{6}', cDomFiscal = '{7}', cRazonSocial = '{8}', cCP = '{9}', cPais = '{10}', cEstado = '{11}', cMunicipio = '{12}', cSaldo = '{13}' WHERE idCliente = {14}",
+            cliente.Nombre, cliente.Apellidos, cliente.Direccion, cliente.FechaNac, cliente.e_mail, cliente.Tel, cliente.RFC, cliente.DomFiscal, cliente.RazonSocial, cliente.CP, cliente.Pais, cliente.Estado, cliente.Municipio, cliente.Saldo, cliente.idcliente), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }
 
-        public MySqlDataReader BuscarCliente(MySqlConnection Connection, int idCliente)
+        public static MySqlDataReader BuscarCliente(MySqlConnection Connection, string idCliente)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * from cliente WHERE idCliente = {0}",idCliente),Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM cliente WHERE idCliente = '{0}'", idCliente),Connection);
             MySqlDataReader Reader = command.ExecuteReader();
             return Reader;
         }
 
-        public int BajaCliente(MySqlConnection Connection, int idCliente)
+        public static int BajaCliente(MySqlConnection Connection, int idCliente)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("UPDATE cliente cDisponible = 'false' WHERE idCliente = {0}", idCliente), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("UPDATE cliente SET cDisponible = false WHERE idCliente = {0}", idCliente), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }

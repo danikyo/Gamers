@@ -26,17 +26,24 @@ namespace Interfaz_de_usuario
             MySqlDataReader Reader = command.ExecuteReader();
             if(Reader.Read())
             {
-                if(Reader.GetString(3) == "Gerente")
+                if(Reader.GetBoolean(5))
                 {
-                    Menu_Principal_Administrador menu_principal_adm = new Menu_Principal_Administrador(Reader.GetString(1) + " " + Reader.GetString(2), CConnection);
-                    CConnection.CloseConnection();
-                    menu_principal_adm.ShowDialog();
+                    if (Reader.GetString(3) == "Gerente")
+                    {
+                        Menu_Principal_Administrador menu_principal_adm = new Menu_Principal_Administrador(Reader.GetString(1) + " " + Reader.GetString(2), CConnection);
+                        CConnection.CloseConnection();
+                        menu_principal_adm.ShowDialog();
+                    }
+                    else if (Reader.GetString(3) == "Cajero")
+                    {
+                        Menu_Principal_Empleado menu_principal_emp = new Menu_Principal_Empleado(Reader.GetString(1) + " " + Reader.GetString(2));
+                        CConnection.CloseConnection();
+                        menu_principal_emp.ShowDialog();
+                    }
                 }
-                else if(Reader.GetString(3) == "Cajero")
+                else
                 {
-                    Menu_Principal_Empleado menu_principal_emp = new Menu_Principal_Empleado(Reader.GetString(1) + " " + Reader.GetString(2));
-                    CConnection.CloseConnection();
-                    menu_principal_emp.ShowDialog();
+                    MessageBox.Show("Empleado Inactivo", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else

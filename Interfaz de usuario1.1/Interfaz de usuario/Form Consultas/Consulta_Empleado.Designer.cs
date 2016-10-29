@@ -53,7 +53,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(63, 131);
+            this.label4.Location = new System.Drawing.Point(68, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 21);
             this.label4.TabIndex = 23;
@@ -65,7 +65,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(63, 202);
+            this.label3.Location = new System.Drawing.Point(68, 292);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 21);
             this.label3.TabIndex = 22;
@@ -77,7 +77,7 @@
             this.labelIDCliente.BackColor = System.Drawing.Color.Transparent;
             this.labelIDCliente.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIDCliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelIDCliente.Location = new System.Drawing.Point(164, 22);
+            this.labelIDCliente.Location = new System.Drawing.Point(185, 38);
             this.labelIDCliente.Name = "labelIDCliente";
             this.labelIDCliente.Size = new System.Drawing.Size(114, 21);
             this.labelIDCliente.TabIndex = 19;
@@ -89,7 +89,7 @@
             this.labelNombre.BackColor = System.Drawing.Color.Transparent;
             this.labelNombre.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelNombre.Location = new System.Drawing.Point(257, 61);
+            this.labelNombre.Location = new System.Drawing.Point(262, 104);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(87, 21);
             this.labelNombre.TabIndex = 16;
@@ -101,7 +101,7 @@
             this.labelApellido.BackColor = System.Drawing.Color.Transparent;
             this.labelApellido.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelApellido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelApellido.Location = new System.Drawing.Point(63, 61);
+            this.labelApellido.Location = new System.Drawing.Point(68, 104);
             this.labelApellido.Name = "labelApellido";
             this.labelApellido.Size = new System.Drawing.Size(83, 21);
             this.labelApellido.TabIndex = 15;
@@ -110,9 +110,9 @@
             // buttonRegresar
             // 
             this.buttonRegresar.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegresar.Location = new System.Drawing.Point(429, 270);
+            this.buttonRegresar.Location = new System.Drawing.Point(612, 216);
             this.buttonRegresar.Name = "buttonRegresar";
-            this.buttonRegresar.Size = new System.Drawing.Size(89, 44);
+            this.buttonRegresar.Size = new System.Drawing.Size(160, 44);
             this.buttonRegresar.TabIndex = 14;
             this.buttonRegresar.Text = "Regresar";
             this.buttonRegresar.UseVisualStyleBackColor = true;
@@ -121,9 +121,9 @@
             // buttonModificar
             // 
             this.buttonModificar.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModificar.Location = new System.Drawing.Point(57, 270);
+            this.buttonModificar.Location = new System.Drawing.Point(612, 38);
             this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(89, 44);
+            this.buttonModificar.Size = new System.Drawing.Size(160, 44);
             this.buttonModificar.TabIndex = 12;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = true;
@@ -132,9 +132,9 @@
             // buttonBaja
             // 
             this.buttonBaja.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBaja.Location = new System.Drawing.Point(247, 270);
+            this.buttonBaja.Location = new System.Drawing.Point(612, 160);
             this.buttonBaja.Name = "buttonBaja";
-            this.buttonBaja.Size = new System.Drawing.Size(89, 44);
+            this.buttonBaja.Size = new System.Drawing.Size(160, 44);
             this.buttonBaja.TabIndex = 24;
             this.buttonBaja.Text = "Baja";
             this.buttonBaja.UseVisualStyleBackColor = true;
@@ -142,32 +142,36 @@
             // 
             // textBoxApellido
             // 
-            this.textBoxApellido.Location = new System.Drawing.Point(57, 85);
+            this.textBoxApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxApellido.Location = new System.Drawing.Point(62, 128);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(178, 20);
             this.textBoxApellido.TabIndex = 25;
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(261, 85);
+            this.textBoxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNombre.Location = new System.Drawing.Point(266, 128);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(178, 20);
             this.textBoxNombre.TabIndex = 26;
             // 
             // textBoxStatus
             // 
-            this.textBoxStatus.Location = new System.Drawing.Point(57, 226);
+            this.textBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxStatus.Location = new System.Drawing.Point(62, 316);
             this.textBoxStatus.Name = "textBoxStatus";
             this.textBoxStatus.Size = new System.Drawing.Size(178, 20);
             this.textBoxStatus.TabIndex = 27;
             // 
             // comboBoxPuesto
             // 
+            this.comboBoxPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxPuesto.FormattingEnabled = true;
             this.comboBoxPuesto.Items.AddRange(new object[] {
             "Gerente",
             "Cajero"});
-            this.comboBoxPuesto.Location = new System.Drawing.Point(57, 155);
+            this.comboBoxPuesto.Location = new System.Drawing.Point(62, 223);
             this.comboBoxPuesto.Name = "comboBoxPuesto";
             this.comboBoxPuesto.Size = new System.Drawing.Size(178, 21);
             this.comboBoxPuesto.TabIndex = 28;
@@ -179,7 +183,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(257, 131);
+            this.label1.Location = new System.Drawing.Point(262, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 21);
             this.label1.TabIndex = 29;
@@ -187,7 +191,8 @@
             // 
             // textBoxContrasena
             // 
-            this.textBoxContrasena.Location = new System.Drawing.Point(261, 155);
+            this.textBoxContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxContrasena.Location = new System.Drawing.Point(266, 223);
             this.textBoxContrasena.Name = "textBoxContrasena";
             this.textBoxContrasena.Size = new System.Drawing.Size(178, 20);
             this.textBoxContrasena.TabIndex = 30;
@@ -195,9 +200,9 @@
             // buttonCancelar
             // 
             this.buttonCancelar.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(152, 291);
+            this.buttonCancelar.Location = new System.Drawing.Point(612, 119);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(89, 23);
+            this.buttonCancelar.Size = new System.Drawing.Size(160, 23);
             this.buttonCancelar.TabIndex = 32;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -206,9 +211,9 @@
             // buttonListo
             // 
             this.buttonListo.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonListo.Location = new System.Drawing.Point(152, 270);
+            this.buttonListo.Location = new System.Drawing.Point(612, 95);
             this.buttonListo.Name = "buttonListo";
-            this.buttonListo.Size = new System.Drawing.Size(89, 23);
+            this.buttonListo.Size = new System.Drawing.Size(160, 23);
             this.buttonListo.TabIndex = 33;
             this.buttonListo.Text = "Listo";
             this.buttonListo.UseVisualStyleBackColor = true;
@@ -218,8 +223,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.blurry_blue_background_ii_wallpaper_800x480;
-            this.ClientSize = new System.Drawing.Size(530, 326);
+            this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.WallpaperPacman;
+            this.ClientSize = new System.Drawing.Size(784, 411);
             this.Controls.Add(this.buttonListo);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.textBoxContrasena);

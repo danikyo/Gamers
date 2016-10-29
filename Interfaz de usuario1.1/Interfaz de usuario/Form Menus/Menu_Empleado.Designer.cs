@@ -191,6 +191,7 @@
             // buttonConsultaE
             // 
             this.buttonConsultaE.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConsultaE.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonConsultaE.Location = new System.Drawing.Point(33, 78);
             this.buttonConsultaE.Name = "buttonConsultaE";
             this.buttonConsultaE.Size = new System.Drawing.Size(158, 36);
@@ -239,6 +240,7 @@
             this.groupBox2.Controls.Add(this.buttonConsultaE);
             this.groupBox2.Controls.Add(this.textBoxQuery);
             this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Location = new System.Drawing.Point(368, 152);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(222, 139);
@@ -251,7 +253,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.blurry_blue_background_ii_wallpaper_800x480;
+            this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.WallpaperPacman;
             this.ClientSize = new System.Drawing.Size(604, 436);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

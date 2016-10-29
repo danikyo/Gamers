@@ -13,7 +13,7 @@ namespace Interfaz_de_usuario.Class_
         DateTime Fecha;
         int Empleado_idEmpleado;
         int Cliente_idCliente;
-        bool vDisponible;
+        //bool vDisponible;
 
         public Venta(int idVenta, DateTime Fecha, int Empleado_idEmpleado, int Cliente_idCliente)
         {

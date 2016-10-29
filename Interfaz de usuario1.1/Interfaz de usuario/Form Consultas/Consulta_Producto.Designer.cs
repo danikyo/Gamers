@@ -251,7 +251,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.blurry_blue_background_ii_wallpaper_800x480;
             this.ClientSize = new System.Drawing.Size(766, 340);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.radioButtonSeminuevo);

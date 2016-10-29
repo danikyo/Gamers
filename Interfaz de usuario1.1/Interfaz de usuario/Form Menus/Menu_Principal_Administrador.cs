@@ -39,13 +39,13 @@ namespace Interfaz_de_usuario
 
         private void buttonInventario_Click(object sender, EventArgs e)
         {
-            Menu_Inventario menu_inventario = new Menu_Inventario();
+            Menu_Inventario menu_inventario = new Menu_Inventario(CConnection);
             menu_inventario.ShowDialog();
         }
 
         private void buttonCliente_Click(object sender, EventArgs e)
         {
-            Menu_Clientes menu_clientes = new Menu_Clientes();
+            Menu_Clientes menu_clientes = new Menu_Clientes(CConnection);
             menu_clientes.ShowDialog();
         }
 

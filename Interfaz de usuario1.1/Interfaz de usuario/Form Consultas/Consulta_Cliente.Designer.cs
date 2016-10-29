@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consulta_Cliente));
             this.buttonModificar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonRegresar = new System.Windows.Forms.Button();
             this.labelApellido = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelIDCliente = new System.Windows.Forms.Label();
@@ -47,28 +47,48 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.textBoxApellidos = new System.Windows.Forms.TextBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxDireccion = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxSaldo = new System.Windows.Forms.TextBox();
+            this.textBoxTel = new System.Windows.Forms.TextBox();
+            this.textBoxCP = new System.Windows.Forms.TextBox();
+            this.textBoxRFC = new System.Windows.Forms.TextBox();
+            this.textBoxRazonSocial = new System.Windows.Forms.TextBox();
+            this.textBoxDomFiscal = new System.Windows.Forms.TextBox();
+            this.textBoxPais = new System.Windows.Forms.TextBox();
+            this.textBoxEstado = new System.Windows.Forms.TextBox();
+            this.textBoxMunicipio = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.buttonBaja = new System.Windows.Forms.Button();
+            this.buttonListo = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonModificar
             // 
-            this.buttonModificar.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModificar.Location = new System.Drawing.Point(647, 297);
+            this.buttonModificar.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonModificar.Location = new System.Drawing.Point(647, 74);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(89, 48);
-            this.buttonModificar.TabIndex = 0;
+            this.buttonModificar.TabIndex = 16;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
-            // button3
+            // buttonRegresar
             // 
-            this.button3.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(647, 354);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 44);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Regresar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonRegresar.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegresar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonRegresar.Location = new System.Drawing.Point(647, 232);
+            this.buttonRegresar.Name = "buttonRegresar";
+            this.buttonRegresar.Size = new System.Drawing.Size(89, 48);
+            this.buttonRegresar.TabIndex = 17;
+            this.buttonRegresar.Text = "Regresar";
+            this.buttonRegresar.UseVisualStyleBackColor = true;
+            this.buttonRegresar.Click += new System.EventHandler(this.button3_Click);
             // 
             // labelApellido
             // 
@@ -187,9 +207,9 @@
             this.label8.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(342, 249);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(139, 21);
+            this.label8.Size = new System.Drawing.Size(104, 21);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Domicilio Fiscal:";
+            this.label8.Text = "Dom Fiscal:";
             // 
             // label9
             // 
@@ -235,12 +255,179 @@
             this.label12.TabIndex = 20;
             this.label12.Text = "Municipio:";
             // 
+            // textBoxApellidos
+            // 
+            this.textBoxApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxApellidos.Location = new System.Drawing.Point(267, 79);
+            this.textBoxApellidos.Name = "textBoxApellidos";
+            this.textBoxApellidos.Size = new System.Drawing.Size(206, 20);
+            this.textBoxApellidos.TabIndex = 1;
+            // 
+            // textBoxNombre
+            // 
+            this.textBoxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNombre.Location = new System.Drawing.Point(267, 124);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(206, 20);
+            this.textBoxNombre.TabIndex = 2;
+            // 
+            // textBoxDireccion
+            // 
+            this.textBoxDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDireccion.Location = new System.Drawing.Point(182, 215);
+            this.textBoxDireccion.Name = "textBoxDireccion";
+            this.textBoxDireccion.Size = new System.Drawing.Size(142, 20);
+            this.textBoxDireccion.TabIndex = 4;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(182, 252);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(142, 20);
+            this.textBoxEmail.TabIndex = 5;
+            // 
+            // textBoxSaldo
+            // 
+            this.textBoxSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSaldo.Location = new System.Drawing.Point(182, 292);
+            this.textBoxSaldo.Name = "textBoxSaldo";
+            this.textBoxSaldo.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSaldo.TabIndex = 6;
+            // 
+            // textBoxTel
+            // 
+            this.textBoxTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTel.Location = new System.Drawing.Point(182, 327);
+            this.textBoxTel.Name = "textBoxTel";
+            this.textBoxTel.Size = new System.Drawing.Size(142, 20);
+            this.textBoxTel.TabIndex = 7;
+            // 
+            // textBoxCP
+            // 
+            this.textBoxCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCP.Location = new System.Drawing.Point(182, 363);
+            this.textBoxCP.Name = "textBoxCP";
+            this.textBoxCP.Size = new System.Drawing.Size(142, 20);
+            this.textBoxCP.TabIndex = 8;
+            // 
+            // textBoxRFC
+            // 
+            this.textBoxRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRFC.Location = new System.Drawing.Point(478, 177);
+            this.textBoxRFC.Name = "textBoxRFC";
+            this.textBoxRFC.Size = new System.Drawing.Size(129, 20);
+            this.textBoxRFC.TabIndex = 9;
+            // 
+            // textBoxRazonSocial
+            // 
+            this.textBoxRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRazonSocial.Location = new System.Drawing.Point(478, 215);
+            this.textBoxRazonSocial.Name = "textBoxRazonSocial";
+            this.textBoxRazonSocial.Size = new System.Drawing.Size(129, 20);
+            this.textBoxRazonSocial.TabIndex = 10;
+            // 
+            // textBoxDomFiscal
+            // 
+            this.textBoxDomFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDomFiscal.Location = new System.Drawing.Point(478, 252);
+            this.textBoxDomFiscal.Name = "textBoxDomFiscal";
+            this.textBoxDomFiscal.Size = new System.Drawing.Size(129, 20);
+            this.textBoxDomFiscal.TabIndex = 11;
+            // 
+            // textBoxPais
+            // 
+            this.textBoxPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPais.Location = new System.Drawing.Point(478, 292);
+            this.textBoxPais.Name = "textBoxPais";
+            this.textBoxPais.Size = new System.Drawing.Size(129, 20);
+            this.textBoxPais.TabIndex = 12;
+            // 
+            // textBoxEstado
+            // 
+            this.textBoxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEstado.Location = new System.Drawing.Point(478, 327);
+            this.textBoxEstado.Name = "textBoxEstado";
+            this.textBoxEstado.Size = new System.Drawing.Size(129, 20);
+            this.textBoxEstado.TabIndex = 13;
+            // 
+            // textBoxMunicipio
+            // 
+            this.textBoxMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMunicipio.Location = new System.Drawing.Point(478, 363);
+            this.textBoxMunicipio.Name = "textBoxMunicipio";
+            this.textBoxMunicipio.Size = new System.Drawing.Size(129, 20);
+            this.textBoxMunicipio.TabIndex = 14;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(182, 177);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
+            this.dateTimePicker1.TabIndex = 3;
+            // 
+            // buttonBaja
+            // 
+            this.buttonBaja.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBaja.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonBaja.Location = new System.Drawing.Point(647, 20);
+            this.buttonBaja.Name = "buttonBaja";
+            this.buttonBaja.Size = new System.Drawing.Size(89, 48);
+            this.buttonBaja.TabIndex = 15;
+            this.buttonBaja.Text = "Baja";
+            this.buttonBaja.UseVisualStyleBackColor = true;
+            this.buttonBaja.Click += new System.EventHandler(this.buttonBaja_Click);
+            // 
+            // buttonListo
+            // 
+            this.buttonListo.Font = new System.Drawing.Font("Bodoni MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonListo.Location = new System.Drawing.Point(647, 128);
+            this.buttonListo.Name = "buttonListo";
+            this.buttonListo.Size = new System.Drawing.Size(89, 22);
+            this.buttonListo.TabIndex = 18;
+            this.buttonListo.Text = "Listo";
+            this.buttonListo.UseVisualStyleBackColor = true;
+            this.buttonListo.Click += new System.EventHandler(this.buttonListo_Click);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Font = new System.Drawing.Font("Bodoni MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonCancelar.Location = new System.Drawing.Point(647, 151);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(89, 22);
+            this.buttonCancelar.TabIndex = 19;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
             // Consulta_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.blurry_blue_background_ii_wallpaper_800x480;
+            this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.WallpaperPacman;
             this.ClientSize = new System.Drawing.Size(748, 404);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonListo);
+            this.Controls.Add(this.buttonBaja);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textBoxMunicipio);
+            this.Controls.Add(this.textBoxEstado);
+            this.Controls.Add(this.textBoxPais);
+            this.Controls.Add(this.textBoxDomFiscal);
+            this.Controls.Add(this.textBoxRazonSocial);
+            this.Controls.Add(this.textBoxRFC);
+            this.Controls.Add(this.textBoxCP);
+            this.Controls.Add(this.textBoxTel);
+            this.Controls.Add(this.textBoxSaldo);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxDireccion);
+            this.Controls.Add(this.textBoxNombre);
+            this.Controls.Add(this.textBoxApellidos);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -256,8 +443,9 @@
             this.Controls.Add(this.labelIDCliente);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.labelApellido);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buttonRegresar);
             this.Controls.Add(this.buttonModificar);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Consulta_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -270,7 +458,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonModificar;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonRegresar;
         private System.Windows.Forms.Label labelApellido;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label labelIDCliente;
@@ -287,5 +475,22 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBoxApellidos;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxDireccion;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxSaldo;
+        private System.Windows.Forms.TextBox textBoxTel;
+        private System.Windows.Forms.TextBox textBoxCP;
+        private System.Windows.Forms.TextBox textBoxRFC;
+        private System.Windows.Forms.TextBox textBoxRazonSocial;
+        private System.Windows.Forms.TextBox textBoxDomFiscal;
+        private System.Windows.Forms.TextBox textBoxPais;
+        private System.Windows.Forms.TextBox textBoxEstado;
+        private System.Windows.Forms.TextBox textBoxMunicipio;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button buttonBaja;
+        private System.Windows.Forms.Button buttonListo;
+        private System.Windows.Forms.Button buttonCancelar;
     }
 }

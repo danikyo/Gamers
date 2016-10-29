@@ -11,7 +11,7 @@ namespace Interfaz_de_usuario.Class_
     {
         int idFactura;
         DateTime Fecha;
-        bool Disponible;
+        //bool Disponible;
 
         public Factura(int idFactura, DateTime Fecha)
         {

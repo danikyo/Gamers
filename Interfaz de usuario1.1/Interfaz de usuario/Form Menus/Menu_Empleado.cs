@@ -60,7 +60,7 @@ namespace Interfaz_de_usuario
 
         private void buttonAgregarE_Click(object sender, EventArgs e)
         {
-            CConnection.OpenConnection();
+            //CConnection.OpenConnection();
             if (textBoxApellidosE.Text == "" || comboBoxPuesto.Text == "" || textBoxCPassword.Text == "" || textBoxPassword.Text == "" || textBoxNombreE.Text == "")
             {
                 MessageBox.Show("Favor de llenar\nlos campor requeridos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -91,7 +91,7 @@ namespace Interfaz_de_usuario
                     MessageBox.Show("La contraseña no coincide", "Error Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            CConnection.CloseConnection();
+           // CConnection.CloseConnection();
         }
 
         private void comboBoxPuesto_KeyPress(object sender, KeyPressEventArgs e)

@@ -157,7 +157,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.blurry_blue_background_ii_wallpaper_800x480;
             this.ClientSize = new System.Drawing.Size(471, 219);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);

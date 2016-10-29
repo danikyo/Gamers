@@ -20,6 +20,7 @@ namespace Interfaz_de_usuario
             InitializeComponent();
             this.CConnection = CConnection;
             this.Nempleado = Nempleado;
+            if(!Nempleado.eStatus) { buttonBaja.Enabled = false; }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -49,10 +50,14 @@ namespace Interfaz_de_usuario
 
         private void buttonBaja_Click(object sender, EventArgs e)
         {
-            CConnection.OpenConnection();
-            Class_.Empleado.BajaEmpleado(CConnection.myConnection, Nempleado.idEmpleado);
-            CConnection.CloseConnection();
-            this.Close();
+            DialogResult result = MessageBox.Show("Seguro que desea dar de baja\na este empleado?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if(result == DialogResult.Yes)
+            {
+                CConnection.OpenConnection();
+                Class_.Empleado.BajaEmpleado(CConnection.myConnection, Nempleado.idEmpleado);
+                CConnection.CloseConnection();
+                this.Close();
+            }
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)

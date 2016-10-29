@@ -35,7 +35,6 @@
             this.textBoxNombreC = new System.Windows.Forms.TextBox();
             this.textBoxDireccionC = new System.Windows.Forms.TextBox();
             this.textBoxEmailC = new System.Windows.Forms.TextBox();
-            this.textBoxFechaNacC = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxTel = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerFechaNac = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -63,10 +63,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.groupBoxReportes = new System.Windows.Forms.GroupBox();
+            this.buttonReportes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBoxReportes.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonAgregarC
@@ -76,7 +78,7 @@
             this.buttonAgregarC.Location = new System.Drawing.Point(48, 273);
             this.buttonAgregarC.Name = "buttonAgregarC";
             this.buttonAgregarC.Size = new System.Drawing.Size(160, 35);
-            this.buttonAgregarC.TabIndex = 1;
+            this.buttonAgregarC.TabIndex = 14;
             this.buttonAgregarC.Text = "Registrar";
             this.buttonAgregarC.UseVisualStyleBackColor = true;
             this.buttonAgregarC.Click += new System.EventHandler(this.buttonAgregarC_Click);
@@ -84,10 +86,11 @@
             // buttonConsultaC
             // 
             this.buttonConsultaC.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConsultaC.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonConsultaC.Location = new System.Drawing.Point(24, 82);
             this.buttonConsultaC.Name = "buttonConsultaC";
             this.buttonConsultaC.Size = new System.Drawing.Size(158, 36);
-            this.buttonConsultaC.TabIndex = 3;
+            this.buttonConsultaC.TabIndex = 16;
             this.buttonConsultaC.Text = "Consultar Cliente";
             this.buttonConsultaC.UseVisualStyleBackColor = true;
             this.buttonConsultaC.Click += new System.EventHandler(this.buttonConsultaC_Click);
@@ -98,7 +101,7 @@
             this.buttonRegresar.Location = new System.Drawing.Point(692, 393);
             this.buttonRegresar.Name = "buttonRegresar";
             this.buttonRegresar.Size = new System.Drawing.Size(98, 69);
-            this.buttonRegresar.TabIndex = 4;
+            this.buttonRegresar.TabIndex = 18;
             this.buttonRegresar.Text = "Regresar";
             this.buttonRegresar.UseVisualStyleBackColor = true;
             this.buttonRegresar.Click += new System.EventHandler(this.buttonRegresar_Click);
@@ -108,28 +111,21 @@
             this.textBoxNombreC.Location = new System.Drawing.Point(15, 39);
             this.textBoxNombreC.Name = "textBoxNombreC";
             this.textBoxNombreC.Size = new System.Drawing.Size(212, 20);
-            this.textBoxNombreC.TabIndex = 6;
+            this.textBoxNombreC.TabIndex = 1;
             // 
             // textBoxDireccionC
             // 
             this.textBoxDireccionC.Location = new System.Drawing.Point(15, 126);
             this.textBoxDireccionC.Name = "textBoxDireccionC";
             this.textBoxDireccionC.Size = new System.Drawing.Size(212, 20);
-            this.textBoxDireccionC.TabIndex = 7;
+            this.textBoxDireccionC.TabIndex = 3;
             // 
             // textBoxEmailC
             // 
             this.textBoxEmailC.Location = new System.Drawing.Point(15, 207);
             this.textBoxEmailC.Name = "textBoxEmailC";
             this.textBoxEmailC.Size = new System.Drawing.Size(212, 20);
-            this.textBoxEmailC.TabIndex = 8;
-            // 
-            // textBoxFechaNacC
-            // 
-            this.textBoxFechaNacC.Location = new System.Drawing.Point(13, 164);
-            this.textBoxFechaNacC.Name = "textBoxFechaNacC";
-            this.textBoxFechaNacC.Size = new System.Drawing.Size(214, 20);
-            this.textBoxFechaNacC.TabIndex = 9;
+            this.textBoxEmailC.TabIndex = 5;
             // 
             // label1
             // 
@@ -171,16 +167,16 @@
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 146);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(243, 15);
+            this.label4.Size = new System.Drawing.Size(134, 15);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Fecha de nacimiento (DD/MM/AAAA)";
+            this.label4.Text = "Fecha de nacimiento";
             // 
             // textBoxIDCliente
             // 
             this.textBoxIDCliente.Location = new System.Drawing.Point(36, 53);
             this.textBoxIDCliente.Name = "textBoxIDCliente";
             this.textBoxIDCliente.Size = new System.Drawing.Size(136, 20);
-            this.textBoxIDCliente.TabIndex = 14;
+            this.textBoxIDCliente.TabIndex = 15;
             this.textBoxIDCliente.TextChanged += new System.EventHandler(this.textBoxIDCliente_TextChanged);
             // 
             // label5
@@ -210,7 +206,7 @@
             this.textBoxApellidosC.Location = new System.Drawing.Point(15, 83);
             this.textBoxApellidosC.Name = "textBoxApellidosC";
             this.textBoxApellidosC.Size = new System.Drawing.Size(212, 20);
-            this.textBoxApellidosC.TabIndex = 17;
+            this.textBoxApellidosC.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -239,12 +235,12 @@
             this.textBoxTel.Location = new System.Drawing.Point(15, 247);
             this.textBoxTel.Name = "textBoxTel";
             this.textBoxTel.Size = new System.Drawing.Size(212, 20);
-            this.textBoxTel.TabIndex = 19;
+            this.textBoxTel.TabIndex = 6;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dateTimePickerFechaNac);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
@@ -267,7 +263,6 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBoxEmailC);
             this.groupBox1.Controls.Add(this.textBoxApellidosC);
-            this.groupBox1.Controls.Add(this.textBoxFechaNacC);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
@@ -279,6 +274,16 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Cliente";
+            // 
+            // dateTimePickerFechaNac
+            // 
+            this.dateTimePickerFechaNac.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerFechaNac.Location = new System.Drawing.Point(15, 164);
+            this.dateTimePickerFechaNac.Name = "dateTimePickerFechaNac";
+            this.dateTimePickerFechaNac.Size = new System.Drawing.Size(96, 20);
+            this.dateTimePickerFechaNac.TabIndex = 4;
+            this.dateTimePickerFechaNac.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             // 
             // label14
             // 
@@ -318,49 +323,49 @@
             this.textBoxPais.Location = new System.Drawing.Point(307, 209);
             this.textBoxPais.Name = "textBoxPais";
             this.textBoxPais.Size = new System.Drawing.Size(212, 20);
-            this.textBoxPais.TabIndex = 33;
+            this.textBoxPais.TabIndex = 11;
             // 
             // textBoxMunicipio
             // 
-            this.textBoxMunicipio.Location = new System.Drawing.Point(310, 291);
+            this.textBoxMunicipio.Location = new System.Drawing.Point(308, 289);
             this.textBoxMunicipio.Name = "textBoxMunicipio";
             this.textBoxMunicipio.Size = new System.Drawing.Size(212, 20);
-            this.textBoxMunicipio.TabIndex = 32;
+            this.textBoxMunicipio.TabIndex = 13;
             // 
             // textBoxEstado
             // 
             this.textBoxEstado.Location = new System.Drawing.Point(307, 247);
             this.textBoxEstado.Name = "textBoxEstado";
             this.textBoxEstado.Size = new System.Drawing.Size(212, 20);
-            this.textBoxEstado.TabIndex = 31;
+            this.textBoxEstado.TabIndex = 12;
             // 
             // textBoxCP
             // 
             this.textBoxCP.Location = new System.Drawing.Point(307, 171);
             this.textBoxCP.Name = "textBoxCP";
             this.textBoxCP.Size = new System.Drawing.Size(212, 20);
-            this.textBoxCP.TabIndex = 27;
+            this.textBoxCP.TabIndex = 10;
             // 
             // textBoxRazSoc
             // 
             this.textBoxRazSoc.Location = new System.Drawing.Point(307, 127);
             this.textBoxRazSoc.Name = "textBoxRazSoc";
             this.textBoxRazSoc.Size = new System.Drawing.Size(212, 20);
-            this.textBoxRazSoc.TabIndex = 26;
+            this.textBoxRazSoc.TabIndex = 9;
             // 
             // textBoxDomFisc
             // 
             this.textBoxDomFisc.Location = new System.Drawing.Point(307, 83);
             this.textBoxDomFisc.Name = "textBoxDomFisc";
             this.textBoxDomFisc.Size = new System.Drawing.Size(212, 20);
-            this.textBoxDomFisc.TabIndex = 25;
+            this.textBoxDomFisc.TabIndex = 8;
             // 
             // textBoxRFC
             // 
             this.textBoxRFC.Location = new System.Drawing.Point(307, 37);
             this.textBoxRFC.Name = "textBoxRFC";
             this.textBoxRFC.Size = new System.Drawing.Size(212, 20);
-            this.textBoxRFC.TabIndex = 24;
+            this.textBoxRFC.TabIndex = 7;
             // 
             // label11
             // 
@@ -412,6 +417,7 @@
             this.groupBox2.Controls.Add(this.buttonConsultaC);
             this.groupBox2.Controls.Add(this.textBoxIDCliente);
             this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Location = new System.Drawing.Point(590, 145);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 140);
@@ -419,20 +425,36 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edición Cliente";
             // 
-            // dateTimePicker1
+            // groupBoxReportes
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(66, 186);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 37;
+            this.groupBoxReportes.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxReportes.Controls.Add(this.buttonReportes);
+            this.groupBoxReportes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBoxReportes.Location = new System.Drawing.Point(590, 295);
+            this.groupBoxReportes.Name = "groupBoxReportes";
+            this.groupBoxReportes.Size = new System.Drawing.Size(200, 83);
+            this.groupBoxReportes.TabIndex = 24;
+            this.groupBoxReportes.TabStop = false;
+            this.groupBoxReportes.Text = "Reportes";
+            // 
+            // buttonReportes
+            // 
+            this.buttonReportes.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReportes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonReportes.Location = new System.Drawing.Point(24, 25);
+            this.buttonReportes.Name = "buttonReportes";
+            this.buttonReportes.Size = new System.Drawing.Size(158, 36);
+            this.buttonReportes.TabIndex = 17;
+            this.buttonReportes.Text = "Generar";
+            this.buttonReportes.UseVisualStyleBackColor = true;
             // 
             // Menu_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.blurry_blue_background_ii_wallpaper_800x480;
-            this.ClientSize = new System.Drawing.Size(799, 468);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(799, 472);
+            this.Controls.Add(this.groupBoxReportes);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonRegresar);
@@ -446,6 +468,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBoxReportes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,7 +483,6 @@
         private System.Windows.Forms.TextBox textBoxNombreC;
         private System.Windows.Forms.TextBox textBoxDireccionC;
         private System.Windows.Forms.TextBox textBoxEmailC;
-        private System.Windows.Forms.TextBox textBoxFechaNacC;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -487,6 +509,8 @@
         private System.Windows.Forms.TextBox textBoxPais;
         private System.Windows.Forms.TextBox textBoxMunicipio;
         private System.Windows.Forms.TextBox textBoxEstado;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaNac;
+        private System.Windows.Forms.GroupBox groupBoxReportes;
+        private System.Windows.Forms.Button buttonReportes;
     }
 }
