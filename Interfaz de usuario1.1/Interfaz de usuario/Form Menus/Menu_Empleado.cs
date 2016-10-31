@@ -17,6 +17,7 @@ namespace Interfaz_de_usuario
         public Menu_Empleado(Class_.Connection CConnection)
         {
             InitializeComponent();
+
             buttonConsultaE.Enabled = false;
             this.CConnection = CConnection;
         }
@@ -28,13 +29,19 @@ namespace Interfaz_de_usuario
             if(reader.Read())
             {
                 Class_.Empleado Nempleado = new Class_.Empleado(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetBoolean(5));
-                Consulta_Empleado consulta_empleado = new Consulta_Empleado(Nempleado, CConnection);
-                CConnection.CloseConnection();
-                consulta_empleado.ShowDialog();
+                if(Nempleado.Status)
+                {
+                    Consulta_Empleado consulta_empleado = new Consulta_Empleado(Nempleado, CConnection);
+                    CConnection.CloseConnection();
+                    consulta_empleado.ShowDialog();
+                    this.Close();
+                }
+                else
+                { MessageBox.Show("ID no existe"); }
             }
             else
             {
-                MessageBox.Show("ID no existe", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("ID no existe");
             }
             CConnection.CloseConnection();
         }

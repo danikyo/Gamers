@@ -55,6 +55,7 @@
             this.textBoxContraseña.PasswordChar = '*';
             this.textBoxContraseña.Size = new System.Drawing.Size(111, 20);
             this.textBoxContraseña.TabIndex = 1;
+            this.textBoxContraseña.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxContraseña_KeyUp);
             // 
             // label1
             // 

@@ -137,23 +137,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Form Reportes\Reporte_Compra.cs">
+    <Compile Include="Form Consultas\Consulta_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form Reportes\Reporte_Compra.Designer.cs">
-      <DependentUpon>Reporte_Compra.cs</DependentUpon>
+    <Compile Include="Form Consultas\Consulta_Compra.Designer.cs">
+      <DependentUpon>Consulta_Compra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form Reportes\Reporte_Venta.cs">
+    <Compile Include="Form Consultas\Consulta_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form Reportes\Reporte_Venta.Designer.cs">
-      <DependentUpon>Reporte_Venta.cs</DependentUpon>
+    <Compile Include="Form Consultas\Consulta_Venta.Designer.cs">
+      <DependentUpon>Consulta_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="Form Reportes\Reporte_Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form Reportes\Reporte_Inventario.Designer.cs">
       <DependentUpon>Reporte_Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Reportes\ReportesVentaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Reportes\ReportesVentaCompra.Designer.cs">
+      <DependentUpon>ReportesVentaCompra.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form Consultas\Consulta_Cliente.resx">
       <DependentUpon>Consulta_Cliente.cs</DependentUpon>
@@ -202,14 +208,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Reportes\Reporte_Compra.resx">
-      <DependentUpon>Reporte_Compra.cs</DependentUpon>
+    <EmbeddedResource Include="Form Consultas\Consulta_Compra.resx">
+      <DependentUpon>Consulta_Compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Reportes\Reporte_Inventario.resx">
       <DependentUpon>Reporte_Inventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Reportes\Reporte_Venta.resx">
-      <DependentUpon>Reporte_Venta.cs</DependentUpon>
+    <EmbeddedResource Include="Form Consultas\Consulta_Venta.resx">
+      <DependentUpon>Consulta_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Reportes\ReportesVentaCompra.resx">
+      <DependentUpon>ReportesVentaCompra.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

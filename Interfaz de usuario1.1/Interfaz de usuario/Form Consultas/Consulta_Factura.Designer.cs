@@ -31,28 +31,64 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelFolio = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.ID_producto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cantidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ID_producto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Iva = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonRegresar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelNombreEmpleado = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelMunicipioD = new System.Windows.Forms.Label();
+            this.labelCPD = new System.Windows.Forms.Label();
+            this.labelEstadoD = new System.Windows.Forms.Label();
+            this.labelPaisD = new System.Windows.Forms.Label();
+            this.labelDomicilioFiscD = new System.Windows.Forms.Label();
+            this.labelRazonSocD = new System.Windows.Forms.Label();
+            this.labelRFCD = new System.Windows.Forms.Label();
+            this.labelTelD = new System.Windows.Forms.Label();
+            this.labelEmailD = new System.Windows.Forms.Label();
+            this.labelFechaNacD = new System.Windows.Forms.Label();
+            this.labelDireccionD = new System.Windows.Forms.Label();
+            this.labelApellidoD = new System.Windows.Forms.Label();
+            this.labelNombreD = new System.Windows.Forms.Label();
+            this.labelCP = new System.Windows.Forms.Label();
+            this.labelMunicipio = new System.Windows.Forms.Label();
+            this.labelEstado = new System.Windows.Forms.Label();
+            this.labelPais = new System.Windows.Forms.Label();
+            this.labelDomFisc = new System.Windows.Forms.Label();
+            this.labelRazonSoc = new System.Windows.Forms.Label();
+            this.labelRFC = new System.Windows.Forms.Label();
+            this.labelTel = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelFechaNac = new System.Windows.Forms.Label();
+            this.labelDireccion = new System.Windows.Forms.Label();
+            this.labelApellido = new System.Windows.Forms.Label();
+            this.labelNombreC = new System.Windows.Forms.Label();
+            this.labelFecha = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.labelSubTotal = new System.Windows.Forms.Label();
+            this.labelIva = new System.Windows.Forms.Label();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.labelFolioD = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Interfaz_de_usuario.Properties.Resources.logook;
-            this.pictureBox1.Location = new System.Drawing.Point(485, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(485, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(256, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -60,52 +96,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 31);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 29);
+            this.label1.Size = new System.Drawing.Size(287, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Gamers Retail S.A de C.V";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 86);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(273, 57);
+            this.label2.Size = new System.Drawing.Size(290, 60);
             this.label2.TabIndex = 2;
             this.label2.Text = "AV. Revolución 20300\r\nGuadalajara, Jal.\r\nTel. 01 800 3454 121 / 01 800 0127 432";
             // 
-            // label3
+            // labelFolio
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(482, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 36);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Factura No. : \r\nFecha y hora:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 176);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Datos Receptor";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 206);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 76);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "RFC\r\nRazon Social\r\nDomicilio\r\nTelefono";
+            this.labelFolio.AutoSize = true;
+            this.labelFolio.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFolio.Location = new System.Drawing.Point(344, 12);
+            this.labelFolio.Name = "labelFolio";
+            this.labelFolio.Size = new System.Drawing.Size(74, 18);
+            this.labelFolio.TabIndex = 3;
+            this.labelFolio.Text = "Folio No. ";
             // 
             // listView1
             // 
@@ -116,13 +132,17 @@
             this.Cantidad,
             this.Iva,
             this.total});
-            this.listView1.Location = new System.Drawing.Point(12, 297);
+            this.listView1.Location = new System.Drawing.Point(12, 276);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(729, 199);
+            this.listView1.Size = new System.Drawing.Size(729, 185);
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // ID_producto
+            // 
+            this.ID_producto.Text = "ID producto";
+            this.ID_producto.Width = 76;
             // 
             // Nombre
             // 
@@ -139,11 +159,6 @@
             this.Cantidad.Text = "Cantidad";
             this.Cantidad.Width = 74;
             // 
-            // ID_producto
-            // 
-            this.ID_producto.Text = "ID producto";
-            this.ID_producto.Width = 76;
-            // 
             // Iva
             // 
             this.Iva.Text = "Iva";
@@ -153,54 +168,444 @@
             this.total.Text = "Total";
             this.total.Width = 116;
             // 
-            // label6
+            // buttonCancelar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(584, 512);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 42);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Sub Total: \r\nIva:\r\nTotal:";
+            this.buttonCancelar.Location = new System.Drawing.Point(12, 532);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 21);
+            this.buttonCancelar.TabIndex = 8;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // button1
+            // buttonRegresar
             // 
-            this.button1.Location = new System.Drawing.Point(12, 573);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonRegresar.Location = new System.Drawing.Point(93, 532);
+            this.buttonRegresar.Name = "buttonRegresar";
+            this.buttonRegresar.Size = new System.Drawing.Size(75, 21);
+            this.buttonRegresar.TabIndex = 9;
+            this.buttonRegresar.Text = "Regresar";
+            this.buttonRegresar.UseVisualStyleBackColor = true;
+            this.buttonRegresar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // groupBox1
             // 
-            this.button2.Location = new System.Drawing.Point(93, 573);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Regresar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.groupBox1.Controls.Add(this.labelNombreEmpleado);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(326, 148);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos de la empresa";
+            // 
+            // labelNombreEmpleado
+            // 
+            this.labelNombreEmpleado.AutoSize = true;
+            this.labelNombreEmpleado.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreEmpleado.Location = new System.Drawing.Point(89, 116);
+            this.labelNombreEmpleado.Name = "labelNombreEmpleado";
+            this.labelNombreEmpleado.Size = new System.Drawing.Size(45, 18);
+            this.labelNombreEmpleado.TabIndex = 17;
+            this.labelNombreEmpleado.Text = "Datos";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 18);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Empleado";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.labelMunicipioD);
+            this.groupBox2.Controls.Add(this.labelCPD);
+            this.groupBox2.Controls.Add(this.labelEstadoD);
+            this.groupBox2.Controls.Add(this.labelPaisD);
+            this.groupBox2.Controls.Add(this.labelDomicilioFiscD);
+            this.groupBox2.Controls.Add(this.labelRazonSocD);
+            this.groupBox2.Controls.Add(this.labelRFCD);
+            this.groupBox2.Controls.Add(this.labelTelD);
+            this.groupBox2.Controls.Add(this.labelEmailD);
+            this.groupBox2.Controls.Add(this.labelFechaNacD);
+            this.groupBox2.Controls.Add(this.labelDireccionD);
+            this.groupBox2.Controls.Add(this.labelApellidoD);
+            this.groupBox2.Controls.Add(this.labelNombreD);
+            this.groupBox2.Controls.Add(this.labelCP);
+            this.groupBox2.Controls.Add(this.labelMunicipio);
+            this.groupBox2.Controls.Add(this.labelEstado);
+            this.groupBox2.Controls.Add(this.labelPais);
+            this.groupBox2.Controls.Add(this.labelDomFisc);
+            this.groupBox2.Controls.Add(this.labelRazonSoc);
+            this.groupBox2.Controls.Add(this.labelRFC);
+            this.groupBox2.Controls.Add(this.labelTel);
+            this.groupBox2.Controls.Add(this.labelEmail);
+            this.groupBox2.Controls.Add(this.labelFechaNac);
+            this.groupBox2.Controls.Add(this.labelDireccion);
+            this.groupBox2.Controls.Add(this.labelApellido);
+            this.groupBox2.Controls.Add(this.labelNombreC);
+            this.groupBox2.Location = new System.Drawing.Point(12, 162);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(729, 108);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Datos del Receptor";
+            // 
+            // labelMunicipioD
+            // 
+            this.labelMunicipioD.AutoSize = true;
+            this.labelMunicipioD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMunicipioD.Location = new System.Drawing.Point(573, 85);
+            this.labelMunicipioD.Name = "labelMunicipioD";
+            this.labelMunicipioD.Size = new System.Drawing.Size(45, 18);
+            this.labelMunicipioD.TabIndex = 17;
+            this.labelMunicipioD.Text = "Datos";
+            // 
+            // labelCPD
+            // 
+            this.labelCPD.AutoSize = true;
+            this.labelCPD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCPD.Location = new System.Drawing.Point(573, 30);
+            this.labelCPD.Name = "labelCPD";
+            this.labelCPD.Size = new System.Drawing.Size(45, 18);
+            this.labelCPD.TabIndex = 38;
+            this.labelCPD.Text = "Datos";
+            // 
+            // labelEstadoD
+            // 
+            this.labelEstadoD.AutoSize = true;
+            this.labelEstadoD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstadoD.Location = new System.Drawing.Point(573, 66);
+            this.labelEstadoD.Name = "labelEstadoD";
+            this.labelEstadoD.Size = new System.Drawing.Size(45, 18);
+            this.labelEstadoD.TabIndex = 40;
+            this.labelEstadoD.Text = "Datos";
+            // 
+            // labelPaisD
+            // 
+            this.labelPaisD.AutoSize = true;
+            this.labelPaisD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPaisD.Location = new System.Drawing.Point(573, 48);
+            this.labelPaisD.Name = "labelPaisD";
+            this.labelPaisD.Size = new System.Drawing.Size(45, 18);
+            this.labelPaisD.TabIndex = 39;
+            this.labelPaisD.Text = "Datos";
+            // 
+            // labelDomicilioFiscD
+            // 
+            this.labelDomicilioFiscD.AutoSize = true;
+            this.labelDomicilioFiscD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDomicilioFiscD.Location = new System.Drawing.Point(573, 11);
+            this.labelDomicilioFiscD.Name = "labelDomicilioFiscD";
+            this.labelDomicilioFiscD.Size = new System.Drawing.Size(45, 18);
+            this.labelDomicilioFiscD.TabIndex = 37;
+            this.labelDomicilioFiscD.Text = "Datos";
+            // 
+            // labelRazonSocD
+            // 
+            this.labelRazonSocD.AutoSize = true;
+            this.labelRazonSocD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRazonSocD.Location = new System.Drawing.Point(308, 84);
+            this.labelRazonSocD.Name = "labelRazonSocD";
+            this.labelRazonSocD.Size = new System.Drawing.Size(45, 18);
+            this.labelRazonSocD.TabIndex = 36;
+            this.labelRazonSocD.Text = "Datos";
+            // 
+            // labelRFCD
+            // 
+            this.labelRFCD.AutoSize = true;
+            this.labelRFCD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRFCD.Location = new System.Drawing.Point(308, 60);
+            this.labelRFCD.Name = "labelRFCD";
+            this.labelRFCD.Size = new System.Drawing.Size(45, 18);
+            this.labelRFCD.TabIndex = 35;
+            this.labelRFCD.Text = "Datos";
+            // 
+            // labelTelD
+            // 
+            this.labelTelD.AutoSize = true;
+            this.labelTelD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTelD.Location = new System.Drawing.Point(308, 38);
+            this.labelTelD.Name = "labelTelD";
+            this.labelTelD.Size = new System.Drawing.Size(45, 18);
+            this.labelTelD.TabIndex = 34;
+            this.labelTelD.Text = "Datos";
+            // 
+            // labelEmailD
+            // 
+            this.labelEmailD.AutoSize = true;
+            this.labelEmailD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmailD.Location = new System.Drawing.Point(308, 16);
+            this.labelEmailD.Name = "labelEmailD";
+            this.labelEmailD.Size = new System.Drawing.Size(45, 18);
+            this.labelEmailD.TabIndex = 33;
+            this.labelEmailD.Text = "Datos";
+            // 
+            // labelFechaNacD
+            // 
+            this.labelFechaNacD.AutoSize = true;
+            this.labelFechaNacD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFechaNacD.Location = new System.Drawing.Point(87, 84);
+            this.labelFechaNacD.Name = "labelFechaNacD";
+            this.labelFechaNacD.Size = new System.Drawing.Size(45, 18);
+            this.labelFechaNacD.TabIndex = 32;
+            this.labelFechaNacD.Text = "Datos";
+            // 
+            // labelDireccionD
+            // 
+            this.labelDireccionD.AutoSize = true;
+            this.labelDireccionD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDireccionD.Location = new System.Drawing.Point(87, 60);
+            this.labelDireccionD.Name = "labelDireccionD";
+            this.labelDireccionD.Size = new System.Drawing.Size(45, 18);
+            this.labelDireccionD.TabIndex = 31;
+            this.labelDireccionD.Text = "Datos";
+            // 
+            // labelApellidoD
+            // 
+            this.labelApellidoD.AutoSize = true;
+            this.labelApellidoD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApellidoD.Location = new System.Drawing.Point(87, 38);
+            this.labelApellidoD.Name = "labelApellidoD";
+            this.labelApellidoD.Size = new System.Drawing.Size(45, 18);
+            this.labelApellidoD.TabIndex = 30;
+            this.labelApellidoD.Text = "Datos";
+            // 
+            // labelNombreD
+            // 
+            this.labelNombreD.AutoSize = true;
+            this.labelNombreD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreD.Location = new System.Drawing.Point(87, 16);
+            this.labelNombreD.Name = "labelNombreD";
+            this.labelNombreD.Size = new System.Drawing.Size(45, 18);
+            this.labelNombreD.TabIndex = 29;
+            this.labelNombreD.Text = "Datos";
+            // 
+            // labelCP
+            // 
+            this.labelCP.AutoSize = true;
+            this.labelCP.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCP.Location = new System.Drawing.Point(471, 30);
+            this.labelCP.Name = "labelCP";
+            this.labelCP.Size = new System.Drawing.Size(96, 18);
+            this.labelCP.TabIndex = 26;
+            this.labelCP.Text = "Codigo Postal";
+            // 
+            // labelMunicipio
+            // 
+            this.labelMunicipio.AutoSize = true;
+            this.labelMunicipio.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMunicipio.Location = new System.Drawing.Point(492, 85);
+            this.labelMunicipio.Name = "labelMunicipio";
+            this.labelMunicipio.Size = new System.Drawing.Size(75, 18);
+            this.labelMunicipio.TabIndex = 28;
+            this.labelMunicipio.Text = "Municipio";
+            // 
+            // labelEstado
+            // 
+            this.labelEstado.AutoSize = true;
+            this.labelEstado.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstado.Location = new System.Drawing.Point(515, 66);
+            this.labelEstado.Name = "labelEstado";
+            this.labelEstado.Size = new System.Drawing.Size(52, 18);
+            this.labelEstado.TabIndex = 27;
+            this.labelEstado.Text = "Estado";
+            // 
+            // labelPais
+            // 
+            this.labelPais.AutoSize = true;
+            this.labelPais.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPais.Location = new System.Drawing.Point(531, 48);
+            this.labelPais.Name = "labelPais";
+            this.labelPais.Size = new System.Drawing.Size(36, 18);
+            this.labelPais.TabIndex = 26;
+            this.labelPais.Text = "Pais";
+            // 
+            // labelDomFisc
+            // 
+            this.labelDomFisc.AutoSize = true;
+            this.labelDomFisc.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDomFisc.Location = new System.Drawing.Point(451, 11);
+            this.labelDomFisc.Name = "labelDomFisc";
+            this.labelDomFisc.Size = new System.Drawing.Size(116, 18);
+            this.labelDomFisc.TabIndex = 25;
+            this.labelDomFisc.Text = "Domicilio Fiscal";
+            // 
+            // labelRazonSoc
+            // 
+            this.labelRazonSoc.AutoSize = true;
+            this.labelRazonSoc.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRazonSoc.Location = new System.Drawing.Point(205, 84);
+            this.labelRazonSoc.Name = "labelRazonSoc";
+            this.labelRazonSoc.Size = new System.Drawing.Size(92, 18);
+            this.labelRazonSoc.TabIndex = 24;
+            this.labelRazonSoc.Text = "Razon Social";
+            // 
+            // labelRFC
+            // 
+            this.labelRFC.AutoSize = true;
+            this.labelRFC.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRFC.Location = new System.Drawing.Point(255, 60);
+            this.labelRFC.Name = "labelRFC";
+            this.labelRFC.Size = new System.Drawing.Size(38, 18);
+            this.labelRFC.TabIndex = 23;
+            this.labelRFC.Text = "RFC";
+            // 
+            // labelTel
+            // 
+            this.labelTel.AutoSize = true;
+            this.labelTel.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTel.Location = new System.Drawing.Point(229, 38);
+            this.labelTel.Name = "labelTel";
+            this.labelTel.Size = new System.Drawing.Size(64, 18);
+            this.labelTel.TabIndex = 22;
+            this.labelTel.Text = "Teléfono";
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(245, 16);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(48, 18);
+            this.labelEmail.TabIndex = 21;
+            this.labelEmail.Text = "Email";
+            // 
+            // labelFechaNac
+            // 
+            this.labelFechaNac.AutoSize = true;
+            this.labelFechaNac.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFechaNac.Location = new System.Drawing.Point(6, 84);
+            this.labelFechaNac.Name = "labelFechaNac";
+            this.labelFechaNac.Size = new System.Drawing.Size(79, 18);
+            this.labelFechaNac.TabIndex = 20;
+            this.labelFechaNac.Text = "Fecha Nac.";
+            // 
+            // labelDireccion
+            // 
+            this.labelDireccion.AutoSize = true;
+            this.labelDireccion.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDireccion.Location = new System.Drawing.Point(15, 60);
+            this.labelDireccion.Name = "labelDireccion";
+            this.labelDireccion.Size = new System.Drawing.Size(70, 18);
+            this.labelDireccion.TabIndex = 19;
+            this.labelDireccion.Text = "Direccion";
+            // 
+            // labelApellido
+            // 
+            this.labelApellido.AutoSize = true;
+            this.labelApellido.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApellido.Location = new System.Drawing.Point(22, 38);
+            this.labelApellido.Name = "labelApellido";
+            this.labelApellido.Size = new System.Drawing.Size(63, 18);
+            this.labelApellido.TabIndex = 18;
+            this.labelApellido.Text = "Apellido";
+            // 
+            // labelNombreC
+            // 
+            this.labelNombreC.AutoSize = true;
+            this.labelNombreC.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreC.Location = new System.Drawing.Point(27, 16);
+            this.labelNombreC.Name = "labelNombreC";
+            this.labelNombreC.Size = new System.Drawing.Size(58, 18);
+            this.labelNombreC.TabIndex = 17;
+            this.labelNombreC.Text = "Nombre";
+            // 
+            // labelFecha
+            // 
+            this.labelFecha.AutoSize = true;
+            this.labelFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFecha.Location = new System.Drawing.Point(42, 21);
+            this.labelFecha.Name = "labelFecha";
+            this.labelFecha.Size = new System.Drawing.Size(18, 25);
+            this.labelFecha.TabIndex = 12;
+            this.labelFecha.Text = ".";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.labelFecha);
+            this.groupBox3.Location = new System.Drawing.Point(485, 97);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(256, 59);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Fecha";
+            // 
+            // labelSubTotal
+            // 
+            this.labelSubTotal.AutoSize = true;
+            this.labelSubTotal.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSubTotal.Location = new System.Drawing.Point(566, 478);
+            this.labelSubTotal.Name = "labelSubTotal";
+            this.labelSubTotal.Size = new System.Drawing.Size(71, 18);
+            this.labelSubTotal.TabIndex = 14;
+            this.labelSubTotal.Text = "Sub Total";
+            // 
+            // labelIva
+            // 
+            this.labelIva.AutoSize = true;
+            this.labelIva.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIva.Location = new System.Drawing.Point(608, 503);
+            this.labelIva.Name = "labelIva";
+            this.labelIva.Size = new System.Drawing.Size(29, 18);
+            this.labelIva.TabIndex = 15;
+            this.labelIva.Text = "Iva";
+            // 
+            // labelTotal
+            // 
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.Location = new System.Drawing.Point(595, 528);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(42, 18);
+            this.labelTotal.TabIndex = 16;
+            this.labelTotal.Text = "Total";
+            // 
+            // labelFolioD
+            // 
+            this.labelFolioD.AutoSize = true;
+            this.labelFolioD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFolioD.Location = new System.Drawing.Point(414, 12);
+            this.labelFolioD.Name = "labelFolioD";
+            this.labelFolioD.Size = new System.Drawing.Size(15, 18);
+            this.labelFolioD.TabIndex = 17;
+            this.labelFolioD.Text = "0";
             // 
             // Consulta_Factura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(753, 598);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(753, 555);
+            this.Controls.Add(this.labelFolioD);
+            this.Controls.Add(this.labelTotal);
+            this.Controls.Add(this.labelIva);
+            this.Controls.Add(this.labelSubTotal);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.buttonRegresar);
+            this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelFolio);
             this.Controls.Add(this.pictureBox1);
-            this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Consulta_Factura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta_Factura";
+            this.Load += new System.EventHandler(this.Consulta_Factura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,9 +616,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelFolio;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader ID_producto;
         private System.Windows.Forms.ColumnHeader Nombre;
@@ -221,8 +624,43 @@
         private System.Windows.Forms.ColumnHeader Cantidad;
         private System.Windows.Forms.ColumnHeader Iva;
         private System.Windows.Forms.ColumnHeader total;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Button buttonRegresar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label labelFecha;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelMunicipioD;
+        private System.Windows.Forms.Label labelCPD;
+        private System.Windows.Forms.Label labelEstadoD;
+        private System.Windows.Forms.Label labelPaisD;
+        private System.Windows.Forms.Label labelDomicilioFiscD;
+        private System.Windows.Forms.Label labelRazonSocD;
+        private System.Windows.Forms.Label labelRFCD;
+        private System.Windows.Forms.Label labelTelD;
+        private System.Windows.Forms.Label labelEmailD;
+        private System.Windows.Forms.Label labelFechaNacD;
+        private System.Windows.Forms.Label labelDireccionD;
+        private System.Windows.Forms.Label labelApellidoD;
+        private System.Windows.Forms.Label labelNombreD;
+        private System.Windows.Forms.Label labelCP;
+        private System.Windows.Forms.Label labelMunicipio;
+        private System.Windows.Forms.Label labelEstado;
+        private System.Windows.Forms.Label labelPais;
+        private System.Windows.Forms.Label labelDomFisc;
+        private System.Windows.Forms.Label labelRazonSoc;
+        private System.Windows.Forms.Label labelRFC;
+        private System.Windows.Forms.Label labelTel;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelFechaNac;
+        private System.Windows.Forms.Label labelDireccion;
+        private System.Windows.Forms.Label labelApellido;
+        private System.Windows.Forms.Label labelNombreC;
+        private System.Windows.Forms.Label labelSubTotal;
+        private System.Windows.Forms.Label labelIva;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Label labelNombreEmpleado;
+        private System.Windows.Forms.Label labelFolioD;
     }
 }

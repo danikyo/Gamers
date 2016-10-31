@@ -55,6 +55,10 @@
             this.comboBoxGenero = new System.Windows.Forms.ComboBox();
             this.comboBoxConsola = new System.Windows.Forms.ComboBox();
             this.comboBoxTipo = new System.Windows.Forms.ComboBox();
+            this.textBoxImage = new System.Windows.Forms.TextBox();
+            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
+            this.buttonExaminar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -195,7 +199,6 @@
             this.buttonAddstock.TabIndex = 10;
             this.buttonAddstock.Text = "Añadir Stock";
             this.buttonAddstock.UseVisualStyleBackColor = true;
-            this.buttonAddstock.Click += new System.EventHandler(this.buttonAddstock_Click);
             // 
             // buttonDeleteStock
             // 
@@ -343,12 +346,44 @@
             this.comboBoxTipo.Size = new System.Drawing.Size(152, 21);
             this.comboBoxTipo.TabIndex = 47;
             // 
+            // textBoxImage
+            // 
+            this.textBoxImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxImage.Location = new System.Drawing.Point(288, 352);
+            this.textBoxImage.Name = "textBoxImage";
+            this.textBoxImage.Size = new System.Drawing.Size(152, 20);
+            this.textBoxImage.TabIndex = 51;
+            // 
+            // pictureBoxImage
+            // 
+            this.pictureBoxImage.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxImage.Location = new System.Drawing.Point(271, 36);
+            this.pictureBoxImage.Name = "pictureBoxImage";
+            this.pictureBoxImage.Size = new System.Drawing.Size(253, 310);
+            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImage.TabIndex = 52;
+            this.pictureBoxImage.TabStop = false;
+            // 
+            // buttonExaminar
+            // 
+            this.buttonExaminar.Location = new System.Drawing.Point(495, 351);
+            this.buttonExaminar.Name = "buttonExaminar";
+            this.buttonExaminar.Size = new System.Drawing.Size(29, 20);
+            this.buttonExaminar.TabIndex = 53;
+            this.buttonExaminar.Text = "...";
+            this.buttonExaminar.UseVisualStyleBackColor = true;
+            this.buttonExaminar.Click += new System.EventHandler(this.buttonExaminar_Click);
+            // 
             // Consulta_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.WallpaperPacman;
             this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.buttonExaminar);
+            this.Controls.Add(this.pictureBoxImage);
+            this.Controls.Add(this.textBoxImage);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.comboBoxGenero);
             this.Controls.Add(this.comboBoxConsola);
@@ -380,6 +415,7 @@
             this.Name = "Consulta_Producto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Producto";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,5 +449,8 @@
         private System.Windows.Forms.ComboBox comboBoxGenero;
         private System.Windows.Forms.ComboBox comboBoxConsola;
         private System.Windows.Forms.ComboBox comboBoxTipo;
+        private System.Windows.Forms.TextBox textBoxImage;
+        private System.Windows.Forms.PictureBox pictureBoxImage;
+        private System.Windows.Forms.Button buttonExaminar;
     }
 }

@@ -36,12 +36,11 @@
             this.buttonRegresar = new System.Windows.Forms.Button();
             this.groupBoxDatosCliente = new System.Windows.Forms.GroupBox();
             this.IDcliente = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.textBoxIDcliente = new System.Windows.Forms.TextBox();
             this.labelNombre = new System.Windows.Forms.Label();
             this.textBoxNombreCliente = new System.Windows.Forms.TextBox();
             this.labelSaldo = new System.Windows.Forms.Label();
             this.textBoxSaldo = new System.Windows.Forms.TextBox();
-            this.labelFecha = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.IDProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,26 +49,33 @@
             this.PrecioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImporteProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonLimpiar = new System.Windows.Forms.Button();
-            this.comboBoxEmpleado = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxMetodoPago = new System.Windows.Forms.ComboBox();
+            this.groupBoxDate = new System.Windows.Forms.GroupBox();
+            this.labelFecha = new System.Windows.Forms.Label();
+            this.groupBoxTipodePago = new System.Windows.Forms.GroupBox();
+            this.comboBoxTipoPago = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxNomEmpleado = new System.Windows.Forms.TextBox();
+            this.buttonComprobar = new System.Windows.Forms.Button();
             this.groupBoxDatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBoxDate.SuspendLayout();
+            this.groupBoxTipodePago.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelFolio
             // 
             this.labelFolio.AutoSize = true;
-            this.labelFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFolio.Location = new System.Drawing.Point(11, 9);
             this.labelFolio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFolio.Name = "labelFolio";
-            this.labelFolio.Size = new System.Drawing.Size(47, 16);
+            this.labelFolio.Size = new System.Drawing.Size(58, 13);
             this.labelFolio.TabIndex = 3;
-            this.labelFolio.Text = "Folio:";
+            this.labelFolio.Text = "Folio No.";
             // 
             // buttonConfirmar
             // 
@@ -80,6 +86,7 @@
             this.buttonConfirmar.TabIndex = 16;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
+            this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
             // 
             // buttonRegresar
             // 
@@ -94,14 +101,15 @@
             // 
             // groupBoxDatosCliente
             // 
+            this.groupBoxDatosCliente.Controls.Add(this.buttonComprobar);
             this.groupBoxDatosCliente.Controls.Add(this.IDcliente);
-            this.groupBoxDatosCliente.Controls.Add(this.textBoxID);
+            this.groupBoxDatosCliente.Controls.Add(this.textBoxIDcliente);
             this.groupBoxDatosCliente.Controls.Add(this.labelNombre);
             this.groupBoxDatosCliente.Controls.Add(this.textBoxNombreCliente);
             this.groupBoxDatosCliente.Controls.Add(this.labelSaldo);
             this.groupBoxDatosCliente.Controls.Add(this.textBoxSaldo);
-            this.groupBoxDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxDatosCliente.Location = new System.Drawing.Point(14, 35);
+            this.groupBoxDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxDatosCliente.Location = new System.Drawing.Point(14, 68);
             this.groupBoxDatosCliente.Name = "groupBoxDatosCliente";
             this.groupBoxDatosCliente.Size = new System.Drawing.Size(584, 84);
             this.groupBoxDatosCliente.TabIndex = 32;
@@ -111,37 +119,38 @@
             // IDcliente
             // 
             this.IDcliente.AutoSize = true;
-            this.IDcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDcliente.Location = new System.Drawing.Point(5, 22);
+            this.IDcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDcliente.Location = new System.Drawing.Point(23, 26);
             this.IDcliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IDcliente.Name = "IDcliente";
             this.IDcliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.IDcliente.Size = new System.Drawing.Size(77, 16);
+            this.IDcliente.Size = new System.Drawing.Size(20, 13);
             this.IDcliente.TabIndex = 16;
-            this.IDcliente.Text = "ID cliente:";
+            this.IDcliente.Text = "ID";
             // 
-            // textBoxID
+            // textBoxIDcliente
             // 
-            this.textBoxID.Location = new System.Drawing.Point(87, 22);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(44, 20);
-            this.textBoxID.TabIndex = 17;
+            this.textBoxIDcliente.Location = new System.Drawing.Point(48, 23);
+            this.textBoxIDcliente.Name = "textBoxIDcliente";
+            this.textBoxIDcliente.Size = new System.Drawing.Size(44, 20);
+            this.textBoxIDcliente.TabIndex = 17;
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.Location = new System.Drawing.Point(145, 26);
+            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.Location = new System.Drawing.Point(129, 29);
             this.labelNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelNombre.Size = new System.Drawing.Size(67, 16);
+            this.labelNombre.Size = new System.Drawing.Size(50, 13);
             this.labelNombre.TabIndex = 15;
-            this.labelNombre.Text = "Nombre:";
+            this.labelNombre.Text = "Nombre";
             // 
             // textBoxNombreCliente
             // 
-            this.textBoxNombreCliente.Location = new System.Drawing.Point(217, 26);
+            this.textBoxNombreCliente.Enabled = false;
+            this.textBoxNombreCliente.Location = new System.Drawing.Point(184, 26);
             this.textBoxNombreCliente.Name = "textBoxNombreCliente";
             this.textBoxNombreCliente.Size = new System.Drawing.Size(361, 20);
             this.textBoxNombreCliente.TabIndex = 19;
@@ -149,32 +158,22 @@
             // labelSaldo
             // 
             this.labelSaldo.AutoSize = true;
-            this.labelSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaldo.Location = new System.Drawing.Point(159, 53);
+            this.labelSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSaldo.Location = new System.Drawing.Point(140, 52);
             this.labelSaldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSaldo.Name = "labelSaldo";
             this.labelSaldo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelSaldo.Size = new System.Drawing.Size(53, 16);
+            this.labelSaldo.Size = new System.Drawing.Size(39, 13);
             this.labelSaldo.TabIndex = 25;
-            this.labelSaldo.Text = "Saldo:";
+            this.labelSaldo.Text = "Saldo";
             // 
             // textBoxSaldo
             // 
-            this.textBoxSaldo.Location = new System.Drawing.Point(217, 52);
+            this.textBoxSaldo.Enabled = false;
+            this.textBoxSaldo.Location = new System.Drawing.Point(184, 49);
             this.textBoxSaldo.Name = "textBoxSaldo";
             this.textBoxSaldo.Size = new System.Drawing.Size(120, 20);
             this.textBoxSaldo.TabIndex = 26;
-            // 
-            // labelFecha
-            // 
-            this.labelFecha.AutoSize = true;
-            this.labelFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFecha.Location = new System.Drawing.Point(629, 9);
-            this.labelFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelFecha.Name = "labelFecha";
-            this.labelFecha.Size = new System.Drawing.Size(55, 16);
-            this.labelFecha.TabIndex = 33;
-            this.labelFecha.Text = "Fecha:";
             // 
             // dataGridView1
             // 
@@ -253,30 +252,6 @@
             this.buttonLimpiar.UseVisualStyleBackColor = true;
             this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
             // 
-            // comboBoxEmpleado
-            // 
-            this.comboBoxEmpleado.FormattingEnabled = true;
-            this.comboBoxEmpleado.Items.AddRange(new object[] {
-            "Daniel Mitchel",
-            "Edgar Casillas"});
-            this.comboBoxEmpleado.Location = new System.Drawing.Point(101, 125);
-            this.comboBoxEmpleado.Name = "comboBoxEmpleado";
-            this.comboBoxEmpleado.Size = new System.Drawing.Size(125, 21);
-            this.comboBoxEmpleado.TabIndex = 37;
-            this.comboBoxEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxEmpleado_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 126);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(83, 16);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "Empleado:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -285,56 +260,117 @@
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(106, 16);
+            this.label3.Size = new System.Drawing.Size(104, 16);
             this.label3.TabIndex = 38;
-            this.label3.Text = "Total a pagar:";
+            this.label3.Text = "Total a pagar";
             // 
             // textBoxTotal
             // 
+            this.textBoxTotal.Enabled = false;
             this.textBoxTotal.Location = new System.Drawing.Point(511, 403);
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.Size = new System.Drawing.Size(100, 20);
             this.textBoxTotal.TabIndex = 39;
             // 
-            // label4
+            // groupBoxDate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(629, 61);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(126, 16);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Metodo de pago:";
+            this.groupBoxDate.Controls.Add(this.labelFecha);
+            this.groupBoxDate.Location = new System.Drawing.Point(605, 3);
+            this.groupBoxDate.Name = "groupBoxDate";
+            this.groupBoxDate.Size = new System.Drawing.Size(180, 74);
+            this.groupBoxDate.TabIndex = 55;
+            this.groupBoxDate.TabStop = false;
+            this.groupBoxDate.Text = "Fecha";
             // 
-            // comboBoxMetodoPago
+            // labelFecha
             // 
-            this.comboBoxMetodoPago.FormattingEnabled = true;
-            this.comboBoxMetodoPago.Items.AddRange(new object[] {
-            "Electrónico",
-            "Efectivo"});
-            this.comboBoxMetodoPago.Location = new System.Drawing.Point(630, 88);
-            this.comboBoxMetodoPago.Name = "comboBoxMetodoPago";
-            this.comboBoxMetodoPago.Size = new System.Drawing.Size(125, 21);
-            this.comboBoxMetodoPago.TabIndex = 41;
-            this.comboBoxMetodoPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxMetodoPago_KeyPress);
+            this.labelFecha.AutoSize = true;
+            this.labelFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFecha.Location = new System.Drawing.Point(37, 16);
+            this.labelFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelFecha.Name = "labelFecha";
+            this.labelFecha.Size = new System.Drawing.Size(64, 24);
+            this.labelFecha.TabIndex = 18;
+            this.labelFecha.Text = "Fecha";
+            // 
+            // groupBoxTipodePago
+            // 
+            this.groupBoxTipodePago.Controls.Add(this.comboBoxTipoPago);
+            this.groupBoxTipodePago.Location = new System.Drawing.Point(605, 78);
+            this.groupBoxTipodePago.Name = "groupBoxTipodePago";
+            this.groupBoxTipodePago.Size = new System.Drawing.Size(180, 74);
+            this.groupBoxTipodePago.TabIndex = 56;
+            this.groupBoxTipodePago.TabStop = false;
+            this.groupBoxTipodePago.Text = "Tipo de pago";
+            // 
+            // comboBoxTipoPago
+            // 
+            this.comboBoxTipoPago.FormattingEnabled = true;
+            this.comboBoxTipoPago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Tarjeta",
+            "Electrónico"});
+            this.comboBoxTipoPago.Location = new System.Drawing.Point(30, 32);
+            this.comboBoxTipoPago.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.comboBoxTipoPago.Name = "comboBoxTipoPago";
+            this.comboBoxTipoPago.Size = new System.Drawing.Size(120, 21);
+            this.comboBoxTipoPago.TabIndex = 5;
+            this.comboBoxTipoPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxTipoPago_KeyPress);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBoxNomEmpleado);
+            this.groupBox1.Location = new System.Drawing.Point(12, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(584, 42);
+            this.groupBox1.TabIndex = 57;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos de Empleado";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 19);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Nombre:";
+            // 
+            // textBoxNomEmpleado
+            // 
+            this.textBoxNomEmpleado.Enabled = false;
+            this.textBoxNomEmpleado.Location = new System.Drawing.Point(84, 16);
+            this.textBoxNomEmpleado.Name = "textBoxNomEmpleado";
+            this.textBoxNomEmpleado.Size = new System.Drawing.Size(187, 20);
+            this.textBoxNomEmpleado.TabIndex = 32;
+            // 
+            // buttonComprobar
+            // 
+            this.buttonComprobar.Location = new System.Drawing.Point(26, 47);
+            this.buttonComprobar.Name = "buttonComprobar";
+            this.buttonComprobar.Size = new System.Drawing.Size(75, 23);
+            this.buttonComprobar.TabIndex = 58;
+            this.buttonComprobar.Text = "comprobar";
+            this.buttonComprobar.UseVisualStyleBackColor = true;
+            this.buttonComprobar.Click += new System.EventHandler(this.buttonComprobar_Click);
             // 
             // Menu_Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(797, 436);
-            this.Controls.Add(this.comboBoxMetodoPago);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxTipodePago);
+            this.Controls.Add(this.groupBoxDate);
             this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBoxEmpleado);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonLimpiar);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.labelFecha);
             this.Controls.Add(this.groupBoxDatosCliente);
             this.Controls.Add(this.buttonRegresar);
             this.Controls.Add(this.buttonConfirmar);
@@ -343,9 +379,15 @@
             this.Name = "Menu_Compra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transaccion Compra";
+            this.Load += new System.EventHandler(this.Menu_Compra_Load);
             this.groupBoxDatosCliente.ResumeLayout(false);
             this.groupBoxDatosCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBoxDate.ResumeLayout(false);
+            this.groupBoxDate.PerformLayout();
+            this.groupBoxTipodePago.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,12 +399,11 @@
         private System.Windows.Forms.Button buttonRegresar;
         private System.Windows.Forms.GroupBox groupBoxDatosCliente;
         private System.Windows.Forms.Label IDcliente;
-        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.TextBox textBoxIDcliente;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.TextBox textBoxNombreCliente;
         private System.Windows.Forms.Label labelSaldo;
         private System.Windows.Forms.TextBox textBoxSaldo;
-        private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
@@ -371,11 +412,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImporteProducto;
         private System.Windows.Forms.Button buttonLimpiar;
-        private System.Windows.Forms.ComboBox comboBoxEmpleado;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxTotal;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBoxMetodoPago;
+        private System.Windows.Forms.GroupBox groupBoxDate;
+        private System.Windows.Forms.Label labelFecha;
+        private System.Windows.Forms.GroupBox groupBoxTipodePago;
+        private System.Windows.Forms.ComboBox comboBoxTipoPago;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxNomEmpleado;
+        private System.Windows.Forms.Button buttonComprobar;
     }
 }

@@ -26,19 +26,21 @@ namespace Interfaz_de_usuario
             MySqlDataReader Reader = command.ExecuteReader();
             if(Reader.Read())
             {
-                if(Reader.GetBoolean(5))
+                Class_.Empleado nEmpleado = new Class_.Empleado(Reader.GetInt32(0), Reader.GetString(1), Reader.GetString(2), Reader.GetString(3), Reader.GetString(4), Reader.GetBoolean(5));
+
+                if(nEmpleado.Status)
                 {
-                    if (Reader.GetString(3) == "Gerente")
+                    if (nEmpleado.Puesto == "Gerente")
                     {
-                        Menu_Principal_Administrador menu_principal_adm = new Menu_Principal_Administrador(Reader.GetString(1) + " " + Reader.GetString(2), CConnection);
+                        Menu_Principal_Administrador menu_principal_adm = new Menu_Principal_Administrador(nEmpleado, CConnection);
                         CConnection.CloseConnection();
                         menu_principal_adm.ShowDialog();
                     }
-                    else if (Reader.GetString(3) == "Cajero")
+                    else if (nEmpleado.Puesto == "Cajero")
                     {
-                        Menu_Principal_Empleado menu_principal_emp = new Menu_Principal_Empleado(Reader.GetString(1) + " " + Reader.GetString(2));
+                        //Menu_Principal_Empleado menu_principal_emp = new Menu_Principal_Empleado(Reader.GetString(1) + " " + Reader.GetString(2));
                         CConnection.CloseConnection();
-                        menu_principal_emp.ShowDialog();
+                        //menu_principal_emp.ShowDialog();
                     }
                 }
                 else
@@ -51,11 +53,22 @@ namespace Interfaz_de_usuario
                 MessageBox.Show("ID o Contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             CConnection.CloseConnection();
+            textBoxNombre.Clear();
+            textBoxContraseña.Clear();
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBoxContraseña_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonEntrar_Click(sender, e);
+                e.Handled = true;
+            }
         }
     }
 }

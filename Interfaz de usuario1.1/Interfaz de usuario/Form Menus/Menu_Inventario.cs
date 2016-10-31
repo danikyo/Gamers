@@ -20,9 +20,7 @@ namespace Interfaz_de_usuario
             InitializeComponent();
 
             this.Connection = Connection;
-            buttonConsultaP.Enabled = false;
-            buttonGenerar.Enabled = false;
-        }
+            buttonConsultaP.Enabled = false;        }
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
@@ -35,11 +33,12 @@ namespace Interfaz_de_usuario
             MySqlDataReader reader = Class_.Producto.BuscarProducto(Connection.myConnection, textBoxIDproducto.Text);
             if(reader.Read())
             {
-                if(reader.GetBoolean(8))
+                if(reader.GetBoolean(9))
                 {
-                    Class_.Producto nProducto = new Class_.Producto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetFloat(6), reader.GetInt32(7), reader.GetBoolean(8));
+                    Class_.Producto nProducto = new Class_.Producto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetFloat(6), reader.GetInt32(7), reader.GetString(8), reader.GetBoolean(9));
                     Consulta_Producto consulta_producto = new Consulta_Producto(nProducto, Connection);
                     Connection.CloseConnection();
+                    this.Close();
                     consulta_producto.ShowDialog();
                 }
                 else
@@ -59,20 +58,13 @@ namespace Interfaz_de_usuario
             if (textBoxIDproducto.Text == "")
             {
                 buttonAgregarP.Enabled = true;
-                buttonGenerar.Enabled = true;
                 buttonConsultaP.Enabled = false;
             }
             else
             {
                 buttonAgregarP.Enabled = false;
-                buttonGenerar.Enabled = false;
                 buttonConsultaP.Enabled = true;
             }
-        }
-
-        private void comboBoxReporteTipo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            buttonGenerar.Enabled = true;
         }
 
         private void buttonGenerar_Click(object sender, EventArgs e)
@@ -83,16 +75,17 @@ namespace Interfaz_de_usuario
 
         private void buttonAgregarP_Click(object sender, EventArgs e)
         {
-            if(textBoxNombreP.Text == "" || textBoxPrecio.Text == "" || comboBoxTipo.Text == "" || comboBoxConsola.Text == "" || comboBoxGenero.Text == "" || comboBoxStatus.Text == "")
+            if (textBoxNombreP.Text == "" || textBoxPrecio.Text == "" || comboBoxTipo.Text == "" || comboBoxConsola.Text == "" || comboBoxGenero.Text == "" || comboBoxStatus.Text == "")
             {
                 MessageBox.Show("Rellenar todos los campos");
             }
             else
             {
                 Connection.OpenConnection();
-                Class_.Producto nProducto = new Class_.Producto(1, textBoxNombreP.Text, comboBoxTipo.Text, comboBoxConsola.Text,comboBoxGenero.Text, comboBoxStatus.Text, float.Parse(textBoxPrecio.Text), 0, true);
+                Class_.Producto nProducto = new Class_.Producto(1, textBoxNombreP.Text, comboBoxTipo.Text, comboBoxConsola.Text,comboBoxGenero.Text, comboBoxStatus.Text, float.Parse(textBoxPrecio.Text), 0, textBoxImagen.Text, true);
                 Class_.Producto.AgregarProducto(Connection.myConnection, nProducto);
                 Connection.CloseConnection();
+                MessageBox.Show("Captura Exitosa");
                 this.Close();
             }
         }
@@ -102,8 +95,38 @@ namespace Interfaz_de_usuario
             Connection.OpenConnection();
             dataGridView1.DataSource = Class_.Producto.MostrarProductos(Connection.myConnection);
             dataGridView1.Columns[0].Width = 40;
+            dataGridView1.Columns[9].Visible = false;
             dataGridView1.Columns[8].Visible = false;
             Connection.CloseConnection();
+            string imagen = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+            string ruta = "C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\";
+            pictureBoxRimage.Image = Image.FromFile(ruta + imagen);
+        }
+
+        private void buttonExaminar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog filedialog = new OpenFileDialog();
+            try
+            {
+                if (filedialog.ShowDialog() == DialogResult.OK)
+                {
+                    string url = filedialog.FileName;
+                    string imagen = filedialog.SafeFileName;
+                    pictureBoxImage.Image = Image.FromFile(url);
+                    textBoxImagen.Text = imagen;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string imagen = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+            string ruta = "C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\";
+            pictureBoxRimage.Image = Image.FromFile(ruta + imagen);
         }
     }
 }

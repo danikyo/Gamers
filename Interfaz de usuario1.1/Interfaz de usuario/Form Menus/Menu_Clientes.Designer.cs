@@ -65,14 +65,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBoxReportes = new System.Windows.Forms.GroupBox();
-            this.buttonReportes = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBoxReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -430,31 +427,9 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edición Cliente";
             // 
-            // groupBoxReportes
-            // 
-            this.groupBoxReportes.BackColor = System.Drawing.Color.Transparent;
-            this.groupBoxReportes.Controls.Add(this.buttonReportes);
-            this.groupBoxReportes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBoxReportes.Location = new System.Drawing.Point(590, 295);
-            this.groupBoxReportes.Name = "groupBoxReportes";
-            this.groupBoxReportes.Size = new System.Drawing.Size(200, 83);
-            this.groupBoxReportes.TabIndex = 24;
-            this.groupBoxReportes.TabStop = false;
-            this.groupBoxReportes.Text = "Reportes";
-            // 
-            // buttonReportes
-            // 
-            this.buttonReportes.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReportes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonReportes.Location = new System.Drawing.Point(24, 25);
-            this.buttonReportes.Name = "buttonReportes";
-            this.buttonReportes.Size = new System.Drawing.Size(158, 36);
-            this.buttonReportes.TabIndex = 17;
-            this.buttonReportes.Text = "Generar";
-            this.buttonReportes.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -499,7 +474,6 @@
             this.ClientSize = new System.Drawing.Size(1362, 472);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBoxReportes);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonRegresar);
@@ -514,7 +488,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBoxReportes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -557,8 +530,6 @@
         private System.Windows.Forms.TextBox textBoxMunicipio;
         private System.Windows.Forms.TextBox textBoxEstado;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaNac;
-        private System.Windows.Forms.GroupBox groupBoxReportes;
-        private System.Windows.Forms.Button buttonReportes;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label15;
     }

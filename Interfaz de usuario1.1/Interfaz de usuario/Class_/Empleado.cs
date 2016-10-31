@@ -74,13 +74,12 @@ namespace Interfaz_de_usuario.Class_
         public static IList<Empleado> MostrarEmpleado(MySqlConnection Connection)
         {
             List<Empleado> Nempleado = new List<Empleado>();
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM empleado"), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM empleado WHERE eStatus = true"), Connection);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
                 Empleado empleado = new Empleado(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetBoolean(5));
-                if(empleado.Status)
-                { Nempleado.Add(empleado); }
+                Nempleado.Add(empleado);
             }
             return Nempleado;
         }

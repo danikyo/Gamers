@@ -12,19 +12,38 @@ namespace Interfaz_de_usuario
 {
     public partial class Consulta_Factura : Form
     {
-        public Consulta_Factura()
+        Class_.Connection Connection;
+        Class_.Factura Factura;
+
+        public Consulta_Factura(Class_.Connection Connection, Class_.Factura Factura)
         {
             InitializeComponent();
-        }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            this.Connection = Connection;
+            this.Factura = Factura;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro que desea eliminar\neste producto?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
+            {
+                Connection.OpenConnection();
+                Class_.Factura.CancelarFactura(Connection.myConnection, labelFolioD.Text);
+                Connection.CloseConnection();
+                this.Close();
+            }
+        }
+
+        private void Consulta_Factura_Load(object sender, EventArgs e)
+        {
+            labelFolioD.Text = Factura.ID.ToString();
+            labelFecha.Text = Factura.Fecha;
         }
     }
 }

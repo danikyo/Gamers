@@ -63,9 +63,18 @@ namespace Interfaz_de_usuario
             textBoxPrec.Enabled = false;
             textBoxStock.Enabled = false;
             textBoxPrecioCompra.Enabled = false;
+            textBoxImage.Enabled = false;
+            textBoxImage.Visible = false;
 
             buttonListo.Visible = false;
             buttonCancelar.Visible = false;
+            buttonExaminar.Enabled = false;
+
+            string imagen = Producto.Ruta;
+            string ruta = "C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\";
+            textBoxImage.Text = Producto.Ruta;
+
+            pictureBoxImage.Image = Image.FromFile(ruta + imagen);
         }
 
         public void desbloquear()
@@ -86,6 +95,7 @@ namespace Interfaz_de_usuario
             buttonDeleteStock.Enabled = false;
             buttonRegresar.Enabled = false;
             buttonEliminar.Enabled = false;
+            buttonExaminar.Enabled = true;
         }
 
         private void labelNombre_Click(object sender, EventArgs e)
@@ -116,20 +126,15 @@ namespace Interfaz_de_usuario
         private void buttonListo_Click(object sender, EventArgs e)
         {
             Connection.OpenConnection();
-            Class_.Producto nProducto = new Class_.Producto(Producto.ID, textBoxNom.Text, comboBoxTipo.Text, comboBoxConsola.Text, comboBoxGenero.Text, comboBoxStatus.Text, float.Parse(textBoxPrec.Text), int.Parse(textBoxStock.Text), true);
+            Class_.Producto nProducto = new Class_.Producto(Producto.ID, textBoxNom.Text, comboBoxTipo.Text, comboBoxConsola.Text, comboBoxGenero.Text, comboBoxStatus.Text, float.Parse(textBoxPrec.Text), int.Parse(textBoxStock.Text), textBoxImage.Text, true);
             Class_.Producto.ModificarProducto(Connection.myConnection, nProducto);
             Connection.CloseConnection();
             this.Close();
         }
 
-        private void buttonAddstock_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Seguro que desea dar de baja\na este cliente?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Seguro que desea eliminar\neste producto?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (result == DialogResult.Yes)
             {
                 Connection.OpenConnection();
@@ -138,5 +143,27 @@ namespace Interfaz_de_usuario
                 this.Close();
             }
         }
+
+        private void buttonExaminar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog filedialog = new OpenFileDialog();
+            try
+            {
+                if (filedialog.ShowDialog() == DialogResult.OK)
+                {
+                    string ruta = "C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\";
+                    string imagen = filedialog.SafeFileName;
+                    //MessageBox.Show(ruta + imagen);
+                    pictureBoxImage.Image = Image.FromFile(ruta + imagen);
+                    textBoxImage.Text = imagen;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido" + ex);
+            }
+        }
+
+
     }
 }

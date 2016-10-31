@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Empleado));
             this.buttonRegresar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxApellidosE = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,10 +49,11 @@
             this.dataGridViewEmpleado = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpleado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonRegresar
@@ -62,28 +62,17 @@
             this.buttonRegresar.Location = new System.Drawing.Point(405, 352);
             this.buttonRegresar.Name = "buttonRegresar";
             this.buttonRegresar.Size = new System.Drawing.Size(158, 74);
-            this.buttonRegresar.TabIndex = 7;
+            this.buttonRegresar.TabIndex = 9;
             this.buttonRegresar.Text = "Regresar";
             this.buttonRegresar.UseVisualStyleBackColor = true;
             this.buttonRegresar.Click += new System.EventHandler(this.buttonRegresar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Interfaz_de_usuario.Properties.Resources.logook;
-            this.pictureBox1.Location = new System.Drawing.Point(301, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(495, 155);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // textBoxApellidosE
             // 
             this.textBoxApellidosE.Location = new System.Drawing.Point(84, 66);
             this.textBoxApellidosE.Name = "textBoxApellidosE";
             this.textBoxApellidosE.Size = new System.Drawing.Size(244, 20);
-            this.textBoxApellidosE.TabIndex = 28;
+            this.textBoxApellidosE.TabIndex = 2;
             // 
             // label6
             // 
@@ -134,7 +123,7 @@
             this.textBoxPassword.Location = new System.Drawing.Point(84, 138);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(208, 20);
-            this.textBoxPassword.TabIndex = 22;
+            this.textBoxPassword.TabIndex = 4;
             // 
             // textBoxCPassword
             // 
@@ -142,14 +131,14 @@
             this.textBoxCPassword.Name = "textBoxCPassword";
             this.textBoxCPassword.PasswordChar = '*';
             this.textBoxCPassword.Size = new System.Drawing.Size(208, 20);
-            this.textBoxCPassword.TabIndex = 21;
+            this.textBoxCPassword.TabIndex = 5;
             // 
             // textBoxNombreE
             // 
             this.textBoxNombreE.Location = new System.Drawing.Point(84, 28);
             this.textBoxNombreE.Name = "textBoxNombreE";
             this.textBoxNombreE.Size = new System.Drawing.Size(244, 20);
-            this.textBoxNombreE.TabIndex = 19;
+            this.textBoxNombreE.TabIndex = 1;
             // 
             // buttonAgregarE
             // 
@@ -158,7 +147,7 @@
             this.buttonAgregarE.Location = new System.Drawing.Point(84, 215);
             this.buttonAgregarE.Name = "buttonAgregarE";
             this.buttonAgregarE.Size = new System.Drawing.Size(160, 35);
-            this.buttonAgregarE.TabIndex = 18;
+            this.buttonAgregarE.TabIndex = 6;
             this.buttonAgregarE.Text = "Registrar";
             this.buttonAgregarE.UseVisualStyleBackColor = true;
             this.buttonAgregarE.Click += new System.EventHandler(this.buttonAgregarE_Click);
@@ -190,7 +179,7 @@
             this.textBoxQuery.Location = new System.Drawing.Point(45, 49);
             this.textBoxQuery.Name = "textBoxQuery";
             this.textBoxQuery.Size = new System.Drawing.Size(136, 20);
-            this.textBoxQuery.TabIndex = 31;
+            this.textBoxQuery.TabIndex = 7;
             this.textBoxQuery.TextChanged += new System.EventHandler(this.textBoxIDEmpleado_TextChanged);
             // 
             // buttonConsultaE
@@ -200,7 +189,7 @@
             this.buttonConsultaE.Location = new System.Drawing.Point(33, 78);
             this.buttonConsultaE.Name = "buttonConsultaE";
             this.buttonConsultaE.Size = new System.Drawing.Size(158, 36);
-            this.buttonConsultaE.TabIndex = 30;
+            this.buttonConsultaE.TabIndex = 8;
             this.buttonConsultaE.Text = "Consultar Empleado";
             this.buttonConsultaE.UseVisualStyleBackColor = true;
             this.buttonConsultaE.Click += new System.EventHandler(this.buttonConsultaE_Click);
@@ -236,7 +225,7 @@
             this.comboBoxPuesto.Location = new System.Drawing.Point(84, 105);
             this.comboBoxPuesto.Name = "comboBoxPuesto";
             this.comboBoxPuesto.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxPuesto.TabIndex = 30;
+            this.comboBoxPuesto.TabIndex = 3;
             this.comboBoxPuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxPuesto_KeyPress);
             // 
             // groupBox2
@@ -255,6 +244,7 @@
             // 
             // dataGridViewEmpleado
             // 
+            this.dataGridViewEmpleado.AllowUserToResizeRows = false;
             this.dataGridViewEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEmpleado.Location = new System.Drawing.Point(607, 173);
             this.dataGridViewEmpleado.Name = "dataGridViewEmpleado";
@@ -287,6 +277,17 @@
             this.label8.TabIndex = 37;
             this.label8.Text = "BIENVENIDO AL \r\nMENU DE EMPLEADO";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Interfaz_de_usuario.Properties.Resources.logook;
+            this.pictureBox2.Location = new System.Drawing.Point(409, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(336, 118);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
+            // 
             // Menu_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,32 +295,30 @@
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.WallpaperPacman;
             this.ClientSize = new System.Drawing.Size(1058, 436);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dataGridViewEmpleado);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonRegresar);
-            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu_Empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Empleado";
             this.Load += new System.EventHandler(this.Menu_Empleado_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpleado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonRegresar;
         private System.Windows.Forms.TextBox textBoxApellidosE;
         private System.Windows.Forms.Label label6;
@@ -340,5 +339,6 @@
         private System.Windows.Forms.DataGridView dataGridViewEmpleado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

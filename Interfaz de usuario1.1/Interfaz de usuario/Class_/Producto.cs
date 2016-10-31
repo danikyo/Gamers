@@ -17,9 +17,10 @@ namespace Interfaz_de_usuario.Class_
         string pStatus;
         float pPrecio;
         int pStock;
+        string pImagen;
         bool pDisponible;
 
-        public Producto(int idProducto, string Nombre, string Tipo, string Consola, string Genero, string Status, float Precio, int Stock, bool disponible)
+        public Producto(int idProducto, string Nombre, string Tipo, string Consola, string Genero, string Status, float Precio, int Stock, string Imagen, bool disponible)
         {
             this.idProducto = idProducto;
             this.pNombre = Nombre;
@@ -29,6 +30,7 @@ namespace Interfaz_de_usuario.Class_
             this.pStatus = Status;
             this.pPrecio = Precio;
             this.pStock = Stock;
+            this.pImagen = Imagen;
             this.pDisponible = disponible;
         }
 
@@ -86,9 +88,15 @@ namespace Interfaz_de_usuario.Class_
             set { pDisponible = value; }
         }
 
+        public string Ruta
+        {
+            get { return pImagen; }
+            set { pImagen = value; }
+        }
+
         public static int AgregarProducto(MySqlConnection Connection, Producto producto)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO producto (pNombre, pTipo, pConsola, pStatus, pPrecio, pStock, pDisponible) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}',true)", producto.Nombre, producto.Tipo, producto.Consola, producto.Status, producto.Precio, producto.Stock), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO producto (pNombre, pTipo, pConsola, pGenero, pStatus, pPrecio, pStock, pFoto, pDisponible) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', true)", producto.pNombre, producto.pTipo, producto.pConsola, producto.pGenero, producto.pStatus, producto.pPrecio, producto.pStock, producto.pImagen), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }
@@ -96,11 +104,11 @@ namespace Interfaz_de_usuario.Class_
         public static IList<Producto> MostrarProductos(MySqlConnection Connection)
         {
             List<Producto> Nproducto = new List<Producto>();
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM producto"), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM producto WHERE pDisponible = true"), Connection);
             MySqlDataReader reader = command.ExecuteReader();
             while(reader.Read())
             {
-                Producto nProducto = new Producto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetFloat(6), reader.GetInt32(7), reader.GetBoolean(8));
+                Producto nProducto = new Producto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetFloat(6), reader.GetInt32(7), reader.GetString(8), reader.GetBoolean(9));
                 Nproducto.Add(nProducto);
             }
             return Nproducto;
@@ -115,7 +123,7 @@ namespace Interfaz_de_usuario.Class_
 
         public static int ModificarProducto(MySqlConnection Connection, Producto producto)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("UPDATE producto SET pNombre = '{1}', pTipo = '{2}', pConsola = '{3}', pGenero = '{4}', pStatus = '{5}', pPrecio = '{6}', pStock = '{7}'  WHERE idProducto = {0}", producto.idProducto, producto.Nombre, producto.Tipo, producto.Consola, producto.Genero, producto.Status, producto.Precio, producto.Stock), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("UPDATE producto SET pNombre = '{1}', pTipo = '{2}', pConsola = '{3}', pGenero = '{4}', pStatus = '{5}', pPrecio = '{6}', pStock = '{7}', pFoto = '{8}'  WHERE idProducto = {0}", producto.idProducto, producto.Nombre, producto.Tipo, producto.Consola, producto.Genero, producto.Status, producto.Precio, producto.Stock, producto.pImagen), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }

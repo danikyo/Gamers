@@ -147,8 +147,8 @@ namespace Interfaz_de_usuario.Class_
 
         public static int AgregarCliente(MySqlConnection Connection, Cliente cliente)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO cliente (cNombre, cApellido, cDireccion, cFechaNac, cEmail, cTel, cRFC, cDomFiscal, cRazonSocial, cCP, cPais, cEstado, cMunicipio, cSaldo, cDisponible) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','0','1')",
-            cliente.Nombre, cliente.cApellidos, cliente.cDireccion, cliente.cFechaNac, cliente.ce_mail, cliente.cTel, cliente.cRFC, cliente.cDomFiscal, cliente.cRazonSocial, cliente.cCP, cliente.cPais, cliente.cEstado, cliente.cMunicipio, cliente.cSaldo), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO cliente (cNombre, cApellido, cDireccion, cFechaNac, cEmail, cTel, cRFC, cDomFiscal, cRazonSocial, cCP, cPais, cEstado, cMunicipio, cSaldo, cDisponible) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','0',true)",
+            cliente.Nombre, cliente.cApellidos, cliente.cDireccion, cliente.cFechaNac, cliente.ce_mail, cliente.cTel, cliente.cRFC, cliente.cDomFiscal, cliente.cRazonSocial, cliente.cCP, cliente.cPais, cliente.cEstado, cliente.cMunicipio), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }
@@ -156,7 +156,7 @@ namespace Interfaz_de_usuario.Class_
         public static IList<Cliente> MostrarClientes(MySqlConnection Connection)
         {
             List<Cliente> Ncliente = new List<Cliente>();
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM cliente"),Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM cliente Where cDisponible = true"),Connection);
             MySqlDataReader reader = command.ExecuteReader();
             while(reader.Read())
             {

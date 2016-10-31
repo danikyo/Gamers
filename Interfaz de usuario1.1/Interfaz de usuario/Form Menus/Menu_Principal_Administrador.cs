@@ -12,11 +12,15 @@ namespace Interfaz_de_usuario
 {
     public partial class Menu_Principal_Administrador : Form
     {
+        Class_.Empleado Empleado;
         Class_.Connection CConnection;
-        public Menu_Principal_Administrador(String Nombre, Class_.Connection CConnection)
+
+        public Menu_Principal_Administrador(Class_.Empleado Empleado, Class_.Connection CConnection)
         {
             InitializeComponent();
-            labelName.Text = "Bienvenido\n" + Nombre;
+
+            labelName.Text = "Bienvenido\n" + Empleado.Nombre + " " + Empleado.Apellido;
+            this.Empleado = Empleado;
             this.CConnection = CConnection;
         }
 
@@ -27,13 +31,13 @@ namespace Interfaz_de_usuario
 
         private void buttonVenta_Click(object sender, EventArgs e)
         {
-            Menu_Venta menu_venta = new Menu_Venta();
+            Menu_Venta menu_venta = new Menu_Venta(CConnection, Empleado);
             menu_venta.ShowDialog();
         }
 
         private void buttonCompra_Click(object sender, EventArgs e)
         {
-            Menu_Compra menu_compra = new Menu_Compra();
+            Menu_Compra menu_compra = new Menu_Compra(CConnection, Empleado);
             menu_compra.ShowDialog();
         }
 
@@ -57,20 +61,14 @@ namespace Interfaz_de_usuario
 
         private void buttonFactura_Click(object sender, EventArgs e)
         {
-            Menu_Factura menu_factura = new Menu_Factura();
+            Menu_Factura menu_factura = new Menu_Factura(CConnection);
             menu_factura.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonReportesVentacompra_Click(object sender, EventArgs e)
         {
-            Reporte_Venta reporte_venta = new Reporte_Venta();
-            reporte_venta.ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Reporte_Compra reporte_compra = new Reporte_Compra();
-            reporte_compra.ShowDialog();
+            ReportesVentaCompra reportesventacompra = new ReportesVentaCompra(CConnection);
+            reportesventacompra.ShowDialog();
         }
     }
 }

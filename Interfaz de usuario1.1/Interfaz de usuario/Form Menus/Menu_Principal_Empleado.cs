@@ -20,14 +20,14 @@ namespace Interfaz_de_usuario
 
         private void buttonVenta_Click(object sender, EventArgs e)
         {
-            Menu_Venta menu_venta = new Menu_Venta();
-            menu_venta.ShowDialog();
+            //Menu_Venta menu_venta = new Menu_Venta();
+           // menu_venta.ShowDialog();
         }
 
         private void buttonCompra_Click(object sender, EventArgs e)
         {
-            Menu_Compra menu_compra = new Menu_Compra();
-            menu_compra.ShowDialog();
+            //Menu_Compra menu_compra = new Menu_Compra();
+            //menu_compra.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)

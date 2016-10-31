@@ -7,37 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Interfaz_de_usuario
 {
     public partial class Menu_Venta : Form
     {
-        public Menu_Venta()
+        Class_.Connection Connection;
+        Class_.Empleado Empleado;
+        string fecha;
+
+        public Menu_Venta(Class_.Connection Connection, Class_.Empleado Empleado)
         {
             InitializeComponent();
-            textBoxNombreCliente.Enabled = false;
-            textBoxSaldo.Enabled = false;
-            textBoxIva.Enabled = false;
-            textBoxSubTotal.Enabled = false;
-            textBoxTotal.Enabled = false;
-            SetFecha();
+
+            this.Connection = Connection;
+            this.Empleado = Empleado;
         }
 
         private void SetFecha()
         {
-            DateTime Hoy = DateTime.Today;
-            string fecha = Hoy.ToString("dd-MM-yyyy");
-            labelFecha.Text = "Fecha: " + fecha;
+            DateTime Hoy = DateTime.Now;
+            fecha = Hoy.ToString("yyyy-MM-dd HH:mm:ss");
+            string[] fechaHora = fecha.Split(' ');
+            labelFecha.Text = fechaHora[0] + "\n" + fechaHora[1];
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
 
-        }
-
-        private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
         }
 
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -52,8 +50,19 @@ namespace Interfaz_de_usuario
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Su cambio es: ","GRACIAS POR SU COMPRA",MessageBoxButtons.OK,MessageBoxIcon.None);
-            this.Close();
+            if ((textBoxIDcliente.Text == "") || (comboBoxTipoPago.Text == ""))
+            {
+                MessageBox.Show("Favor de llenar los campos requeridos");
+            }
+            else
+            {
+                Connection.OpenConnection();
+                Class_.Venta nVenta = new Class_.Venta(1, fecha, comboBoxTipoPago.Text, "V", Empleado.ID, int.Parse(textBoxIDcliente.Text), true);
+                Class_.Venta.AgregarVenta(Connection.myConnection, nVenta);
+                MessageBox.Show("Compra exitosa", "GRACIAS POR SU COMPRA", MessageBoxButtons.OK, MessageBoxIcon.None);
+                Connection.CloseConnection();
+                this.Close();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,50 +72,53 @@ namespace Interfaz_de_usuario
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
-            textBoxID.Clear();
+            textBoxIDcliente.Clear();
             textBoxNombreCliente.Clear();
             textBoxSaldo.Clear();
             comboBoxTipoPago.Text = "";
-            comboBoxEmpleado.Text = "";
         }
 
-        /*private void groupBoxDatosCliente_Paint(object sender, PaintEventArgs e)
+        private void Menu_Venta_Load(object sender, EventArgs e)
         {
-            GroupBox box = sender as GroupBox;
-            DrawGroupBox(box, e.Graphics, Color.Black, Color.Gray);
+            SetFecha();
+
+            textBoxNomEmpleado.Text = Empleado.Nombre + " " + Empleado.Apellido;
+
+            int Nofolio = MaxId();
+            labelFolio.Text = "Folio No. " + Nofolio.ToString();
         }
 
-        private void DrawGroupBox(GroupBox box, Graphics g, Color textColor, Color borderColor)
+        private int MaxId()
         {
-            if (box != null)
+            int max = 1;
+            Connection.OpenConnection();
+            MySqlDataReader reader = Class_.Venta.BuscarMaxId(Connection.myConnection);
+            if(reader.Read())
             {
-                Brush textBrush = new SolidBrush(textColor);
-                Brush borderBrush = new SolidBrush(borderColor);
-                Pen borderPen = new Pen(borderBrush);
-                SizeF strSize = g.MeasureString(box.Text, box.Font);
-                Rectangle rect = new Rectangle(box.ClientRectangle.X,
-                                               box.ClientRectangle.Y + (int)(strSize.Height / 2),
-                                               box.ClientRectangle.Width - 1,
-                                               box.ClientRectangle.Height - (int)(strSize.Height / 2) - 1);
-
-                // Clear text and border
-                g.Clear(this.BackColor);
-
-                // Draw text
-                g.DrawString(box.Text, box.Font, textBrush, box.Padding.Left, 0);
-
-                // Drawing Border
-                //Left
-                g.DrawLine(borderPen, rect.Location, new Point(rect.X, rect.Y + rect.Height));
-                //Right
-                g.DrawLine(borderPen, new Point(rect.X + rect.Width, rect.Y), new Point(rect.X + rect.Width, rect.Y + rect.Height));
-                //Bottom
-                g.DrawLine(borderPen, new Point(rect.X, rect.Y + rect.Height), new Point(rect.X + rect.Width, rect.Y + rect.Height));
-                //Top1
-                g.DrawLine(borderPen, new Point(rect.X, rect.Y), new Point(rect.X + box.Padding.Left, rect.Y));
-                //Top2
-                g.DrawLine(borderPen, new Point(rect.X + box.Padding.Left + (int)(strSize.Width), rect.Y), new Point(rect.X + rect.Width, rect.Y));
+                if(!reader.IsDBNull(0)) { max = reader.GetInt32(0); max++; }
             }
-        }*/
+            Connection.CloseConnection();
+            return max;
+        }
+
+        private void buttonComprobar_Click(object sender, EventArgs e)
+        {
+            Connection.OpenConnection();
+            MySqlDataReader reader = Class_.Cliente.BuscarCliente(Connection.myConnection, textBoxIDcliente.Text);
+            if(reader.Read())
+            {
+                if (reader.GetBoolean(15))
+                {
+                    textBoxNombreCliente.Text = reader.GetString(1) + " " + reader.GetString(2);
+                    textBoxSaldo.Text = reader.GetFloat(14).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No existe ID");
+                }
+            }
+            else { MessageBox.Show("No existe ID"); }
+            Connection.CloseConnection();
+        }
     }
 }

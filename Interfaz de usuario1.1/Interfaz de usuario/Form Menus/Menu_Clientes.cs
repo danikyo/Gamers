@@ -40,6 +40,7 @@ namespace Interfaz_de_usuario
                 , textBoxRFC.Text, textBoxDomFisc.Text, textBoxRazSoc.Text, textBoxCP.Text, textBoxPais.Text, textBoxEstado.Text, textBoxMunicipio.Text, 0, true);
                 Class_.Cliente.AgregarCliente(CConnection.myConnection, nCliente);
                 CConnection.CloseConnection();
+                MessageBox.Show("Captura Exitosa");
                 this.Close();
             }
         }
@@ -72,6 +73,7 @@ namespace Interfaz_de_usuario
                     Consulta_Cliente consulta_cliente = new Consulta_Cliente(nCliente, CConnection);
                     CConnection.CloseConnection();
                     consulta_cliente.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
