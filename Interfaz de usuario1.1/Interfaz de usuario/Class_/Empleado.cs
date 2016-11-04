@@ -104,5 +104,12 @@ namespace Interfaz_de_usuario.Class_
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }
+
+        public static MySqlDataReader BuscarMaxId(MySqlConnection Connection)
+        {
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT MAX(idEmpleado) AS idEmpleado FROM empleado"), Connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            return reader;
+        }
     }
 }

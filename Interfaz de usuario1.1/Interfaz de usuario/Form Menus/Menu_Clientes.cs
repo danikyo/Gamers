@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace Interfaz_de_usuario
 {
@@ -35,13 +36,20 @@ namespace Interfaz_de_usuario
             }
             else
             {
-                CConnection.OpenConnection();
-                Class_.Cliente nCliente = new Class_.Cliente(1, textBoxNombreC.Text, textBoxApellidosC.Text, textBoxDireccionC.Text, dateTimePickerFechaNac.Text, textBoxEmailC.Text, textBoxTel.Text
-                , textBoxRFC.Text, textBoxDomFisc.Text, textBoxRazSoc.Text, textBoxCP.Text, textBoxPais.Text, textBoxEstado.Text, textBoxMunicipio.Text, 0, true);
-                Class_.Cliente.AgregarCliente(CConnection.myConnection, nCliente);
-                CConnection.CloseConnection();
-                MessageBox.Show("Captura Exitosa");
-                this.Close();
+                if (!email_bien_escrito(textBoxEmailC.Text)) { MessageBox.Show("Email no válido"); }
+                else
+                {
+                    CConnection.OpenConnection();
+                    Class_.Cliente nCliente = new Class_.Cliente(1, textBoxNombreC.Text, textBoxApellidosC.Text, textBoxDireccionC.Text, dateTimePickerFechaNac.Text, textBoxEmailC.Text, textBoxTel.Text
+                    , textBoxRFC.Text, textBoxDomFisc.Text, textBoxRazSoc.Text, textBoxCP.Text, textBoxPais.Text, textBoxEstado.Text, textBoxMunicipio.Text, 0, true);
+                    Class_.Cliente.AgregarCliente(CConnection.myConnection, nCliente);
+
+                    CConnection.CloseConnection();
+
+                    MessageBox.Show("Captura Exitosa");
+
+                    this.Close();
+                }
             }
         }
 
@@ -88,6 +96,20 @@ namespace Interfaz_de_usuario
             CConnection.CloseConnection();
         }
 
+        private int MaxId()
+        {
+            int max = 1;
+            CConnection.OpenConnection();
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT MAX(idCliente) AS idCliente FROM Cliente"), CConnection.myConnection);
+            MySqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                if (!reader.IsDBNull(0)) { max = reader.GetInt32(0); max++; }
+            }
+            CConnection.CloseConnection();
+            return max;
+        }
+
         private void Menu_Clientes_Load(object sender, EventArgs e)
         {
             CConnection.OpenConnection();
@@ -95,6 +117,29 @@ namespace Interfaz_de_usuario
             dataGridView1.Columns[15].Visible = false;
             dataGridView1.Columns[0].Width = 40;
             CConnection.CloseConnection();
+
+            labelIDCliente.Text = "ID " + MaxId().ToString();
+        }
+
+        private Boolean email_bien_escrito(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

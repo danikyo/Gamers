@@ -101,6 +101,8 @@ namespace Interfaz_de_usuario
             string imagen = dataGridView1.CurrentRow.Cells[9].Value.ToString();
             string ruta = "C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\";
             pictureBoxRimage.Image = Image.FromFile(ruta + imagen);
+
+            labelIDproducto.Text = "ID " + MaxId().ToString();
         }
 
         private void buttonExaminar_Click(object sender, EventArgs e)
@@ -120,6 +122,20 @@ namespace Interfaz_de_usuario
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
             }
+        }
+
+        private int MaxId()
+        {
+            int max = 1;
+            Connection.OpenConnection();
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT MAX(idProducto) AS idProducto FROM producto"), Connection.myConnection);
+            MySqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                if (!reader.IsDBNull(0)) { max = reader.GetInt32(0); max++; }
+            }
+            Connection.CloseConnection();
+            return max;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

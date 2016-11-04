@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Interfaz_de_usuario
@@ -105,13 +106,20 @@ namespace Interfaz_de_usuario
 
         private void buttonListo_Click(object sender, EventArgs e)
         {
-            Connection.OpenConnection();
-            Class_.Cliente nCliente = new Class_.Cliente(Cliente.ID, textBoxNombre.Text, textBoxApellidos.Text, textBoxDireccion.Text,
-            dateTimePicker1.Text, textBoxEmail.Text, textBoxTel.Text, textBoxRFC.Text, textBoxDomFiscal.Text, textBoxRazonSocial.Text, textBoxCP.Text,
-            textBoxPais.Text, textBoxEstado.Text, textBoxMunicipio.Text, float.Parse(textBoxSaldo.Text), true);
-            Class_.Cliente.ModificarCliente(Connection.myConnection, nCliente);
-            Connection.CloseConnection();
-            this.Close();
+            if (email_bien_escrito(textBoxEmail.Text))
+            {
+                Connection.OpenConnection();
+                Class_.Cliente nCliente = new Class_.Cliente(Cliente.ID, textBoxNombre.Text, textBoxApellidos.Text, textBoxDireccion.Text,
+                dateTimePicker1.Text, textBoxEmail.Text, textBoxTel.Text, textBoxRFC.Text, textBoxDomFiscal.Text, textBoxRazonSocial.Text, textBoxCP.Text,
+                textBoxPais.Text, textBoxEstado.Text, textBoxMunicipio.Text, float.Parse(textBoxSaldo.Text), true);
+                Class_.Cliente.ModificarCliente(Connection.myConnection, nCliente);
+                Connection.CloseConnection();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Email no válido");
+            }
         }
 
         private void buttonBaja_Click(object sender, EventArgs e)
@@ -123,6 +131,27 @@ namespace Interfaz_de_usuario
                 Class_.Cliente.BajaCliente(Connection.myConnection, Cliente.ID);
                 Connection.CloseConnection();
                 this.Close();
+            }
+        }
+
+        private Boolean email_bien_escrito(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
             }
         }
     }

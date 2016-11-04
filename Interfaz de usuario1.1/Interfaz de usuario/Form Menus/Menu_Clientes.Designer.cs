@@ -49,6 +49,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxTel = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.labelIDCliente = new System.Windows.Forms.Label();
             this.dateTimePickerFechaNac = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -77,7 +79,7 @@
             // 
             this.buttonAgregarC.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonAgregarC.Location = new System.Drawing.Point(48, 273);
+            this.buttonAgregarC.Location = new System.Drawing.Point(49, 299);
             this.buttonAgregarC.Name = "buttonAgregarC";
             this.buttonAgregarC.Size = new System.Drawing.Size(160, 35);
             this.buttonAgregarC.TabIndex = 14;
@@ -110,21 +112,21 @@
             // 
             // textBoxNombreC
             // 
-            this.textBoxNombreC.Location = new System.Drawing.Point(15, 39);
+            this.textBoxNombreC.Location = new System.Drawing.Point(16, 65);
             this.textBoxNombreC.Name = "textBoxNombreC";
             this.textBoxNombreC.Size = new System.Drawing.Size(212, 20);
             this.textBoxNombreC.TabIndex = 1;
             // 
             // textBoxDireccionC
             // 
-            this.textBoxDireccionC.Location = new System.Drawing.Point(15, 126);
+            this.textBoxDireccionC.Location = new System.Drawing.Point(16, 152);
             this.textBoxDireccionC.Name = "textBoxDireccionC";
             this.textBoxDireccionC.Size = new System.Drawing.Size(212, 20);
             this.textBoxDireccionC.TabIndex = 3;
             // 
             // textBoxEmailC
             // 
-            this.textBoxEmailC.Location = new System.Drawing.Point(15, 207);
+            this.textBoxEmailC.Location = new System.Drawing.Point(16, 233);
             this.textBoxEmailC.Name = "textBoxEmailC";
             this.textBoxEmailC.Size = new System.Drawing.Size(212, 20);
             this.textBoxEmailC.TabIndex = 5;
@@ -134,7 +136,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Location = new System.Drawing.Point(13, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 18);
             this.label1.TabIndex = 10;
@@ -156,7 +158,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 105);
+            this.label3.Location = new System.Drawing.Point(11, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 18);
             this.label3.TabIndex = 12;
@@ -167,7 +169,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 146);
+            this.label4.Location = new System.Drawing.Point(13, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 15);
             this.label4.TabIndex = 13;
@@ -197,7 +199,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 62);
+            this.label6.Location = new System.Drawing.Point(13, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 18);
             this.label6.TabIndex = 16;
@@ -205,7 +207,7 @@
             // 
             // textBoxApellidosC
             // 
-            this.textBoxApellidosC.Location = new System.Drawing.Point(15, 83);
+            this.textBoxApellidosC.Location = new System.Drawing.Point(16, 109);
             this.textBoxApellidosC.Name = "textBoxApellidosC";
             this.textBoxApellidosC.Size = new System.Drawing.Size(212, 20);
             this.textBoxApellidosC.TabIndex = 2;
@@ -226,7 +228,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 230);
+            this.label7.Location = new System.Drawing.Point(13, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 15);
             this.label7.TabIndex = 18;
@@ -234,7 +236,7 @@
             // 
             // textBoxTel
             // 
-            this.textBoxTel.Location = new System.Drawing.Point(15, 247);
+            this.textBoxTel.Location = new System.Drawing.Point(16, 273);
             this.textBoxTel.Name = "textBoxTel";
             this.textBoxTel.Size = new System.Drawing.Size(212, 20);
             this.textBoxTel.TabIndex = 6;
@@ -242,6 +244,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.labelIDCliente);
             this.groupBox1.Controls.Add(this.dateTimePickerFechaNac);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
@@ -270,18 +274,40 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 145);
+            this.groupBox1.Location = new System.Drawing.Point(12, 121);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(572, 317);
+            this.groupBox1.Size = new System.Drawing.Size(572, 341);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Cliente";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(13, 213);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 18);
+            this.label16.TabIndex = 38;
+            this.label16.Text = "Email";
+            // 
+            // labelIDCliente
+            // 
+            this.labelIDCliente.AutoSize = true;
+            this.labelIDCliente.BackColor = System.Drawing.Color.Transparent;
+            this.labelIDCliente.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIDCliente.Location = new System.Drawing.Point(235, 16);
+            this.labelIDCliente.Name = "labelIDCliente";
+            this.labelIDCliente.Size = new System.Drawing.Size(48, 18);
+            this.labelIDCliente.TabIndex = 37;
+            this.labelIDCliente.Text = "ID X";
             // 
             // dateTimePickerFechaNac
             // 
             this.dateTimePickerFechaNac.CustomFormat = "yyyy-MM-dd";
             this.dateTimePickerFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerFechaNac.Location = new System.Drawing.Point(15, 164);
+            this.dateTimePickerFechaNac.Location = new System.Drawing.Point(16, 190);
             this.dateTimePickerFechaNac.Name = "dateTimePickerFechaNac";
             this.dateTimePickerFechaNac.Size = new System.Drawing.Size(96, 20);
             this.dateTimePickerFechaNac.TabIndex = 4;
@@ -292,7 +318,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(307, 270);
+            this.label14.Location = new System.Drawing.Point(308, 296);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(66, 15);
             this.label14.TabIndex = 36;
@@ -303,7 +329,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(307, 232);
+            this.label13.Location = new System.Drawing.Point(308, 258);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 15);
             this.label13.TabIndex = 35;
@@ -314,7 +340,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(304, 191);
+            this.label12.Location = new System.Drawing.Point(305, 217);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(33, 15);
             this.label12.TabIndex = 34;
@@ -322,49 +348,49 @@
             // 
             // textBoxPais
             // 
-            this.textBoxPais.Location = new System.Drawing.Point(307, 209);
+            this.textBoxPais.Location = new System.Drawing.Point(308, 235);
             this.textBoxPais.Name = "textBoxPais";
             this.textBoxPais.Size = new System.Drawing.Size(212, 20);
             this.textBoxPais.TabIndex = 11;
             // 
             // textBoxMunicipio
             // 
-            this.textBoxMunicipio.Location = new System.Drawing.Point(308, 289);
+            this.textBoxMunicipio.Location = new System.Drawing.Point(309, 315);
             this.textBoxMunicipio.Name = "textBoxMunicipio";
             this.textBoxMunicipio.Size = new System.Drawing.Size(212, 20);
             this.textBoxMunicipio.TabIndex = 13;
             // 
             // textBoxEstado
             // 
-            this.textBoxEstado.Location = new System.Drawing.Point(307, 247);
+            this.textBoxEstado.Location = new System.Drawing.Point(308, 273);
             this.textBoxEstado.Name = "textBoxEstado";
             this.textBoxEstado.Size = new System.Drawing.Size(212, 20);
             this.textBoxEstado.TabIndex = 12;
             // 
             // textBoxCP
             // 
-            this.textBoxCP.Location = new System.Drawing.Point(307, 171);
+            this.textBoxCP.Location = new System.Drawing.Point(308, 197);
             this.textBoxCP.Name = "textBoxCP";
             this.textBoxCP.Size = new System.Drawing.Size(212, 20);
             this.textBoxCP.TabIndex = 10;
             // 
             // textBoxRazSoc
             // 
-            this.textBoxRazSoc.Location = new System.Drawing.Point(307, 127);
+            this.textBoxRazSoc.Location = new System.Drawing.Point(308, 153);
             this.textBoxRazSoc.Name = "textBoxRazSoc";
             this.textBoxRazSoc.Size = new System.Drawing.Size(212, 20);
             this.textBoxRazSoc.TabIndex = 9;
             // 
             // textBoxDomFisc
             // 
-            this.textBoxDomFisc.Location = new System.Drawing.Point(307, 83);
+            this.textBoxDomFisc.Location = new System.Drawing.Point(308, 109);
             this.textBoxDomFisc.Name = "textBoxDomFisc";
             this.textBoxDomFisc.Size = new System.Drawing.Size(212, 20);
             this.textBoxDomFisc.TabIndex = 8;
             // 
             // textBoxRFC
             // 
-            this.textBoxRFC.Location = new System.Drawing.Point(307, 37);
+            this.textBoxRFC.Location = new System.Drawing.Point(308, 63);
             this.textBoxRFC.Name = "textBoxRFC";
             this.textBoxRFC.Size = new System.Drawing.Size(212, 20);
             this.textBoxRFC.TabIndex = 7;
@@ -374,7 +400,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(304, 150);
+            this.label11.Location = new System.Drawing.Point(305, 176);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(109, 18);
             this.label11.TabIndex = 23;
@@ -385,7 +411,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(304, 106);
+            this.label10.Location = new System.Drawing.Point(305, 132);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(176, 18);
             this.label10.TabIndex = 22;
@@ -396,7 +422,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(304, 62);
+            this.label9.Location = new System.Drawing.Point(305, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 18);
             this.label9.TabIndex = 21;
@@ -407,7 +433,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(307, 16);
+            this.label8.Location = new System.Drawing.Point(308, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 18);
             this.label8.TabIndex = 20;
@@ -532,5 +558,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaNac;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label labelIDCliente;
+        private System.Windows.Forms.Label label16;
     }
 }

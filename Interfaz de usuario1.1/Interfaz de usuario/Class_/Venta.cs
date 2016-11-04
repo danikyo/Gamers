@@ -122,7 +122,6 @@ namespace Interfaz_de_usuario.Class_
             MySqlCommand command = new MySqlCommand(String.Format("SELECT MAX(idVenta) AS idVenta FROM venta"), Connection);
             MySqlDataReader reader = command.ExecuteReader();
             return reader;
-
         }
     }
 }

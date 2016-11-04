@@ -50,6 +50,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.labelIDempleado = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpleado)).BeginInit();
@@ -69,7 +70,7 @@
             // 
             // textBoxApellidosE
             // 
-            this.textBoxApellidosE.Location = new System.Drawing.Point(84, 66);
+            this.textBoxApellidosE.Location = new System.Drawing.Point(84, 90);
             this.textBoxApellidosE.Name = "textBoxApellidosE";
             this.textBoxApellidosE.Size = new System.Drawing.Size(244, 20);
             this.textBoxApellidosE.TabIndex = 2;
@@ -79,7 +80,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 65);
+            this.label6.Location = new System.Drawing.Point(6, 89);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 18);
             this.label6.TabIndex = 27;
@@ -90,7 +91,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 105);
+            this.label3.Location = new System.Drawing.Point(6, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 18);
             this.label3.TabIndex = 25;
@@ -101,7 +102,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 140);
+            this.label2.Location = new System.Drawing.Point(6, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 15);
             this.label2.TabIndex = 24;
@@ -112,7 +113,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Location = new System.Drawing.Point(6, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 18);
             this.label1.TabIndex = 23;
@@ -120,14 +121,14 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(84, 138);
+            this.textBoxPassword.Location = new System.Drawing.Point(84, 162);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(208, 20);
             this.textBoxPassword.TabIndex = 4;
             // 
             // textBoxCPassword
             // 
-            this.textBoxCPassword.Location = new System.Drawing.Point(84, 172);
+            this.textBoxCPassword.Location = new System.Drawing.Point(84, 196);
             this.textBoxCPassword.Name = "textBoxCPassword";
             this.textBoxCPassword.PasswordChar = '*';
             this.textBoxCPassword.Size = new System.Drawing.Size(208, 20);
@@ -135,7 +136,7 @@
             // 
             // textBoxNombreE
             // 
-            this.textBoxNombreE.Location = new System.Drawing.Point(84, 28);
+            this.textBoxNombreE.Location = new System.Drawing.Point(84, 52);
             this.textBoxNombreE.Name = "textBoxNombreE";
             this.textBoxNombreE.Size = new System.Drawing.Size(244, 20);
             this.textBoxNombreE.TabIndex = 1;
@@ -144,7 +145,7 @@
             // 
             this.buttonAgregarE.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonAgregarE.Location = new System.Drawing.Point(84, 215);
+            this.buttonAgregarE.Location = new System.Drawing.Point(84, 231);
             this.buttonAgregarE.Name = "buttonAgregarE";
             this.buttonAgregarE.Size = new System.Drawing.Size(160, 35);
             this.buttonAgregarE.TabIndex = 6;
@@ -157,7 +158,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 166);
+            this.label4.Location = new System.Drawing.Point(6, 190);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 30);
             this.label4.TabIndex = 29;
@@ -197,6 +198,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.labelIDempleado);
             this.groupBox1.Controls.Add(this.comboBoxPuesto);
             this.groupBox1.Controls.Add(this.textBoxNombreE);
             this.groupBox1.Controls.Add(this.buttonAgregarE);
@@ -222,7 +224,7 @@
             this.comboBoxPuesto.Items.AddRange(new object[] {
             "Gerente",
             "Cajero"});
-            this.comboBoxPuesto.Location = new System.Drawing.Point(84, 105);
+            this.comboBoxPuesto.Location = new System.Drawing.Point(84, 129);
             this.comboBoxPuesto.Name = "comboBoxPuesto";
             this.comboBoxPuesto.Size = new System.Drawing.Size(121, 21);
             this.comboBoxPuesto.TabIndex = 3;
@@ -273,7 +275,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(9, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(179, 32);
+            this.label8.Size = new System.Drawing.Size(163, 32);
             this.label8.TabIndex = 37;
             this.label8.Text = "BIENVENIDO AL \r\nMENU DE EMPLEADO";
             // 
@@ -287,6 +289,17 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
+            // 
+            // labelIDempleado
+            // 
+            this.labelIDempleado.AutoSize = true;
+            this.labelIDempleado.BackColor = System.Drawing.Color.Transparent;
+            this.labelIDempleado.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIDempleado.Location = new System.Drawing.Point(147, 21);
+            this.labelIDempleado.Name = "labelIDempleado";
+            this.labelIDempleado.Size = new System.Drawing.Size(48, 18);
+            this.labelIDempleado.TabIndex = 30;
+            this.labelIDempleado.Text = "ID X";
             // 
             // Menu_Empleado
             // 
@@ -340,5 +353,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label labelIDempleado;
     }
 }

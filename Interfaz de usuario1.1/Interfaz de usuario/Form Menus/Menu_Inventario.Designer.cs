@@ -61,6 +61,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBoxRegistros = new System.Windows.Forms.GroupBox();
             this.pictureBoxRimage = new System.Windows.Forms.PictureBox();
+            this.labelIDproducto = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -119,7 +120,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(33, 62);
+            this.label6.Location = new System.Drawing.Point(32, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 18);
             this.label6.TabIndex = 42;
@@ -131,7 +132,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(11, 97);
+            this.label3.Location = new System.Drawing.Point(10, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 18);
             this.label3.TabIndex = 41;
@@ -143,7 +144,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(11, 24);
+            this.label1.Location = new System.Drawing.Point(10, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 18);
             this.label1.TabIndex = 39;
@@ -151,14 +152,14 @@
             // 
             // textBoxPrecio
             // 
-            this.textBoxPrecio.Location = new System.Drawing.Point(89, 210);
+            this.textBoxPrecio.Location = new System.Drawing.Point(88, 234);
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(121, 20);
             this.textBoxPrecio.TabIndex = 6;
             // 
             // textBoxNombreP
             // 
-            this.textBoxNombreP.Location = new System.Drawing.Point(89, 25);
+            this.textBoxNombreP.Location = new System.Drawing.Point(88, 49);
             this.textBoxNombreP.Name = "textBoxNombreP";
             this.textBoxNombreP.Size = new System.Drawing.Size(244, 20);
             this.textBoxNombreP.TabIndex = 1;
@@ -167,7 +168,7 @@
             // 
             this.buttonAgregarP.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarP.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAgregarP.Location = new System.Drawing.Point(36, 274);
+            this.buttonAgregarP.Location = new System.Drawing.Point(35, 298);
             this.buttonAgregarP.Name = "buttonAgregarP";
             this.buttonAgregarP.Size = new System.Drawing.Size(160, 35);
             this.buttonAgregarP.TabIndex = 7;
@@ -193,7 +194,7 @@
             "Consolas",
             "Videojuegos",
             "Accesorios"});
-            this.comboBoxTipo.Location = new System.Drawing.Point(89, 59);
+            this.comboBoxTipo.Location = new System.Drawing.Point(88, 83);
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(121, 21);
             this.comboBoxTipo.TabIndex = 2;
@@ -204,7 +205,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(23, 212);
+            this.label2.Location = new System.Drawing.Point(22, 236);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 18);
             this.label2.TabIndex = 49;
@@ -216,7 +217,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(16, 134);
+            this.label4.Location = new System.Drawing.Point(15, 158);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 18);
             this.label4.TabIndex = 50;
@@ -230,7 +231,7 @@
             "Playstation",
             "Nintendo",
             "PC"});
-            this.comboBoxConsola.Location = new System.Drawing.Point(89, 96);
+            this.comboBoxConsola.Location = new System.Drawing.Point(88, 120);
             this.comboBoxConsola.Name = "comboBoxConsola";
             this.comboBoxConsola.Size = new System.Drawing.Size(121, 21);
             this.comboBoxConsola.TabIndex = 3;
@@ -246,7 +247,7 @@
             "Plataforma",
             "Shooter",
             "Otro"});
-            this.comboBoxGenero.Location = new System.Drawing.Point(89, 134);
+            this.comboBoxGenero.Location = new System.Drawing.Point(88, 158);
             this.comboBoxGenero.Name = "comboBoxGenero";
             this.comboBoxGenero.Size = new System.Drawing.Size(121, 21);
             this.comboBoxGenero.TabIndex = 4;
@@ -257,7 +258,7 @@
             this.comboBoxStatus.Items.AddRange(new object[] {
             "Nuevo",
             "Seminuevo"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(89, 171);
+            this.comboBoxStatus.Location = new System.Drawing.Point(88, 195);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
             this.comboBoxStatus.TabIndex = 5;
@@ -268,7 +269,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(23, 172);
+            this.label9.Location = new System.Drawing.Point(22, 196);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 18);
             this.label9.TabIndex = 58;
@@ -318,6 +319,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelIDproducto);
             this.groupBox1.Controls.Add(this.buttonExaminar);
             this.groupBox1.Controls.Add(this.textBoxImagen);
             this.groupBox1.Controls.Add(this.label7);
@@ -336,9 +338,9 @@
             this.groupBox1.Controls.Add(this.comboBoxTipo);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(4, 150);
+            this.groupBox1.Location = new System.Drawing.Point(4, 122);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(362, 315);
+            this.groupBox1.Size = new System.Drawing.Size(362, 343);
             this.groupBox1.TabIndex = 60;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
@@ -346,7 +348,7 @@
             // buttonExaminar
             // 
             this.buttonExaminar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonExaminar.Location = new System.Drawing.Point(212, 242);
+            this.buttonExaminar.Location = new System.Drawing.Point(211, 266);
             this.buttonExaminar.Name = "buttonExaminar";
             this.buttonExaminar.Size = new System.Drawing.Size(24, 23);
             this.buttonExaminar.TabIndex = 62;
@@ -356,7 +358,7 @@
             // 
             // textBoxImagen
             // 
-            this.textBoxImagen.Location = new System.Drawing.Point(89, 244);
+            this.textBoxImagen.Location = new System.Drawing.Point(88, 268);
             this.textBoxImagen.Name = "textBoxImagen";
             this.textBoxImagen.ReadOnly = true;
             this.textBoxImagen.Size = new System.Drawing.Size(121, 20);
@@ -368,7 +370,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(13, 244);
+            this.label7.Location = new System.Drawing.Point(12, 268);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 18);
             this.label7.TabIndex = 60;
@@ -377,7 +379,7 @@
             // pictureBoxImage
             // 
             this.pictureBoxImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxImage.Location = new System.Drawing.Point(240, 83);
+            this.pictureBoxImage.Location = new System.Drawing.Point(239, 107);
             this.pictureBoxImage.Name = "pictureBoxImage";
             this.pictureBoxImage.Size = new System.Drawing.Size(93, 93);
             this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -419,6 +421,18 @@
             this.pictureBoxRimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxRimage.TabIndex = 63;
             this.pictureBoxRimage.TabStop = false;
+            // 
+            // labelIDproducto
+            // 
+            this.labelIDproducto.AutoSize = true;
+            this.labelIDproducto.BackColor = System.Drawing.Color.Transparent;
+            this.labelIDproducto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIDproducto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelIDproducto.Location = new System.Drawing.Point(147, 16);
+            this.labelIDproducto.Name = "labelIDproducto";
+            this.labelIDproducto.Size = new System.Drawing.Size(48, 18);
+            this.labelIDproducto.TabIndex = 63;
+            this.labelIDproducto.Text = "ID X";
             // 
             // Menu_Inventario
             // 
@@ -481,5 +495,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBoxRegistros;
         private System.Windows.Forms.PictureBox pictureBoxRimage;
+        private System.Windows.Forms.Label labelIDproducto;
     }
 }

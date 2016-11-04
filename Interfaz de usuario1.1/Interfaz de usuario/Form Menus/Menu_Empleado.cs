@@ -108,6 +108,19 @@ namespace Interfaz_de_usuario
             e.Handled = true;
         }
 
+        private int MaxId()
+        {
+            int max = 1;
+            CConnection.OpenConnection();
+            MySqlDataReader reader = Class_.Empleado.BuscarMaxId(CConnection.myConnection);
+            if (reader.Read())
+            {
+                if (!reader.IsDBNull(0)) { max = reader.GetInt32(0); max++; }
+            }
+            CConnection.CloseConnection();
+            return max;
+        }
+
         private void Menu_Empleado_Load(object sender, EventArgs e)
         {
             CConnection.OpenConnection();
@@ -115,6 +128,8 @@ namespace Interfaz_de_usuario
             dataGridViewEmpleado.Columns[0].Width = 40;
             dataGridViewEmpleado.Columns[5].Visible = false;
             CConnection.CloseConnection();
+
+            labelIDempleado.Text = "ID " + MaxId().ToString();
         }
     }
 }

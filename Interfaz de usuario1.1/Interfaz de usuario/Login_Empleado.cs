@@ -38,9 +38,9 @@ namespace Interfaz_de_usuario
                     }
                     else if (nEmpleado.Puesto == "Cajero")
                     {
-                        //Menu_Principal_Empleado menu_principal_emp = new Menu_Principal_Empleado(Reader.GetString(1) + " " + Reader.GetString(2));
+                        Menu_Principal_Empleado menu_principal_emp = new Menu_Principal_Empleado(Reader.GetString(1) + " " + Reader.GetString(2));
                         CConnection.CloseConnection();
-                        //menu_principal_emp.ShowDialog();
+                        menu_principal_emp.ShowDialog();
                     }
                 }
                 else
