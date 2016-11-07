@@ -14,7 +14,9 @@ namespace Interfaz_de_usuario
     public partial class Consulta_Venta : Form
     {
         int comprobar;
+        Bitmap bmp;
         Class_.Connection Connection;
+        private PrintPreviewDialog VistaPrevia = new PrintPreviewDialog();
 
         public Consulta_Venta(Class_.Connection Connection, int comprobar)
         {
@@ -167,5 +169,49 @@ namespace Interfaz_de_usuario
                 }
             }
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp, 0, 0, bmp.Width, bmp.Height);
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            Capturaformulario();
+
+            VistaPrevia.Document = printDocument1;
+            VistaPrevia.ShowDialog();
+        }
+
+        /* Graphics g = this.CreateGraphics();
+            bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
+            Graphics mg = Graphics.FromImage(bmp);
+            mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+            printPreviewDialog1.ShowDialog(); */
+
+        private void Capturaformulario()
+        {
+            Graphics mygraphics = this.CreateGraphics();
+            Size sz = this.ClientRectangle.Size;
+            bmp = new Bitmap(sz.Width, sz.Height, mygraphics);
+            Graphics memoryGraphics = Graphics.FromImage(bmp);
+            IntPtr dc1 = mygraphics.GetHdc();
+            IntPtr dc2 = memoryGraphics.GetHdc();
+            //BitBlt(dc2, 0, 0, this.ClientRectangle.Width,
+                 //  this.ClientRectangle.Height, dc1, 0, 0, 13369376);
+            mygraphics.ReleaseHdc(dc1);
+            memoryGraphics.ReleaseHdc(dc2);
+        }
+
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        public static extern long BitBlt(IntPtr hdcDest,
+            int nXDest,
+            int nYDest,
+            int nWidth,
+            int nHeight,
+            IntPtr hdcSrc,
+            int nXSrc,
+            int nYSrc,
+            int dwRop);
     }
 }
