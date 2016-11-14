@@ -116,7 +116,7 @@ namespace Interfaz_de_usuario.Class_
 
         public static MySqlDataReader BuscarProducto(MySqlConnection Connection, string idProducto)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM producto WHERE idProducto = '{0}'", idProducto), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM producto WHERE idProducto = '{0}' AND pDisponible = true", idProducto), Connection);
             MySqlDataReader reader = command.ExecuteReader();
             return reader;
         }

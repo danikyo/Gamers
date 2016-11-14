@@ -244,6 +244,7 @@
             this.textBoxPrec.Name = "textBoxPrec";
             this.textBoxPrec.Size = new System.Drawing.Size(152, 20);
             this.textBoxPrec.TabIndex = 6;
+            this.textBoxPrec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrec_KeyPress);
             // 
             // textBoxStock
             // 
@@ -252,6 +253,7 @@
             this.textBoxStock.Name = "textBoxStock";
             this.textBoxStock.Size = new System.Drawing.Size(152, 20);
             this.textBoxStock.TabIndex = 7;
+            this.textBoxStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStock_KeyPress);
             // 
             // textBoxPrecioCompra
             // 
@@ -260,6 +262,7 @@
             this.textBoxPrecioCompra.Name = "textBoxPrecioCompra";
             this.textBoxPrecioCompra.Size = new System.Drawing.Size(152, 20);
             this.textBoxPrecioCompra.TabIndex = 8;
+            this.textBoxPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioCompra_KeyPress);
             // 
             // buttonListo
             // 
@@ -305,6 +308,7 @@
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(150, 21);
             this.comboBoxStatus.TabIndex = 50;
+            this.comboBoxStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxStatus_KeyPress);
             // 
             // comboBoxGenero
             // 
@@ -333,6 +337,7 @@
             this.comboBoxConsola.Name = "comboBoxConsola";
             this.comboBoxConsola.Size = new System.Drawing.Size(150, 21);
             this.comboBoxConsola.TabIndex = 48;
+            this.comboBoxConsola.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxConsola_KeyPress);
             // 
             // comboBoxTipo
             // 
@@ -345,6 +350,7 @@
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(152, 21);
             this.comboBoxTipo.TabIndex = 47;
+            this.comboBoxTipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxTipo_KeyPress);
             // 
             // textBoxImage
             // 

@@ -13,19 +13,21 @@ namespace Interfaz_de_usuario.Class_
         string vFecha;
         string vTipoPago;
         string VC;
+        string balance;
         int vEmpleado_idEmpleado;
         int vCliente_idCliente;
-        bool vDisponible;
+        bool disponible;
 
-        public Venta(int idVenta, string Fecha, string TipoPago, string VC, int Empleado_idEmpleado, int Cliente_idCliente, bool Disponible)
+        public Venta(int idVenta, string Fecha, string TipoPago, string VC, bool disponible, string balance, int Empleado_idEmpleado, int Cliente_idCliente)
         {
             this.idVenta = idVenta;
             this.vFecha = Fecha;
             this.vTipoPago = TipoPago;
             this.VC = VC;
+            this.disponible = disponible;
+            this.balance = balance;
             this.vEmpleado_idEmpleado = Empleado_idEmpleado;
             this.vCliente_idCliente = Cliente_idCliente;
-            this.vDisponible = Disponible;
         }
 
         public int ID
@@ -64,15 +66,21 @@ namespace Interfaz_de_usuario.Class_
             set { VC = value; }
         }
 
+        public string Balance
+        {
+            get { return balance; }
+            set { balance = value; }
+        }
+
         public bool Disponible
         {
-            get { return vDisponible; }
-            set { vDisponible = value; }
+            get { return disponible; }
+            set { disponible = value; }
         }
 
         public static int AgregarVenta(MySqlConnection Connection, Venta venta)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO venta (vFecha, vTipoPago, VC, Empleado_idEmpleado, Cliente_idCliente, vDisponible) VALUES ('{0}','{1}','{2}','{3}','{4}',true)", venta.vFecha, venta.TipoPago, venta.vc, venta.vEmpleado_idEmpleado, venta.vCliente_idCliente), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO venta (vFecha, vTipoPago, VC, vSaldo, Empleado_idEmpleado, Cliente_idCliente, vDisponible) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', true)", venta.vFecha, venta.TipoPago, venta.vc, venta.balance, venta.vEmpleado_idEmpleado, venta.vCliente_idCliente), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }
@@ -84,7 +92,7 @@ namespace Interfaz_de_usuario.Class_
             MySqlDataReader reader = command.ExecuteReader();
             while(reader.Read())
             {
-                Venta venta = new Venta(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetBoolean(6));
+                Venta venta = new Venta(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetBoolean(4), reader.GetString(5), reader.GetInt32(6), reader.GetInt32(7));
                 Nventa.Add(venta);
             }
             return Nventa;
@@ -97,7 +105,7 @@ namespace Interfaz_de_usuario.Class_
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                Venta venta = new Venta(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetBoolean(6));
+                Venta venta = new Venta(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetBoolean(4), reader.GetString(5), reader.GetInt32(6), reader.GetInt32(7));
                 Nventa.Add(venta);
             }
             return Nventa;

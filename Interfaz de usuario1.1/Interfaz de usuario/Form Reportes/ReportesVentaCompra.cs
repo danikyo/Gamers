@@ -35,14 +35,14 @@ namespace Interfaz_de_usuario
 
         private void buttonConsultarVenta_Click(object sender, EventArgs e)
         {
-            Consulta_Venta reporte_venta = new Consulta_Venta(Connection, 0);
+            Consulta_Venta reporte_venta = new Consulta_Venta(Connection, dataGridViewVenta.CurrentRow.Cells[0].Value.ToString());
             reporte_venta.ShowDialog();
             this.Close();
         }
 
         private void buttonConsultarCompra_Click(object sender, EventArgs e)
         {
-            Consulta_Compra reporte_compra = new Consulta_Compra(Connection);
+            Consulta_Compra reporte_compra = new Consulta_Compra(Connection, dataGridViewCompra.CurrentRow.Cells[0].Value.ToString());
             reporte_compra.ShowDialog();
             this.Close();
         }

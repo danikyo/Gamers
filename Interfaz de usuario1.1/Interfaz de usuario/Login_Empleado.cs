@@ -62,13 +62,18 @@ namespace Interfaz_de_usuario
             this.Close();
         }
 
-        private void textBoxContraseña_KeyUp(object sender, KeyEventArgs e)
+        private void textBoxContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 buttonEntrar_Click(sender, e);
-                e.Handled = true;
+                //aqui codigo
             }
+        }
+
+        private void textBoxContraseña_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

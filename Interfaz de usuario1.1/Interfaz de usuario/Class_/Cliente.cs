@@ -174,6 +174,13 @@ namespace Interfaz_de_usuario.Class_
             return retorno;
         }
 
+        public static int ModifyBenefic(MySqlConnection Connection, Cliente cliente)
+        {
+            MySqlCommand command = new MySqlCommand(String.Format("UPDATE cliente SET cSaldo = {0} Where idCliente = {1}", cliente.Saldo, cliente.ID), Connection);
+            int retorno = command.ExecuteNonQuery();
+            return retorno;
+        }
+
         public static MySqlDataReader BuscarCliente(MySqlConnection Connection, string idCliente)
         {
             MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM cliente WHERE idCliente = '{0}'", idCliente),Connection);

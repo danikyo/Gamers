@@ -36,7 +36,7 @@ namespace Interfaz_de_usuario
             }
             else
             {
-                if (!email_bien_escrito(textBoxEmailC.Text)) { MessageBox.Show("Email no válido"); }
+                if (!email_bien_escrito(textBoxEmailC.Text) && textBoxRFC.Text.Length < 10) { MessageBox.Show("Verifique que los campos esten escritos\ncorrectamente!"); }
                 else
                 {
                     CConnection.OpenConnection();
@@ -139,6 +139,25 @@ namespace Interfaz_de_usuario
             else
             {
                 return false;
+            }
+        }
+
+        private void textBoxTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NumberOnly(e);
+        }
+
+        private void textBoxCP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NumberOnly(e);
+        }
+
+        private void NumberOnly(KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
             }
         }
     }

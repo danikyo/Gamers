@@ -71,7 +71,7 @@ namespace Interfaz_de_usuario
             dateTimePicker1.Enabled = true;
             textBoxDireccion.Enabled = true;
             textBoxEmail.Enabled = true;
-            textBoxSaldo.Enabled = true;
+            //textBoxSaldo.Enabled = true;
             textBoxTel.Enabled = true;
             textBoxCP.Enabled = true;
             textBoxRFC.Enabled = true;
@@ -106,7 +106,7 @@ namespace Interfaz_de_usuario
 
         private void buttonListo_Click(object sender, EventArgs e)
         {
-            if (email_bien_escrito(textBoxEmail.Text))
+            if (email_bien_escrito(textBoxEmail.Text) && textBoxRFC.Text.Length > 9)
             {
                 Connection.OpenConnection();
                 Class_.Cliente nCliente = new Class_.Cliente(Cliente.ID, textBoxNombre.Text, textBoxApellidos.Text, textBoxDireccion.Text,
@@ -118,7 +118,7 @@ namespace Interfaz_de_usuario
             }
             else
             {
-                MessageBox.Show("Email no válido");
+                MessageBox.Show("Verifique que los datos esten bien escritos");
             }
         }
 
@@ -152,6 +152,25 @@ namespace Interfaz_de_usuario
             else
             {
                 return false;
+            }
+        }
+
+        private void textBoxTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NumberOnly(e);
+        }
+
+        private void textBoxCP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NumberOnly(e);
+        }
+
+        private void NumberOnly(KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
             }
         }
     }

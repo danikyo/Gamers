@@ -240,6 +240,7 @@
             this.textBoxTel.Name = "textBoxTel";
             this.textBoxTel.Size = new System.Drawing.Size(212, 20);
             this.textBoxTel.TabIndex = 6;
+            this.textBoxTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTel_KeyPress);
             // 
             // groupBox1
             // 
@@ -373,6 +374,7 @@
             this.textBoxCP.Name = "textBoxCP";
             this.textBoxCP.Size = new System.Drawing.Size(212, 20);
             this.textBoxCP.TabIndex = 10;
+            this.textBoxCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCP_KeyPress);
             // 
             // textBoxRazSoc
             // 

@@ -302,6 +302,7 @@
             this.textBoxTel.Name = "textBoxTel";
             this.textBoxTel.Size = new System.Drawing.Size(142, 20);
             this.textBoxTel.TabIndex = 7;
+            this.textBoxTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTel_KeyPress);
             // 
             // textBoxCP
             // 
@@ -310,6 +311,7 @@
             this.textBoxCP.Name = "textBoxCP";
             this.textBoxCP.Size = new System.Drawing.Size(142, 20);
             this.textBoxCP.TabIndex = 8;
+            this.textBoxCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCP_KeyPress);
             // 
             // textBoxRFC
             // 

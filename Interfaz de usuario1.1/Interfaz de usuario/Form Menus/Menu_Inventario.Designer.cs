@@ -54,6 +54,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelIDproducto = new System.Windows.Forms.Label();
             this.buttonExaminar = new System.Windows.Forms.Button();
             this.textBoxImagen = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBoxRegistros = new System.Windows.Forms.GroupBox();
             this.pictureBoxRimage = new System.Windows.Forms.PictureBox();
-            this.labelIDproducto = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -156,6 +156,7 @@
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(121, 20);
             this.textBoxPrecio.TabIndex = 6;
+            this.textBoxPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecio_KeyPress);
             // 
             // textBoxNombreP
             // 
@@ -198,6 +199,7 @@
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(121, 21);
             this.comboBoxTipo.TabIndex = 2;
+            this.comboBoxTipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxTipo_KeyPress);
             // 
             // label2
             // 
@@ -235,6 +237,7 @@
             this.comboBoxConsola.Name = "comboBoxConsola";
             this.comboBoxConsola.Size = new System.Drawing.Size(121, 21);
             this.comboBoxConsola.TabIndex = 3;
+            this.comboBoxConsola.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxConsola_KeyPress);
             // 
             // comboBoxGenero
             // 
@@ -262,6 +265,7 @@
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
             this.comboBoxStatus.TabIndex = 5;
+            this.comboBoxStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxStatus_KeyPress);
             // 
             // label9
             // 
@@ -345,6 +349,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
             // 
+            // labelIDproducto
+            // 
+            this.labelIDproducto.AutoSize = true;
+            this.labelIDproducto.BackColor = System.Drawing.Color.Transparent;
+            this.labelIDproducto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIDproducto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelIDproducto.Location = new System.Drawing.Point(147, 16);
+            this.labelIDproducto.Name = "labelIDproducto";
+            this.labelIDproducto.Size = new System.Drawing.Size(48, 18);
+            this.labelIDproducto.TabIndex = 63;
+            this.labelIDproducto.Text = "ID X";
+            // 
             // buttonExaminar
             // 
             this.buttonExaminar.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -422,18 +438,6 @@
             this.pictureBoxRimage.TabIndex = 63;
             this.pictureBoxRimage.TabStop = false;
             // 
-            // labelIDproducto
-            // 
-            this.labelIDproducto.AutoSize = true;
-            this.labelIDproducto.BackColor = System.Drawing.Color.Transparent;
-            this.labelIDproducto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIDproducto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelIDproducto.Location = new System.Drawing.Point(147, 16);
-            this.labelIDproducto.Name = "labelIDproducto";
-            this.labelIDproducto.Size = new System.Drawing.Size(48, 18);
-            this.labelIDproducto.TabIndex = 63;
-            this.labelIDproducto.Text = "ID X";
-            // 
             // Menu_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,7 +453,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu_Inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu_Inventario";
+            this.Text = "6";
             this.Load += new System.EventHandler(this.Menu_Inventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

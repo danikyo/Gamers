@@ -8,186 +8,145 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Drawing.Printing;
 
 namespace Interfaz_de_usuario
 {
     public partial class Consulta_Venta : Form
-    {
-        int comprobar;
+    { 
+        string idSale;
+        string saldo;
+
         Bitmap bmp;
         Class_.Connection Connection;
-        private PrintPreviewDialog VistaPrevia = new PrintPreviewDialog();
+        PrintPreviewDialog VistaPrevia = new PrintPreviewDialog();
+        PrintDialog impresora = new PrintDialog();
 
-        public Consulta_Venta(Class_.Connection Connection, int comprobar)
+        public Consulta_Venta(Class_.Connection Connection, string idSale)
         {
             InitializeComponent();
-            this.comprobar = comprobar;
             this.Connection = Connection;
-        }
-
-        private void buttonRegresar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void limpiar()
-        {
-            textBoxFolio.Clear();
-            textBoxIDcliente.Clear();
-            textBoxIva.Clear();
-            textBoxNombreCliente.Clear();
-            textBoxNomEmpleado.Clear();
-            textBoxSaldo.Clear();
-            textBoxSubTotal.Clear();
-            textBoxTotal.Clear();
-            comboBoxTipoPago.Text = "";
-            labelFecha.Text = "";
-        }
-
-        private void buttonOk_Click(object sender, EventArgs e)
-        {
-            Connection.OpenConnection();
-            MySqlDataReader readerVenta = Class_.Venta.BuscarVenta(Connection.myConnection, textBoxFolio.Text);
-            if (readerVenta.Read())
-            {
-                Class_.Venta venta = new Class_.Venta(readerVenta.GetInt32(0), readerVenta.GetString(1), readerVenta.GetString(2), readerVenta.GetString(3), readerVenta.GetInt32(4), readerVenta.GetInt32(5), readerVenta.GetBoolean(6));
-
-                if(venta.vc == "V" && venta.Disponible)
-                {
-                    string[] fecha = venta.Fecha.Split(' ');
-                    labelFecha.Text = fecha[0] + "\n" + fecha[1];
-                    textBoxIDcliente.Text = venta.ID_Cliente.ToString();
-                    comboBoxTipoPago.Text = venta.TipoPago;
-                    Connection.CloseConnection();
-                    Connection.OpenConnection();
-
-                    MySqlDataReader readerCliente = Class_.Cliente.BuscarCliente(Connection.myConnection, venta.ID_Cliente.ToString());
-
-                    if (readerCliente.Read())
-                    {
-                        textBoxNombreCliente.Text = readerCliente.GetString(1) + " " + readerCliente.GetString(2);
-                        textBoxSaldo.Text = readerCliente.GetString(14);
-                        Connection.CloseConnection();
-                    }
-
-                    Connection.OpenConnection();
-
-                    MySqlDataReader readerEmpleado = Class_.Empleado.BuscarEmpleado(Connection.myConnection, venta.ID_Empleado.ToString());
-
-                    if (readerEmpleado.Read())
-                    {
-                        textBoxNomEmpleado.Text = readerEmpleado.GetString(1) + " " + readerEmpleado.GetString(2);
-                    }
-                }
-                else
-                {
-                    if (!venta.Disponible) { MessageBox.Show("No se encontro folio"); }
-                    else if (venta.vc == "C") { MessageBox.Show("Folio no es de tipo venta"); }
-                    limpiar();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Folio no encontrado");
-                limpiar();
-            }
-            Connection.CloseConnection();
+            this.idSale = idSale;
         }
 
         private void Consulta_Venta_Load(object sender, EventArgs e)
         {
-            if(comprobar > 0)
-            {
-                Connection.OpenConnection();
-                textBoxFolio.Text = comprobar.ToString();
-                MySqlDataReader readerVenta = Class_.Venta.BuscarVenta(Connection.myConnection, textBoxFolio.Text);
-                if (readerVenta.Read())
-                {
-                    Class_.Venta venta = new Class_.Venta(readerVenta.GetInt32(0), readerVenta.GetString(1), readerVenta.GetString(2), readerVenta.GetString(3), readerVenta.GetInt32(4), readerVenta.GetInt32(5), readerVenta.GetBoolean(6));
+            labelFolio.Text = "Folio No. " + idSale;
 
-                    if (venta.vc == "V" && venta.Disponible)
-                    {
-                        string[] fecha = venta.Fecha.Split(' ');
-                        labelFecha.Text = fecha[0] + "\n" + fecha[1];
-                        textBoxIDcliente.Text = venta.ID_Cliente.ToString();
-                        comboBoxTipoPago.Text = venta.TipoPago;
-                        Connection.CloseConnection();
-                        Connection.OpenConnection();
-
-                        MySqlDataReader readerCliente = Class_.Cliente.BuscarCliente(Connection.myConnection, venta.ID_Cliente.ToString());
-
-                        if (readerCliente.Read())
-                        {
-                            textBoxNombreCliente.Text = readerCliente.GetString(1) + " " + readerCliente.GetString(2);
-                            textBoxSaldo.Text = readerCliente.GetString(14);
-                            Connection.CloseConnection();
-                        }
-
-                        Connection.OpenConnection();
-
-                        MySqlDataReader readerEmpleado = Class_.Empleado.BuscarEmpleado(Connection.myConnection, venta.ID_Empleado.ToString());
-
-                        if (readerEmpleado.Read())
-                        {
-                            textBoxNomEmpleado.Text = readerEmpleado.GetString(1) + " " + readerEmpleado.GetString(2);
-                        }
-                    }
-                    else
-                    {
-                        if (!venta.Disponible) { MessageBox.Show("No se encontro folio"); }
-                        else if (venta.vc == "C") { MessageBox.Show("Folio no es de tipo venta"); }
-                        limpiar();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Folio no encontrado");
-                    limpiar();
-                }
-                Connection.CloseConnection();
-
-                textBoxFolio.Enabled = false;
-                buttonCancelar.Visible = false;
-            }
+            LoadForm();
+            LoadDataGrid();
+            dataGridView1.ClearSelection();
+            LoadTotal();
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            if(textBoxIDcliente.Text == "")
-            {
-                MessageBox.Show("Debe seleccionar un folio a eliminar");
-            }
-            else
-            {
                 DialogResult result = MessageBox.Show("Seguro que desea cancelar\nesta venta?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
                     Connection.OpenConnection();
-                    Class_.Venta.CancelarVenta(Connection.myConnection, textBoxFolio.Text);
+                    Class_.Venta.CancelarVenta(Connection.myConnection, idSale);
                     Connection.CloseConnection();
                     this.Close();
                 }
-            }
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void LoadDataGrid()
         {
-            e.Graphics.DrawImage(bmp, 0, 0, bmp.Width, bmp.Height);
+            Connection.OpenConnection();
+            MySqlDataAdapter adapter = Class_.SaleDetail.ShowDetail(Connection.myConnection, idSale);
+            DataSet dataset = new DataSet();
+            adapter.Fill(dataset, "detalleventa");
+            dataGridView1.DataSource = dataset;
+            dataGridView1.DataMember = "detalleventa";
+            dataGridView1.Columns[1].Width = 270;
+            Connection.CloseConnection();
+        }
+
+        private void LoadTotal()
+        {
+            decimal total = 0;
+            double subTotal = 0;
+            double IVA = 0;
+
+            foreach (DataGridViewRow Row in dataGridView1.Rows)
+            {
+                total += (Convert.ToDecimal(Row.Cells["Importe"].Value));
+            }
+
+            subTotal = Convert.ToDouble(total) / 1.16;
+            subTotal = Math.Round(subTotal, 1);
+
+            IVA = Convert.ToDouble(total) - subTotal;
+            IVA = Math.Round(IVA, 1);
+        
+            labelIva.Text = "$" + IVA.ToString();
+            labelSubTotal.Text = "$" + subTotal.ToString();
+            labelTotal.Text = "$"+total.ToString();
+            labelSaldoUsado.Text = "$" + saldo;
+            labelTotalTotal.Text = "$" + (total - decimal.Parse(saldo));
+        }
+
+        private void LoadForm()
+        {
+            Connection.OpenConnection();
+            MySqlDataReader readerVenta = Class_.Venta.BuscarVenta(Connection.myConnection, idSale);
+            if (readerVenta.Read())
+            {
+                Class_.Venta venta = new Class_.Venta(readerVenta.GetInt32(0), readerVenta.GetString(1), readerVenta.GetString(2), readerVenta.GetString(3), readerVenta.GetBoolean(4), readerVenta.GetString(5), readerVenta.GetInt32(6), readerVenta.GetInt32(7));
+
+                string[] fecha = venta.Fecha.Split(' ');
+                labelFecha.Text = fecha[0] + "\n" + fecha[1];
+
+                labelIDcliente.Text = venta.ID_Cliente.ToString();
+                labelTipoPago.Text = venta.TipoPago;
+                labelSaldo.Text = venta.Balance;
+                saldo = venta.Balance;
+
+                Connection.CloseConnection();
+                Connection.OpenConnection();
+
+                MySqlDataReader readerCliente = Class_.Cliente.BuscarCliente(Connection.myConnection, venta.ID_Cliente.ToString());
+
+                if (readerCliente.Read())
+                {
+                    labelNombreCliente.Text = readerCliente.GetString(1) + " " + readerCliente.GetString(2);
+                    labelAdress.Text = readerCliente.GetString(3);
+                    labelTel.Text = readerCliente.GetString(6);
+                    labelEmail.Text = readerCliente.GetString(5);
+
+                    Connection.CloseConnection();
+                }
+                Connection.CloseConnection();
+
+                Connection.OpenConnection();
+
+                MySqlDataReader readerEmpleado = Class_.Empleado.BuscarEmpleado(Connection.myConnection, venta.ID_Empleado.ToString());
+
+                if (readerEmpleado.Read())
+                {
+                    labelNombreEmpleado.Text = readerEmpleado.GetString(1) + " " + readerEmpleado.GetString(2);
+                }
+            }
+            Connection.CloseConnection();
         }
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            Capturaformulario();
+            buttonPrint.Visible = false;
+            buttonPrint2.Visible = false;
+            buttonRegresar.Visible = false;
+            buttonCancelar.Visible = false;
 
-            VistaPrevia.Document = printDocument1;
+            Capturaformulario();
+            buttonPrint.Visible = true;
+            buttonPrint2.Visible = true;
+            buttonRegresar.Visible = true;
+            buttonCancelar.Visible = true;
+
+            VistaPrevia.Document = printDocument2;
             VistaPrevia.ShowDialog();
         }
-
-        /* Graphics g = this.CreateGraphics();
-            bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
-            Graphics mg = Graphics.FromImage(bmp);
-            mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
-            printPreviewDialog1.ShowDialog(); */
 
         private void Capturaformulario()
         {
@@ -197,8 +156,8 @@ namespace Interfaz_de_usuario
             Graphics memoryGraphics = Graphics.FromImage(bmp);
             IntPtr dc1 = mygraphics.GetHdc();
             IntPtr dc2 = memoryGraphics.GetHdc();
-            //BitBlt(dc2, 0, 0, this.ClientRectangle.Width,
-                 //  this.ClientRectangle.Height, dc1, 0, 0, 13369376);
+            BitBlt(dc2, 0, 0, this.ClientRectangle.Width,
+                   this.ClientRectangle.Height, dc1, 0, 0, 13369376);
             mygraphics.ReleaseHdc(dc1);
             memoryGraphics.ReleaseHdc(dc2);
         }
@@ -213,5 +172,29 @@ namespace Interfaz_de_usuario
             int nXSrc,
             int nYSrc,
             int dwRop);
+
+        private void printDocument2_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp, 0, 0, bmp.Width, bmp.Height);
+        }
+
+        private void buttonPrint2_Click(object sender, EventArgs e)
+        {
+            Capturaformulario();
+
+            impresora.Document = printDocument2;
+            DialogResult Result = impresora.ShowDialog();
+
+            if (Result == DialogResult.OK)
+            {
+                printDocument2.DefaultPageSettings.Landscape = false;
+                printDocument2.Print();
+            }
+        }
+
+        private void buttonRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

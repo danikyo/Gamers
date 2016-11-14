@@ -14,6 +14,7 @@ namespace Interfaz_de_usuario
     {
         Class_.Producto Producto;
         Class_.Connection Connection;
+        string imagen;
 
         public Consulta_Producto(Class_.Producto Producto, Class_.Connection Connection)
         {
@@ -70,11 +71,10 @@ namespace Interfaz_de_usuario
             buttonCancelar.Visible = false;
             buttonExaminar.Enabled = false;
 
-            string imagen = Producto.Ruta;
-            string ruta = "C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\";
-            textBoxImage.Text = Producto.Ruta;
+            imagen = Producto.Ruta;
+            textBoxImage.Text = imagen;
 
-            pictureBoxImage.Image = Image.FromFile(ruta + imagen);
+            pictureBoxImage.Image = Image.FromFile(imagen);
         }
 
         public void desbloquear()
@@ -125,11 +125,13 @@ namespace Interfaz_de_usuario
 
         private void buttonListo_Click(object sender, EventArgs e)
         {
-            Connection.OpenConnection();
-            Class_.Producto nProducto = new Class_.Producto(Producto.ID, textBoxNom.Text, comboBoxTipo.Text, comboBoxConsola.Text, comboBoxGenero.Text, comboBoxStatus.Text, float.Parse(textBoxPrec.Text), int.Parse(textBoxStock.Text), textBoxImage.Text, true);
-            Class_.Producto.ModificarProducto(Connection.myConnection, nProducto);
-            Connection.CloseConnection();
-            this.Close();
+                imagen = imagen.Replace(@"\", @"\\");
+
+                Connection.OpenConnection();
+                Class_.Producto nProducto = new Class_.Producto(Producto.ID, textBoxNom.Text, comboBoxTipo.Text, comboBoxConsola.Text, comboBoxGenero.Text, comboBoxStatus.Text, float.Parse(textBoxPrec.Text), int.Parse(textBoxStock.Text), imagen, true);
+                Class_.Producto.ModificarProducto(Connection.myConnection, nProducto);
+                Connection.CloseConnection();
+                this.Close();
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
@@ -151,10 +153,8 @@ namespace Interfaz_de_usuario
             {
                 if (filedialog.ShowDialog() == DialogResult.OK)
                 {
-                    string ruta = "C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\";
-                    string imagen = filedialog.SafeFileName;
-                    //MessageBox.Show(ruta + imagen);
-                    pictureBoxImage.Image = Image.FromFile(ruta + imagen);
+                    imagen = filedialog.FileName;
+                    pictureBoxImage.Image = Image.FromFile(imagen);
                     textBoxImage.Text = imagen;
                 }
             }
@@ -164,6 +164,43 @@ namespace Interfaz_de_usuario
             }
         }
 
+        private void textBoxPrec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NumberOnly(e);
+        }
 
+        private void textBoxStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NumberOnly(e);
+        }
+
+        private void textBoxPrecioCompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NumberOnly(e);
+        }
+
+        private void NumberOnly(KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void comboBoxTipo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBoxConsola_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBoxStatus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

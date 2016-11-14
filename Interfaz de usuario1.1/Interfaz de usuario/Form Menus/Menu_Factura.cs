@@ -62,8 +62,8 @@ namespace Interfaz_de_usuario
 
         private void buttonComprobarVenta_Click(object sender, EventArgs e)
         {
-            Consulta_Venta consulta_venta = new Consulta_Venta(Connection, int.Parse(textBoxNoTicket.Text));
-            consulta_venta.ShowDialog();
+            //Consulta_Venta consulta_venta = new Consulta_Venta(Connection, int.Parse(textBoxNoTicket.Text));
+            //consulta_venta.ShowDialog();
         }
 
         private void textBoxNoTicket_TextChanged(object sender, EventArgs e)
