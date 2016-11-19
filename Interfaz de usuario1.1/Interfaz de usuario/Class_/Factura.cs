@@ -12,12 +12,14 @@ namespace Interfaz_de_usuario.Class_
         int idFactura;
         string fecha;
         bool disponible;
+        int idVenta;
 
-        public Factura(int idFactura, string Fecha, bool disponible)
+        public Factura(int idFactura, string Fecha, bool disponible, int idVenta)
         {
             this.idFactura = idFactura;
             this.fecha = Fecha;
             this.disponible = disponible;
+            this.idVenta = idVenta;
         }
 
         public int ID
@@ -38,9 +40,15 @@ namespace Interfaz_de_usuario.Class_
             set { disponible = value; }
         }
 
+        public int ID_Venta
+        {
+            get { return idVenta; }
+            set { idVenta = value; }
+        }
+
         public static int AgregarFactura(MySqlConnection Connection, Factura factura)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO factura (fFecha, fDisponible) VALUES ('{0}', true)", factura.Fecha), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO factura (fFecha, fDisponible, venta_IdVenta) VALUES ('{0}', '{1}', true)", factura.Fecha, factura.idVenta), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }
@@ -52,7 +60,20 @@ namespace Interfaz_de_usuario.Class_
             MySqlDataReader reader = command.ExecuteReader();
             while(reader.Read())
             {
-                Factura factura = new Factura(reader.GetInt32(0), reader.GetString(1), reader.GetBoolean(2));
+                Factura factura = new Factura(reader.GetInt32(0), reader.GetString(1), reader.GetBoolean(2), reader.GetInt32(3));
+                Nfactura.Add(factura);
+            }
+            return Nfactura;
+        }
+
+        public static IList<Factura> MostrarFacturasCancel(MySqlConnection Connection)
+        {
+            List<Factura> Nfactura = new List<Factura>();
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM factura WHERE fDisponible = false"), Connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Factura factura = new Factura(reader.GetInt32(0), reader.GetString(1), reader.GetBoolean(2), reader.GetInt32(3));
                 Nfactura.Add(factura);
             }
             return Nfactura;

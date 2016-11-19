@@ -46,12 +46,16 @@ namespace Interfaz_de_usuario
             {
                 Class_.Venta venta = new Class_.Venta(readerVenta.GetInt32(0), readerVenta.GetString(1), readerVenta.GetString(2), readerVenta.GetString(3), readerVenta.GetBoolean(4), readerVenta.GetString(5), readerVenta.GetInt32(6), readerVenta.GetInt32(7));
 
-                string[] fecha = venta.Fecha.Split(' ');
+                string[] fecha = venta.Fecha_y_Hora.Split(' ');
                 labelFecha.Text = fecha[0] + "\n" + fecha[1];
 
                 labelIDcliente.Text = venta.ID_Cliente.ToString();
                 labelPaymentType.Text = venta.TipoPago;
                 labelSaldo.Text = venta.Balance;
+                if (!venta.Disponible)
+                {
+                    labelCancelada.Text = "CANCELADA";
+                }
 
                 Connection.CloseConnection();
                 Connection.OpenConnection();
@@ -121,13 +125,11 @@ namespace Interfaz_de_usuario
 
         private void buttonPreview_Click(object sender, EventArgs e)
         {
-            buttonPrint.Visible = false;
             buttonPreview.Visible = false;
             buttonRegresar.Visible = false;
             buttonCancelar.Visible = false;
 
             Capturaformulario();
-            buttonPrint.Visible = true;
             buttonPreview.Visible = true;
             buttonRegresar.Visible = true;
             buttonCancelar.Visible = true;

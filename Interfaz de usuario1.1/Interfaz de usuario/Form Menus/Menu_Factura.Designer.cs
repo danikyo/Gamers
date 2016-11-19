@@ -32,35 +32,38 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Factura));
             this.buttonGenerar = new System.Windows.Forms.Button();
             this.buttonConsulta = new System.Windows.Forms.Button();
-            this.buttonSalir = new System.Windows.Forms.Button();
-            this.textBoxConsulta = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBoxNoTicket = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.buttonComprobarVenta = new System.Windows.Forms.Button();
+            this.dataGridViewVenta = new System.Windows.Forms.DataGridView();
             this.labelFolio = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.buttonComprobarVenta = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonReturn = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVenta)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonGenerar
             // 
             this.buttonGenerar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonGenerar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonGenerar.Location = new System.Drawing.Point(3, 108);
+            this.buttonGenerar.Location = new System.Drawing.Point(3, 251);
             this.buttonGenerar.Name = "buttonGenerar";
-            this.buttonGenerar.Size = new System.Drawing.Size(159, 25);
+            this.buttonGenerar.Size = new System.Drawing.Size(265, 25);
             this.buttonGenerar.TabIndex = 0;
             this.buttonGenerar.Text = "Generar";
             this.buttonGenerar.UseVisualStyleBackColor = true;
@@ -70,95 +73,62 @@
             // 
             this.buttonConsulta.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonConsulta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonConsulta.Location = new System.Drawing.Point(3, 108);
+            this.buttonConsulta.Location = new System.Drawing.Point(3, 228);
             this.buttonConsulta.Name = "buttonConsulta";
-            this.buttonConsulta.Size = new System.Drawing.Size(159, 22);
+            this.buttonConsulta.Size = new System.Drawing.Size(308, 22);
             this.buttonConsulta.TabIndex = 2;
             this.buttonConsulta.Text = "Consultar";
             this.buttonConsulta.UseVisualStyleBackColor = true;
             this.buttonConsulta.Click += new System.EventHandler(this.buttonConsulta_Click);
-            // 
-            // buttonSalir
-            // 
-            this.buttonSalir.Location = new System.Drawing.Point(294, 312);
-            this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Size = new System.Drawing.Size(86, 41);
-            this.buttonSalir.TabIndex = 3;
-            this.buttonSalir.Text = "Regresar";
-            this.buttonSalir.UseVisualStyleBackColor = true;
-            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
-            // 
-            // textBoxConsulta
-            // 
-            this.textBoxConsulta.Location = new System.Drawing.Point(38, 58);
-            this.textBoxConsulta.Name = "textBoxConsulta";
-            this.textBoxConsulta.Size = new System.Drawing.Size(86, 20);
-            this.textBoxConsulta.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(57, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "No. Folio";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(18, 48);
+            this.label9.Location = new System.Drawing.Point(32, 47);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 22;
             this.label9.Text = "No. Ticket";
             // 
-            // textBoxNoTicket
-            // 
-            this.textBoxNoTicket.Location = new System.Drawing.Point(94, 45);
-            this.textBoxNoTicket.Name = "textBoxNoTicket";
-            this.textBoxNoTicket.Size = new System.Drawing.Size(54, 20);
-            this.textBoxNoTicket.TabIndex = 24;
-            this.textBoxNoTicket.TextChanged += new System.EventHandler(this.textBoxNoTicket_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Interfaz_de_usuario.Properties.Resources.logook;
-            this.pictureBox1.Location = new System.Drawing.Point(242, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(253, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.buttonConsulta);
-            this.groupBox1.Controls.Add(this.textBoxConsulta);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 201);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(165, 133);
-            this.groupBox1.TabIndex = 27;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Consulta Factura";
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.buttonConsulta);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(199, 131);
+            this.groupBox2.Location = new System.Drawing.Point(311, 45);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(336, 222);
+            this.groupBox2.Size = new System.Drawing.Size(314, 253);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registros";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(182, 21);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(81, 17);
+            this.radioButton2.TabIndex = 4;
+            this.radioButton2.Text = "Cancelados";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(66, 21);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(60, 17);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Activos";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // dataGridView1
             // 
@@ -176,12 +146,12 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -198,36 +168,64 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(322, 197);
+            this.dataGridView1.Size = new System.Drawing.Size(293, 142);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.dataGridViewVenta);
             this.groupBox3.Controls.Add(this.labelFolio);
             this.groupBox3.Controls.Add(this.buttonComprobarVenta);
             this.groupBox3.Controls.Add(this.buttonGenerar);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.textBoxNoTicket);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(12, 33);
+            this.groupBox3.Location = new System.Drawing.Point(24, 19);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(165, 136);
+            this.groupBox3.Size = new System.Drawing.Size(271, 279);
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Generar";
             // 
-            // buttonComprobarVenta
+            // dataGridViewVenta
             // 
-            this.buttonComprobarVenta.Enabled = false;
-            this.buttonComprobarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonComprobarVenta.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonComprobarVenta.Location = new System.Drawing.Point(38, 71);
-            this.buttonComprobarVenta.Name = "buttonComprobarVenta";
-            this.buttonComprobarVenta.Size = new System.Drawing.Size(82, 21);
-            this.buttonComprobarVenta.TabIndex = 25;
-            this.buttonComprobarVenta.Text = "Comprobar";
-            this.buttonComprobarVenta.UseVisualStyleBackColor = true;
-            this.buttonComprobarVenta.Click += new System.EventHandler(this.buttonComprobarVenta_Click);
+            this.dataGridViewVenta.AllowUserToResizeRows = false;
+            this.dataGridViewVenta.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewVenta.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewVenta.Location = new System.Drawing.Point(19, 121);
+            this.dataGridViewVenta.Name = "dataGridViewVenta";
+            this.dataGridViewVenta.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewVenta.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewVenta.RowHeadersVisible = false;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewVenta.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewVenta.Size = new System.Drawing.Size(232, 118);
+            this.dataGridViewVenta.TabIndex = 1;
             // 
             // labelFolio
             // 
@@ -240,29 +238,65 @@
             this.labelFolio.TabIndex = 26;
             this.labelFolio.Text = "Folio No. ";
             // 
+            // buttonComprobarVenta
+            // 
+            this.buttonComprobarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonComprobarVenta.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonComprobarVenta.Location = new System.Drawing.Point(114, 47);
+            this.buttonComprobarVenta.Name = "buttonComprobarVenta";
+            this.buttonComprobarVenta.Size = new System.Drawing.Size(82, 21);
+            this.buttonComprobarVenta.TabIndex = 25;
+            this.buttonComprobarVenta.Text = "Comprobar";
+            this.buttonComprobarVenta.UseVisualStyleBackColor = true;
+            this.buttonComprobarVenta.Click += new System.EventHandler(this.buttonComprobarVenta_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buttonReturn);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(644, 310);
+            this.panel1.TabIndex = 30;
+            // 
+            // buttonReturn
+            // 
+            this.buttonReturn.BackColor = System.Drawing.Color.Maroon;
+            this.buttonReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReturn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonReturn.Location = new System.Drawing.Point(602, 6);
+            this.buttonReturn.Name = "buttonReturn";
+            this.buttonReturn.Size = new System.Drawing.Size(34, 33);
+            this.buttonReturn.TabIndex = 30;
+            this.buttonReturn.Text = "X";
+            this.buttonReturn.UseVisualStyleBackColor = false;
+            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
+            // 
             // Menu_Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(552, 365);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.buttonSalir);
+            this.ClientSize = new System.Drawing.Size(644, 310);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(330, 150);
             this.Name = "Menu_Factura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Menu Factura";
             this.Load += new System.EventHandler(this.Menu_Factura_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVenta)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -271,17 +305,16 @@
 
         private System.Windows.Forms.Button buttonGenerar;
         private System.Windows.Forms.Button buttonConsulta;
-        private System.Windows.Forms.Button buttonSalir;
-        private System.Windows.Forms.TextBox textBoxConsulta;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBoxNoTicket;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button buttonComprobarVenta;
         private System.Windows.Forms.Label labelFolio;
+        private System.Windows.Forms.DataGridView dataGridViewVenta;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonReturn;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

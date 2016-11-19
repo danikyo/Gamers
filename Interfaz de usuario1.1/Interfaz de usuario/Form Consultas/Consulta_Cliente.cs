@@ -85,15 +85,10 @@ namespace Interfaz_de_usuario
             buttonCancelar.Visible = true;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void buttonModificar_Click(object sender, EventArgs e)
         {
             Desbloquear();
-            buttonRegresar.Enabled = false;
+            buttonReturn.Enabled = false;
             buttonBaja.Enabled = false;
         }
 
@@ -101,7 +96,7 @@ namespace Interfaz_de_usuario
         {
             LoadC();
             buttonBaja.Enabled = true;
-            buttonRegresar.Enabled = true;
+            buttonReturn.Enabled = true;
         }
 
         private void buttonListo_Click(object sender, EventArgs e)
@@ -114,6 +109,8 @@ namespace Interfaz_de_usuario
                 textBoxPais.Text, textBoxEstado.Text, textBoxMunicipio.Text, float.Parse(textBoxSaldo.Text), true);
                 Class_.Cliente.ModificarCliente(Connection.myConnection, nCliente);
                 Connection.CloseConnection();
+
+                MessageBox.Show("Datos Modificados");
                 this.Close();
             }
             else
@@ -172,6 +169,11 @@ namespace Interfaz_de_usuario
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void buttonReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

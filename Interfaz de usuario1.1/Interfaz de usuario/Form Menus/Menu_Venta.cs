@@ -252,10 +252,12 @@ namespace Interfaz_de_usuario
             IVA = Convert.ToDouble(total) - subTotal;
             IVA = Math.Round(IVA, 1);
 
-            if(comboBoxTipoPago.Text == "Electrónico") { textBoxBalanceTotal.Text = textBoxSaldo.Text; }
+            if (comboBoxTipoPago.Text == "Electrónico") { textBoxBalanceTotal.Text = textBoxSaldo.Text; }
             else { textBoxBalanceTotal.Text = "0"; }
 
             textBoxTotalTotal.Text = (total - decimal.Parse(textBoxBalanceTotal.Text)).ToString();
+            if(float.Parse(textBoxBalanceTotal.Text) > float.Parse(textBoxTotalTotal.Text)) {
+                textBoxBalanceTotal.Text = textBoxTotal.Text; textBoxTotalTotal.Text = "0"; }
 
             textBoxIva.Text = IVA.ToString();
             textBoxSubTotal.Text = subTotal.ToString();
@@ -387,7 +389,7 @@ namespace Interfaz_de_usuario
         private void AddSale()
         {
             Connection.OpenConnection();
-            Class_.Venta nVenta = new Class_.Venta(1, fecha, comboBoxTipoPago.Text, "V", true, textBoxSaldo.Text, int.Parse(textBoxIDcliente.Text), Empleado.ID);
+            Class_.Venta nVenta = new Class_.Venta(1, fecha, comboBoxTipoPago.Text, "V", true, textBoxSaldo.Text, Empleado.ID, int.Parse(textBoxIDcliente.Text));
             Class_.Venta.AgregarVenta(Connection.myConnection, nVenta);
             MessageBox.Show("Compra exitosa", "GRACIAS POR SU COMPRA", MessageBoxButtons.OK, MessageBoxIcon.None);
             Connection.CloseConnection();
@@ -466,7 +468,7 @@ namespace Interfaz_de_usuario
             }
             else
             {
-                if (comboBoxTipoPago.Text == "Electrónico") { DecreaseBalance(); MessageBox.Show(String.Format("Saldo Restante: {0}", CurrentBalance)); }
+                if (comboBoxTipoPago.Text == "Electrónico") { DecreaseBalance(); /*MessageBox.Show(String.Format("Saldo Restante: {0}", CurrentBalance));*/ }
                 DecreaseStock();
                 AddSale();
                 AddAllDetails();

@@ -15,11 +15,12 @@ namespace Interfaz_de_usuario
     public partial class Menu_Clientes : Form
     {
         Class_.Connection CConnection;
+
         public Menu_Clientes(Class_.Connection Connection)
         {
             InitializeComponent();
+
             this.CConnection = Connection;
-            buttonConsultaC.Enabled = false;
         }
 
         private void buttonRegresar_Click(object sender, EventArgs e)
@@ -70,24 +71,25 @@ namespace Interfaz_de_usuario
         private void buttonConsultaC_Click(object sender, EventArgs e)
         {
             CConnection.OpenConnection();
-            MySqlDataReader Reader = Class_.Cliente.BuscarCliente(CConnection.myConnection, textBoxIDCliente.Text);
-            if(Reader.Read())
+            MySqlDataReader Reader = Class_.Cliente.BuscarCliente(CConnection.myConnection, dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            if (Reader.Read())
             {
-                if(Reader.GetBoolean(15))
+                if (Reader.GetBoolean(15))
                 {
                     Class_.Cliente nCliente = new Class_.Cliente(Reader.GetInt32(0), Reader.GetString(1), Reader.GetString(2), Reader.GetString(3), Reader.GetString(4), Reader.GetString(5), Reader.GetString(6),
                     Reader.GetString(7), Reader.GetString(8), Reader.GetString(9), Reader.GetString(10), Reader.GetString(11), Reader.GetString(12), Reader.GetString(13), Reader.GetFloat(14), Reader.GetBoolean(15));
                     Console.Write(Reader.GetString(1));
                     Consulta_Cliente consulta_cliente = new Consulta_Cliente(nCliente, CConnection);
                     CConnection.CloseConnection();
+
                     consulta_cliente.ShowDialog();
-                    this.Close();
+                    LoadData();
                 }
                 else
                 {
                     MessageBox.Show("No existe ID de cliente");
                 }
-                
+
             }
             else
             {
@@ -112,13 +114,17 @@ namespace Interfaz_de_usuario
 
         private void Menu_Clientes_Load(object sender, EventArgs e)
         {
+            LoadData();
+            labelIDCliente.Text = "ID " + MaxId().ToString();
+        }
+
+        private void LoadData()
+        {
             CConnection.OpenConnection();
             dataGridView1.DataSource = Class_.Cliente.MostrarClientes(CConnection.myConnection);
             dataGridView1.Columns[15].Visible = false;
             dataGridView1.Columns[0].Width = 40;
             CConnection.CloseConnection();
-
-            labelIDCliente.Text = "ID " + MaxId().ToString();
         }
 
         private Boolean email_bien_escrito(String email)

@@ -121,9 +121,9 @@
             this.labelName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelName.Location = new System.Drawing.Point(22, 27);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(47, 15);
+            this.labelName.Size = new System.Drawing.Size(78, 15);
             this.labelName.TabIndex = 14;
-            this.labelName.Text = "label2";
+            this.labelName.Text = "Bienvenido";
             // 
             // Menu_Principal_Empleado
             // 

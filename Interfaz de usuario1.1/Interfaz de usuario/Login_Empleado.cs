@@ -14,9 +14,20 @@ namespace Interfaz_de_usuario
     public partial class Menu_Logo : Form
     {
         Class_.Connection CConnection = new Class_.Connection();
+
         public Menu_Logo()
         {
             InitializeComponent();
+        }
+
+        private void Menu_Logo_Load(object sender, EventArgs e)
+        {
+            //Centrar el Panel
+            Size desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize; //Captura el Tamaño del Monitor
+            Int32 alto = (desktopSize.Height - 280) / 2;
+            Int32 ancho = (desktopSize.Width - 500) / 2;
+            panel1.Location = new Point(ancho, alto);
+            //Fin central el Panel
         }
 
         private void buttonEntrar_Click(object sender, EventArgs e)
@@ -34,32 +45,31 @@ namespace Interfaz_de_usuario
                     {
                         Menu_Principal_Administrador menu_principal_adm = new Menu_Principal_Administrador(nEmpleado, CConnection);
                         CConnection.CloseConnection();
+
+                        this.Hide();
                         menu_principal_adm.ShowDialog();
+                        this.Show();
                     }
                     else if (nEmpleado.Puesto == "Cajero")
                     {
-                        Menu_Principal_Empleado menu_principal_emp = new Menu_Principal_Empleado(Reader.GetString(1) + " " + Reader.GetString(2));
+                        Menu_Principal_Empleado menu_principal_emp = new Menu_Principal_Empleado(CConnection, nEmpleado);
                         CConnection.CloseConnection();
+
                         menu_principal_emp.ShowDialog();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Empleado Inactivo", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("ID ó Contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("ID o Contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("ID ó Contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             CConnection.CloseConnection();
             textBoxNombre.Clear();
             textBoxContraseña.Clear();
-        }
-
-        private void buttonSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void textBoxContraseña_KeyPress(object sender, KeyPressEventArgs e)
@@ -71,9 +81,12 @@ namespace Interfaz_de_usuario
             }
         }
 
-        private void textBoxContraseña_TextChanged(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Estas seguro que desea Salir", "◄ AVISO ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

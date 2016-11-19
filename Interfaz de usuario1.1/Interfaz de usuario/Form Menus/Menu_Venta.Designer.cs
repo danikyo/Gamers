@@ -34,8 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxTipoPago = new System.Windows.Forms.ComboBox();
             this.buttonConfirmar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxMonto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.labelFolio = new System.Windows.Forms.Label();
             this.labelNombreCliente = new System.Windows.Forms.Label();
@@ -49,8 +47,6 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonRegresar = new System.Windows.Forms.Button();
-            this.buttonLimpiar = new System.Windows.Forms.Button();
             this.labelSaldo = new System.Windows.Forms.Label();
             this.textBoxSaldo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,6 +54,12 @@
             this.textBoxIva = new System.Windows.Forms.TextBox();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.groupBoxDatosCliente = new System.Windows.Forms.GroupBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxTel = new System.Windows.Forms.TextBox();
+            this.textBoxAdress = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.buttonComprobar = new System.Windows.Forms.Button();
             this.textBoxNomEmpleado = new System.Windows.Forms.TextBox();
             this.groupBoxDate = new System.Windows.Forms.GroupBox();
@@ -70,12 +72,8 @@
             this.textBoxTotalTotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBoxAdress = new System.Windows.Forms.TextBox();
-            this.textBoxTel = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.buttonLimpiar = new System.Windows.Forms.Button();
+            this.buttonRegresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxDatosCliente.SuspendLayout();
             this.groupBoxDate.SuspendLayout();
@@ -87,7 +85,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(503, 485);
+            this.label2.Location = new System.Drawing.Point(557, 481);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 20);
@@ -112,38 +110,21 @@
             // 
             // buttonConfirmar
             // 
-            this.buttonConfirmar.Location = new System.Drawing.Point(673, 514);
+            this.buttonConfirmar.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.Accept;
+            this.buttonConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonConfirmar.Location = new System.Drawing.Point(724, 495);
             this.buttonConfirmar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonConfirmar.Name = "buttonConfirmar";
-            this.buttonConfirmar.Size = new System.Drawing.Size(113, 35);
+            this.buttonConfirmar.Size = new System.Drawing.Size(61, 50);
             this.buttonConfirmar.TabIndex = 7;
-            this.buttonConfirmar.Text = "Confirmar Venta";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(666, 439);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Monto: ";
-            // 
-            // textBoxMonto
-            // 
-            this.textBoxMonto.Location = new System.Drawing.Point(730, 441);
-            this.textBoxMonto.Name = "textBoxMonto";
-            this.textBoxMonto.Size = new System.Drawing.Size(55, 20);
-            this.textBoxMonto.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(466, 441);
+            this.label7.Location = new System.Drawing.Point(520, 437);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 20);
@@ -273,26 +254,6 @@
             this.Importe.Name = "Importe";
             this.Importe.ReadOnly = true;
             // 
-            // buttonRegresar
-            // 
-            this.buttonRegresar.Location = new System.Drawing.Point(15, 491);
-            this.buttonRegresar.Name = "buttonRegresar";
-            this.buttonRegresar.Size = new System.Drawing.Size(103, 51);
-            this.buttonRegresar.TabIndex = 23;
-            this.buttonRegresar.Text = "Regresar";
-            this.buttonRegresar.UseVisualStyleBackColor = true;
-            this.buttonRegresar.Click += new System.EventHandler(this.buttonRegresar_Click);
-            // 
-            // buttonLimpiar
-            // 
-            this.buttonLimpiar.Location = new System.Drawing.Point(124, 491);
-            this.buttonLimpiar.Name = "buttonLimpiar";
-            this.buttonLimpiar.Size = new System.Drawing.Size(103, 51);
-            this.buttonLimpiar.TabIndex = 24;
-            this.buttonLimpiar.Text = "Limpiar";
-            this.buttonLimpiar.UseVisualStyleBackColor = true;
-            this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
-            // 
             // labelSaldo
             // 
             this.labelSaldo.AutoSize = true;
@@ -317,7 +278,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(519, 461);
+            this.label6.Location = new System.Drawing.Point(573, 457);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 20);
@@ -327,7 +288,7 @@
             // textBoxSubTotal
             // 
             this.textBoxSubTotal.Enabled = false;
-            this.textBoxSubTotal.Location = new System.Drawing.Point(567, 441);
+            this.textBoxSubTotal.Location = new System.Drawing.Point(621, 437);
             this.textBoxSubTotal.Name = "textBoxSubTotal";
             this.textBoxSubTotal.Size = new System.Drawing.Size(90, 20);
             this.textBoxSubTotal.TabIndex = 28;
@@ -335,7 +296,7 @@
             // textBoxIva
             // 
             this.textBoxIva.Enabled = false;
-            this.textBoxIva.Location = new System.Drawing.Point(567, 463);
+            this.textBoxIva.Location = new System.Drawing.Point(621, 459);
             this.textBoxIva.Name = "textBoxIva";
             this.textBoxIva.Size = new System.Drawing.Size(90, 20);
             this.textBoxIva.TabIndex = 29;
@@ -343,7 +304,7 @@
             // textBoxTotal
             // 
             this.textBoxTotal.Enabled = false;
-            this.textBoxTotal.Location = new System.Drawing.Point(567, 485);
+            this.textBoxTotal.Location = new System.Drawing.Point(621, 481);
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.Size = new System.Drawing.Size(90, 20);
             this.textBoxTotal.TabIndex = 30;
@@ -370,6 +331,66 @@
             this.groupBoxDatosCliente.TabIndex = 31;
             this.groupBoxDatosCliente.TabStop = false;
             this.groupBoxDatosCliente.Text = "Datos de Cliente";
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Enabled = false;
+            this.textBoxEmail.Location = new System.Drawing.Point(362, 86);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(200, 20);
+            this.textBoxEmail.TabIndex = 39;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(310, 87);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label10.Size = new System.Drawing.Size(47, 16);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Email";
+            // 
+            // textBoxTel
+            // 
+            this.textBoxTel.Enabled = false;
+            this.textBoxTel.Location = new System.Drawing.Point(398, 56);
+            this.textBoxTel.Name = "textBoxTel";
+            this.textBoxTel.Size = new System.Drawing.Size(118, 20);
+            this.textBoxTel.TabIndex = 37;
+            // 
+            // textBoxAdress
+            // 
+            this.textBoxAdress.Enabled = false;
+            this.textBoxAdress.Location = new System.Drawing.Point(98, 86);
+            this.textBoxAdress.Name = "textBoxAdress";
+            this.textBoxAdress.Size = new System.Drawing.Size(190, 20);
+            this.textBoxAdress.TabIndex = 36;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(16, 87);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label9.Size = new System.Drawing.Size(74, 16);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Dirección";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(323, 58);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label8.Size = new System.Drawing.Size(70, 16);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Teléfono";
             // 
             // buttonComprobar
             // 
@@ -456,7 +477,7 @@
             // textBoxBalanceTotal
             // 
             this.textBoxBalanceTotal.Enabled = false;
-            this.textBoxBalanceTotal.Location = new System.Drawing.Point(567, 507);
+            this.textBoxBalanceTotal.Location = new System.Drawing.Point(621, 503);
             this.textBoxBalanceTotal.Name = "textBoxBalanceTotal";
             this.textBoxBalanceTotal.Size = new System.Drawing.Size(90, 20);
             this.textBoxBalanceTotal.TabIndex = 57;
@@ -464,7 +485,7 @@
             // textBoxTotalTotal
             // 
             this.textBoxTotalTotal.Enabled = false;
-            this.textBoxTotalTotal.Location = new System.Drawing.Point(567, 529);
+            this.textBoxTotalTotal.Location = new System.Drawing.Point(621, 525);
             this.textBoxTotalTotal.Name = "textBoxTotalTotal";
             this.textBoxTotalTotal.Size = new System.Drawing.Size(90, 20);
             this.textBoxTotalTotal.TabIndex = 58;
@@ -473,7 +494,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(437, 529);
+            this.label3.Location = new System.Drawing.Point(491, 525);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 20);
@@ -484,72 +505,34 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(437, 507);
+            this.label5.Location = new System.Drawing.Point(491, 503);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 20);
             this.label5.TabIndex = 60;
             this.label5.Text = "Saldo Usado";
             // 
-            // label8
+            // buttonLimpiar
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(323, 58);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(70, 16);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Teléfono";
+            this.buttonLimpiar.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.Clean2;
+            this.buttonLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonLimpiar.Location = new System.Drawing.Point(79, 498);
+            this.buttonLimpiar.Name = "buttonLimpiar";
+            this.buttonLimpiar.Size = new System.Drawing.Size(61, 51);
+            this.buttonLimpiar.TabIndex = 24;
+            this.buttonLimpiar.UseVisualStyleBackColor = true;
+            this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
             // 
-            // label9
+            // buttonRegresar
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(16, 87);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label9.Size = new System.Drawing.Size(74, 16);
-            this.label9.TabIndex = 35;
-            this.label9.Text = "Dirección";
-            // 
-            // textBoxAdress
-            // 
-            this.textBoxAdress.Enabled = false;
-            this.textBoxAdress.Location = new System.Drawing.Point(98, 86);
-            this.textBoxAdress.Name = "textBoxAdress";
-            this.textBoxAdress.Size = new System.Drawing.Size(190, 20);
-            this.textBoxAdress.TabIndex = 36;
-            // 
-            // textBoxTel
-            // 
-            this.textBoxTel.Enabled = false;
-            this.textBoxTel.Location = new System.Drawing.Point(398, 56);
-            this.textBoxTel.Name = "textBoxTel";
-            this.textBoxTel.Size = new System.Drawing.Size(118, 20);
-            this.textBoxTel.TabIndex = 37;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(310, 87);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label10.Size = new System.Drawing.Size(47, 16);
-            this.label10.TabIndex = 38;
-            this.label10.Text = "Email";
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Enabled = false;
-            this.textBoxEmail.Location = new System.Drawing.Point(362, 86);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(200, 20);
-            this.textBoxEmail.TabIndex = 39;
+            this.buttonRegresar.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.Return;
+            this.buttonRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonRegresar.Location = new System.Drawing.Point(12, 498);
+            this.buttonRegresar.Name = "buttonRegresar";
+            this.buttonRegresar.Size = new System.Drawing.Size(61, 51);
+            this.buttonRegresar.TabIndex = 23;
+            this.buttonRegresar.UseVisualStyleBackColor = true;
+            this.buttonRegresar.Click += new System.EventHandler(this.buttonRegresar_Click);
             // 
             // Menu_Venta
             // 
@@ -574,16 +557,16 @@
             this.Controls.Add(this.buttonRegresar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBoxMonto);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonConfirmar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelFolio);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(350, 100);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Menu_Venta";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Transaccion Venta";
             this.Load += new System.EventHandler(this.Menu_Venta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -603,8 +586,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxTipoPago;
         private System.Windows.Forms.Button buttonConfirmar;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxMonto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label labelFolio;
         private System.Windows.Forms.Label labelNombreCliente;

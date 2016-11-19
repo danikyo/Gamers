@@ -13,7 +13,7 @@ using System.Drawing.Printing;
 namespace Interfaz_de_usuario
 {
     public partial class Consulta_Venta : Form
-    { 
+    {
         string idSale;
         string saldo;
 
@@ -41,14 +41,15 @@ namespace Interfaz_de_usuario
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-                DialogResult result = MessageBox.Show("Seguro que desea cancelar\nesta venta?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    Connection.OpenConnection();
-                    Class_.Venta.CancelarVenta(Connection.myConnection, idSale);
-                    Connection.CloseConnection();
-                    this.Close();
-                }
+            DialogResult result = MessageBox.Show("Seguro que desea cancelar\nesta venta?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
+            {
+                IncreaseStock();
+                Connection.OpenConnection();
+                Class_.Venta.CancelarVenta(Connection.myConnection, idSale);
+                Connection.CloseConnection();
+                this.Close();
+            }
         }
 
         private void LoadDataGrid()
@@ -79,12 +80,20 @@ namespace Interfaz_de_usuario
 
             IVA = Convert.ToDouble(total) - subTotal;
             IVA = Math.Round(IVA, 1);
-        
+
             labelIva.Text = "$" + IVA.ToString();
             labelSubTotal.Text = "$" + subTotal.ToString();
-            labelTotal.Text = "$"+total.ToString();
-            labelSaldoUsado.Text = "$" + saldo;
-            labelTotalTotal.Text = "$" + (total - decimal.Parse(saldo));
+            labelTotal.Text = "$" + total.ToString();
+            labelSaldoUsado.Text = saldo;
+            labelTotalTotal.Text = (total - decimal.Parse(saldo)).ToString();
+
+            if (labelTipoPago.Text == "Electrónico") { labelSaldoUsado.Text = labelSaldo.Text; }
+            else { labelSaldoUsado.Text = "0"; }
+
+            if (float.Parse(labelSaldoUsado.Text) > float.Parse(labelTotalTotal.Text))
+            {
+                labelSaldoUsado.Text = labelTotal.Text; labelTotalTotal.Text = "$0";
+            }
         }
 
         private void LoadForm()
@@ -95,13 +104,17 @@ namespace Interfaz_de_usuario
             {
                 Class_.Venta venta = new Class_.Venta(readerVenta.GetInt32(0), readerVenta.GetString(1), readerVenta.GetString(2), readerVenta.GetString(3), readerVenta.GetBoolean(4), readerVenta.GetString(5), readerVenta.GetInt32(6), readerVenta.GetInt32(7));
 
-                string[] fecha = venta.Fecha.Split(' ');
+                string[] fecha = venta.Fecha_y_Hora.Split(' ');
                 labelFecha.Text = fecha[0] + "\n" + fecha[1];
 
                 labelIDcliente.Text = venta.ID_Cliente.ToString();
                 labelTipoPago.Text = venta.TipoPago;
                 labelSaldo.Text = venta.Balance;
                 saldo = venta.Balance;
+                if (!venta.Disponible)
+                {
+                    labelCancelada.Text = "CANCELADA";
+                }
 
                 Connection.CloseConnection();
                 Connection.OpenConnection();
@@ -134,13 +147,11 @@ namespace Interfaz_de_usuario
         private void buttonPrint_Click(object sender, EventArgs e)
         {
             buttonPrint.Visible = false;
-            buttonPrint2.Visible = false;
             buttonRegresar.Visible = false;
             buttonCancelar.Visible = false;
 
             Capturaformulario();
             buttonPrint.Visible = true;
-            buttonPrint2.Visible = true;
             buttonRegresar.Visible = true;
             buttonCancelar.Visible = true;
 
@@ -195,6 +206,40 @@ namespace Interfaz_de_usuario
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void IncreaseStock()
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                string idProduct = Convert.ToString(row.Cells[0].Value);
+                int StockDecrease = Convert.ToInt32(row.Cells["Cantidad"].Value);
+
+                Connection.OpenConnection();
+                MySqlDataReader reader = Class_.Producto.BuscarProducto(Connection.myConnection, idProduct);
+                if (reader.Read())
+                {
+                    Class_.Producto product = GetProduct(reader);
+                    product.Stock = product.Stock + StockDecrease;
+
+                    Connection.CloseConnection();
+
+                    Connection.OpenConnection();
+                    product.Ruta = product.Ruta.Replace(@"\", @"\\");
+                    Class_.Producto.ModificarProducto(Connection.myConnection, product);
+                }
+
+                Connection.CloseConnection();
+            }
+        }
+
+        private Class_.Producto GetProduct(MySqlDataReader reader)
+        {
+            Class_.Producto producto = new Class_.Producto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2),
+                    reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetFloat(6), reader.GetInt32(7),
+                    reader.GetString(8), reader.GetBoolean(9));
+
+            return producto;
         }
     }
 }

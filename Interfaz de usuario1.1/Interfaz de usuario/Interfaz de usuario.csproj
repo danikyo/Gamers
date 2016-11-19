@@ -118,12 +118,6 @@
     <Compile Include="Form Menus\Menu_Principal_Empleado.Designer.cs">
       <DependentUpon>Menu_Principal_Empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form Reportes\Reporte_Empleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form Reportes\Reporte_Empleado.Designer.cs">
-      <DependentUpon>Reporte_Empleado.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,12 +143,6 @@
     </Compile>
     <Compile Include="Form Consultas\Consulta_Venta.Designer.cs">
       <DependentUpon>Consulta_Venta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form Reportes\Reporte_Inventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form Reportes\Reporte_Inventario.Designer.cs">
-      <DependentUpon>Reporte_Inventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Form Reportes\ReportesVentaCompra.cs">
       <SubType>Form</SubType>
@@ -195,9 +183,6 @@
     <EmbeddedResource Include="Form Menus\Menu_Principal_Empleado.resx">
       <DependentUpon>Menu_Principal_Empleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Reportes\Reporte_Empleado.resx">
-      <DependentUpon>Reporte_Empleado.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login_Empleado.resx">
       <DependentUpon>Login_Empleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,9 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form Consultas\Consulta_Compra.resx">
       <DependentUpon>Consulta_Compra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form Reportes\Reporte_Inventario.resx">
-      <DependentUpon>Reporte_Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Consultas\Consulta_Venta.resx">
       <DependentUpon>Consulta_Venta.cs</DependentUpon>
@@ -244,6 +226,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WallpaperPacman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cool-gamer-wallpaper-20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clean2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

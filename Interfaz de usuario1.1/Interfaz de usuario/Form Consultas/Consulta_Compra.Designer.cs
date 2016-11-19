@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelNombreEmpleado = new System.Windows.Forms.Label();
             this.groupBoxTipodePago = new System.Windows.Forms.GroupBox();
@@ -35,12 +36,8 @@
             this.groupBoxDate = new System.Windows.Forms.GroupBox();
             this.labelFecha = new System.Windows.Forms.Label();
             this.labelTotal = new System.Windows.Forms.Label();
-            this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonRegresar = new System.Windows.Forms.Button();
             this.labelFolio = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonPrint = new System.Windows.Forms.Button();
-            this.buttonPreview = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.groupBoxDatosCliente = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,17 +53,28 @@
             this.labelNombreCliente = new System.Windows.Forms.Label();
             this.labelSaldo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelCancelada = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.buttonPreview = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonRegresar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBoxTipodePago.SuspendLayout();
             this.groupBoxDate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxDatosCliente.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.labelNombreEmpleado);
-            this.groupBox1.Location = new System.Drawing.Point(12, 28);
+            this.groupBox1.Location = new System.Drawing.Point(16, 121);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(584, 42);
             this.groupBox1.TabIndex = 68;
@@ -88,7 +96,7 @@
             // groupBoxTipodePago
             // 
             this.groupBoxTipodePago.Controls.Add(this.labelPaymentType);
-            this.groupBoxTipodePago.Location = new System.Drawing.Point(605, 78);
+            this.groupBoxTipodePago.Location = new System.Drawing.Point(609, 171);
             this.groupBoxTipodePago.Name = "groupBoxTipodePago";
             this.groupBoxTipodePago.Size = new System.Drawing.Size(180, 74);
             this.groupBoxTipodePago.TabIndex = 67;
@@ -110,7 +118,7 @@
             // groupBoxDate
             // 
             this.groupBoxDate.Controls.Add(this.labelFecha);
-            this.groupBoxDate.Location = new System.Drawing.Point(605, 3);
+            this.groupBoxDate.Location = new System.Drawing.Point(609, 96);
             this.groupBoxDate.Name = "groupBoxDate";
             this.groupBoxDate.Size = new System.Drawing.Size(180, 74);
             this.groupBoxDate.TabIndex = 66;
@@ -132,35 +140,13 @@
             // 
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(689, 477);
+            this.labelTotal.Location = new System.Drawing.Point(693, 570);
             this.labelTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelTotal.Size = new System.Drawing.Size(15, 16);
             this.labelTotal.TabIndex = 64;
             this.labelTotal.Text = "$";
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Location = new System.Drawing.Point(105, 477);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(98, 29);
-            this.buttonCancelar.TabIndex = 63;
-            this.buttonCancelar.Text = "Cancelar Compra";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
-            // buttonRegresar
-            // 
-            this.buttonRegresar.Location = new System.Drawing.Point(3, 477);
-            this.buttonRegresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.buttonRegresar.Name = "buttonRegresar";
-            this.buttonRegresar.Size = new System.Drawing.Size(98, 29);
-            this.buttonRegresar.TabIndex = 60;
-            this.buttonRegresar.Text = "Regresar";
-            this.buttonRegresar.UseVisualStyleBackColor = true;
-            this.buttonRegresar.Click += new System.EventHandler(this.buttonRegresar_Click);
             // 
             // labelFolio
             // 
@@ -179,34 +165,12 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Enabled = false;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 201);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 294);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(774, 261);
             this.dataGridView1.TabIndex = 71;
-            // 
-            // buttonPrint
-            // 
-            this.buttonPrint.Location = new System.Drawing.Point(356, 477);
-            this.buttonPrint.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(98, 29);
-            this.buttonPrint.TabIndex = 72;
-            this.buttonPrint.Text = "Imprimir";
-            this.buttonPrint.UseVisualStyleBackColor = true;
-            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
-            // 
-            // buttonPreview
-            // 
-            this.buttonPreview.Location = new System.Drawing.Point(254, 477);
-            this.buttonPreview.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.buttonPreview.Name = "buttonPreview";
-            this.buttonPreview.Size = new System.Drawing.Size(98, 29);
-            this.buttonPreview.TabIndex = 73;
-            this.buttonPreview.Text = "Vista Previa";
-            this.buttonPreview.UseVisualStyleBackColor = true;
-            this.buttonPreview.Click += new System.EventHandler(this.buttonPreview_Click);
             // 
             // printDocument1
             // 
@@ -227,7 +191,7 @@
             this.groupBoxDatosCliente.Controls.Add(this.labelNombreCliente);
             this.groupBoxDatosCliente.Controls.Add(this.labelSaldo);
             this.groupBoxDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxDatosCliente.Location = new System.Drawing.Point(12, 76);
+            this.groupBoxDatosCliente.Location = new System.Drawing.Point(16, 169);
             this.groupBoxDatosCliente.Name = "groupBoxDatosCliente";
             this.groupBoxDatosCliente.Size = new System.Drawing.Size(584, 119);
             this.groupBoxDatosCliente.TabIndex = 74;
@@ -382,7 +346,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(578, 477);
+            this.label1.Location = new System.Drawing.Point(582, 570);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -390,16 +354,107 @@
             this.label1.TabIndex = 75;
             this.label1.Text = "Total Pagado ";
             // 
+            // labelCancelada
+            // 
+            this.labelCancelada.AutoSize = true;
+            this.labelCancelada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCancelada.Location = new System.Drawing.Point(323, 99);
+            this.labelCancelada.Name = "labelCancelada";
+            this.labelCancelada.Size = new System.Drawing.Size(0, 20);
+            this.labelCancelada.TabIndex = 76;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Location = new System.Drawing.Point(14, 26);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(580, 93);
+            this.groupBox2.TabIndex = 79;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Datos de la empresa";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(274, 14);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(287, 29);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Gamers Retail S.A de C.V";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(6, 14);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(290, 60);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "AV. Revolución 20300\r\nGuadalajara, Jal.\r\nTel. 01 800 3454 121 / 01 800 0127 432";
+            // 
+            // buttonPreview
+            // 
+            this.buttonPreview.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.print;
+            this.buttonPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonPreview.Location = new System.Drawing.Point(102, 561);
+            this.buttonPreview.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buttonPreview.Name = "buttonPreview";
+            this.buttonPreview.Size = new System.Drawing.Size(39, 38);
+            this.buttonPreview.TabIndex = 73;
+            this.toolTip1.SetToolTip(this.buttonPreview, "Imprimir");
+            this.buttonPreview.UseVisualStyleBackColor = true;
+            this.buttonPreview.Click += new System.EventHandler(this.buttonPreview_Click);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.Cross;
+            this.buttonCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonCancelar.Location = new System.Drawing.Point(59, 561);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(39, 38);
+            this.buttonCancelar.TabIndex = 63;
+            this.toolTip1.SetToolTip(this.buttonCancelar, "Cancelar Compra");
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // buttonRegresar
+            // 
+            this.buttonRegresar.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.Return;
+            this.buttonRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonRegresar.Location = new System.Drawing.Point(16, 561);
+            this.buttonRegresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buttonRegresar.Name = "buttonRegresar";
+            this.buttonRegresar.Size = new System.Drawing.Size(39, 38);
+            this.buttonRegresar.TabIndex = 60;
+            this.toolTip1.SetToolTip(this.buttonRegresar, "Regresar");
+            this.buttonRegresar.UseVisualStyleBackColor = true;
+            this.buttonRegresar.Click += new System.EventHandler(this.buttonRegresar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Interfaz_de_usuario.Properties.Resources.logook;
+            this.pictureBox1.Location = new System.Drawing.Point(602, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 80;
+            this.pictureBox1.TabStop = false;
+            // 
             // Consulta_Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(797, 511);
+            this.ClientSize = new System.Drawing.Size(797, 611);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.labelCancelada);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBoxDatosCliente);
             this.Controls.Add(this.buttonPreview);
-            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxTipodePago);
@@ -408,8 +463,10 @@
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonRegresar);
             this.Controls.Add(this.labelFolio);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(350, 70);
             this.Name = "Consulta_Compra";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Consulta Compra";
             this.Load += new System.EventHandler(this.Consulta_Compra_Load);
             this.groupBox1.ResumeLayout(false);
@@ -421,6 +478,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBoxDatosCliente.ResumeLayout(false);
             this.groupBoxDatosCliente.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,7 +499,6 @@
         private System.Windows.Forms.Label labelFolio;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelPaymentType;
-        private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.Button buttonPreview;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.GroupBox groupBoxDatosCliente;
@@ -456,5 +515,11 @@
         private System.Windows.Forms.Label labelNombreCliente;
         private System.Windows.Forms.Label labelSaldo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCancelada;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

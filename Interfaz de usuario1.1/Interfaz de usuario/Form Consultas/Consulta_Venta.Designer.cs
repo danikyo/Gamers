@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelIva = new System.Windows.Forms.Label();
             this.buttonRegresar = new System.Windows.Forms.Button();
             this.labelSubTotal = new System.Windows.Forms.Label();
@@ -39,6 +40,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelNombreEmpleado = new System.Windows.Forms.Label();
             this.groupBoxDatosCliente = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelTel = new System.Windows.Forms.Label();
+            this.labelAdress = new System.Windows.Forms.Label();
             this.labelIDcliente = new System.Windows.Forms.Label();
             this.labelNombreCliente = new System.Windows.Forms.Label();
             this.labelSaldo = new System.Windows.Forms.Label();
@@ -46,7 +56,6 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonPrint = new System.Windows.Forms.Button();
             this.printDocument2 = new System.Drawing.Printing.PrintDocument();
-            this.buttonPrint2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelTotalTotal = new System.Windows.Forms.Label();
             this.labelSaldoUsado = new System.Windows.Forms.Label();
@@ -55,27 +64,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.labelAdress = new System.Windows.Forms.Label();
-            this.labelTel = new System.Windows.Forms.Label();
-            this.labelEmail = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.labelCancelada = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBoxTipodePago.SuspendLayout();
             this.groupBoxDate.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBoxDatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelIva
             // 
             this.labelIva.AutoSize = true;
             this.labelIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIva.Location = new System.Drawing.Point(693, 462);
+            this.labelIva.Location = new System.Drawing.Point(695, 562);
             this.labelIva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIva.Name = "labelIva";
             this.labelIva.Size = new System.Drawing.Size(20, 16);
@@ -84,11 +92,13 @@
             // 
             // buttonRegresar
             // 
-            this.buttonRegresar.Location = new System.Drawing.Point(11, 494);
+            this.buttonRegresar.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.Return;
+            this.buttonRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonRegresar.Location = new System.Drawing.Point(12, 616);
             this.buttonRegresar.Name = "buttonRegresar";
-            this.buttonRegresar.Size = new System.Drawing.Size(76, 36);
+            this.buttonRegresar.Size = new System.Drawing.Size(50, 36);
             this.buttonRegresar.TabIndex = 0;
-            this.buttonRegresar.Text = "Regresar";
+            this.toolTip1.SetToolTip(this.buttonRegresar, "Regresar");
             this.buttonRegresar.UseVisualStyleBackColor = true;
             this.buttonRegresar.Click += new System.EventHandler(this.buttonRegresar_Click);
             // 
@@ -96,7 +106,7 @@
             // 
             this.labelSubTotal.AutoSize = true;
             this.labelSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSubTotal.Location = new System.Drawing.Point(693, 439);
+            this.labelSubTotal.Location = new System.Drawing.Point(695, 539);
             this.labelSubTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSubTotal.Name = "labelSubTotal";
             this.labelSubTotal.Size = new System.Drawing.Size(20, 16);
@@ -107,7 +117,7 @@
             // 
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(693, 484);
+            this.labelTotal.Location = new System.Drawing.Point(695, 584);
             this.labelTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(20, 16);
@@ -117,7 +127,7 @@
             // groupBoxTipodePago
             // 
             this.groupBoxTipodePago.Controls.Add(this.labelTipoPago);
-            this.groupBoxTipodePago.Location = new System.Drawing.Point(614, 83);
+            this.groupBoxTipodePago.Location = new System.Drawing.Point(616, 183);
             this.groupBoxTipodePago.Name = "groupBoxTipodePago";
             this.groupBoxTipodePago.Size = new System.Drawing.Size(180, 74);
             this.groupBoxTipodePago.TabIndex = 57;
@@ -139,7 +149,7 @@
             // groupBoxDate
             // 
             this.groupBoxDate.Controls.Add(this.labelFecha);
-            this.groupBoxDate.Location = new System.Drawing.Point(614, 3);
+            this.groupBoxDate.Location = new System.Drawing.Point(614, 102);
             this.groupBoxDate.Name = "groupBoxDate";
             this.groupBoxDate.Size = new System.Drawing.Size(180, 74);
             this.groupBoxDate.TabIndex = 56;
@@ -160,7 +170,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.labelNombreEmpleado);
-            this.groupBox1.Location = new System.Drawing.Point(11, 26);
+            this.groupBox1.Location = new System.Drawing.Point(11, 125);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(584, 42);
             this.groupBox1.TabIndex = 60;
@@ -194,218 +204,12 @@
             this.groupBoxDatosCliente.Controls.Add(this.labelNombreCliente);
             this.groupBoxDatosCliente.Controls.Add(this.labelSaldo);
             this.groupBoxDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxDatosCliente.Location = new System.Drawing.Point(11, 73);
+            this.groupBoxDatosCliente.Location = new System.Drawing.Point(13, 173);
             this.groupBoxDatosCliente.Name = "groupBoxDatosCliente";
             this.groupBoxDatosCliente.Size = new System.Drawing.Size(584, 119);
             this.groupBoxDatosCliente.TabIndex = 59;
             this.groupBoxDatosCliente.TabStop = false;
             this.groupBoxDatosCliente.Text = "Datos de Cliente";
-            // 
-            // labelIDcliente
-            // 
-            this.labelIDcliente.AutoSize = true;
-            this.labelIDcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIDcliente.Location = new System.Drawing.Point(51, 25);
-            this.labelIDcliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelIDcliente.Name = "labelIDcliente";
-            this.labelIDcliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelIDcliente.Size = new System.Drawing.Size(21, 16);
-            this.labelIDcliente.TabIndex = 16;
-            this.labelIDcliente.Text = "ID";
-            // 
-            // labelNombreCliente
-            // 
-            this.labelNombreCliente.AutoSize = true;
-            this.labelNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreCliente.Location = new System.Drawing.Point(237, 25);
-            this.labelNombreCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelNombreCliente.Name = "labelNombreCliente";
-            this.labelNombreCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelNombreCliente.Size = new System.Drawing.Size(57, 16);
-            this.labelNombreCliente.TabIndex = 15;
-            this.labelNombreCliente.Text = "Nombre";
-            // 
-            // labelSaldo
-            // 
-            this.labelSaldo.AutoSize = true;
-            this.labelSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaldo.Location = new System.Drawing.Point(237, 56);
-            this.labelSaldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSaldo.Name = "labelSaldo";
-            this.labelSaldo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelSaldo.Size = new System.Drawing.Size(44, 16);
-            this.labelSaldo.TabIndex = 25;
-            this.labelSaldo.Text = "Saldo";
-            // 
-            // labelFolio
-            // 
-            this.labelFolio.AutoSize = true;
-            this.labelFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFolio.Location = new System.Drawing.Point(8, 3);
-            this.labelFolio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelFolio.Name = "labelFolio";
-            this.labelFolio.Size = new System.Drawing.Size(75, 16);
-            this.labelFolio.TabIndex = 58;
-            this.labelFolio.Text = "Folio No. ";
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Location = new System.Drawing.Point(93, 494);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(74, 36);
-            this.buttonCancelar.TabIndex = 1;
-            this.buttonCancelar.Text = "Cancelar\r\nVenta";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
-            // buttonPrint
-            // 
-            this.buttonPrint.Location = new System.Drawing.Point(13, 432);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(75, 23);
-            this.buttonPrint.TabIndex = 63;
-            this.buttonPrint.Text = "Vista Previa";
-            this.buttonPrint.UseVisualStyleBackColor = true;
-            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
-            // 
-            // printDocument2
-            // 
-            this.printDocument2.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument2_PrintPage);
-            // 
-            // buttonPrint2
-            // 
-            this.buttonPrint2.Location = new System.Drawing.Point(94, 432);
-            this.buttonPrint2.Name = "buttonPrint2";
-            this.buttonPrint2.Size = new System.Drawing.Size(75, 23);
-            this.buttonPrint2.TabIndex = 64;
-            this.buttonPrint2.Text = "Imprimir";
-            this.buttonPrint2.UseVisualStyleBackColor = true;
-            this.buttonPrint2.Click += new System.EventHandler(this.buttonPrint2_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Enabled = false;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 198);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(774, 231);
-            this.dataGridView1.TabIndex = 65;
-            // 
-            // labelTotalTotal
-            // 
-            this.labelTotalTotal.AutoSize = true;
-            this.labelTotalTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalTotal.Location = new System.Drawing.Point(693, 536);
-            this.labelTotalTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelTotalTotal.Name = "labelTotalTotal";
-            this.labelTotalTotal.Size = new System.Drawing.Size(20, 16);
-            this.labelTotalTotal.TabIndex = 66;
-            this.labelTotalTotal.Text = "---";
-            // 
-            // labelSaldoUsado
-            // 
-            this.labelSaldoUsado.AutoSize = true;
-            this.labelSaldoUsado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaldoUsado.Location = new System.Drawing.Point(693, 508);
-            this.labelSaldoUsado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSaldoUsado.Name = "labelSaldoUsado";
-            this.labelSaldoUsado.Size = new System.Drawing.Size(20, 16);
-            this.labelSaldoUsado.TabIndex = 67;
-            this.labelSaldoUsado.Text = "---";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(571, 439);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "Sub Total:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(571, 462);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 16);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "Iva:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(571, 486);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 16);
-            this.label3.TabIndex = 70;
-            this.label3.Text = "Total:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(571, 510);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 16);
-            this.label4.TabIndex = 71;
-            this.label4.Text = "Saldo Usado:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(571, 536);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 16);
-            this.label5.TabIndex = 72;
-            this.label5.Text = "Total a pagar:";
-            // 
-            // labelAdress
-            // 
-            this.labelAdress.AutoSize = true;
-            this.labelAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAdress.Location = new System.Drawing.Point(94, 88);
-            this.labelAdress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelAdress.Name = "labelAdress";
-            this.labelAdress.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelAdress.Size = new System.Drawing.Size(65, 16);
-            this.labelAdress.TabIndex = 26;
-            this.labelAdress.Text = "Dirección";
-            // 
-            // labelTel
-            // 
-            this.labelTel.AutoSize = true;
-            this.labelTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTel.Location = new System.Drawing.Point(413, 56);
-            this.labelTel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelTel.Name = "labelTel";
-            this.labelTel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelTel.Size = new System.Drawing.Size(62, 16);
-            this.labelTel.TabIndex = 27;
-            this.labelTel.Text = "Teléfono";
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(367, 88);
-            this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelEmail.Size = new System.Drawing.Size(42, 16);
-            this.labelEmail.TabIndex = 28;
-            this.labelEmail.Text = "Email";
             // 
             // label6
             // 
@@ -479,12 +283,265 @@
             this.label11.TabIndex = 31;
             this.label11.Text = "Saldo";
             // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(367, 88);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelEmail.Size = new System.Drawing.Size(42, 16);
+            this.labelEmail.TabIndex = 28;
+            this.labelEmail.Text = "Email";
+            // 
+            // labelTel
+            // 
+            this.labelTel.AutoSize = true;
+            this.labelTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTel.Location = new System.Drawing.Point(413, 56);
+            this.labelTel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTel.Name = "labelTel";
+            this.labelTel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelTel.Size = new System.Drawing.Size(62, 16);
+            this.labelTel.TabIndex = 27;
+            this.labelTel.Text = "Teléfono";
+            // 
+            // labelAdress
+            // 
+            this.labelAdress.AutoSize = true;
+            this.labelAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAdress.Location = new System.Drawing.Point(94, 88);
+            this.labelAdress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAdress.Name = "labelAdress";
+            this.labelAdress.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelAdress.Size = new System.Drawing.Size(65, 16);
+            this.labelAdress.TabIndex = 26;
+            this.labelAdress.Text = "Dirección";
+            // 
+            // labelIDcliente
+            // 
+            this.labelIDcliente.AutoSize = true;
+            this.labelIDcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIDcliente.Location = new System.Drawing.Point(51, 25);
+            this.labelIDcliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelIDcliente.Name = "labelIDcliente";
+            this.labelIDcliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelIDcliente.Size = new System.Drawing.Size(21, 16);
+            this.labelIDcliente.TabIndex = 16;
+            this.labelIDcliente.Text = "ID";
+            // 
+            // labelNombreCliente
+            // 
+            this.labelNombreCliente.AutoSize = true;
+            this.labelNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreCliente.Location = new System.Drawing.Point(237, 25);
+            this.labelNombreCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelNombreCliente.Name = "labelNombreCliente";
+            this.labelNombreCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelNombreCliente.Size = new System.Drawing.Size(57, 16);
+            this.labelNombreCliente.TabIndex = 15;
+            this.labelNombreCliente.Text = "Nombre";
+            // 
+            // labelSaldo
+            // 
+            this.labelSaldo.AutoSize = true;
+            this.labelSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSaldo.Location = new System.Drawing.Point(237, 56);
+            this.labelSaldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSaldo.Name = "labelSaldo";
+            this.labelSaldo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelSaldo.Size = new System.Drawing.Size(44, 16);
+            this.labelSaldo.TabIndex = 25;
+            this.labelSaldo.Text = "Saldo";
+            // 
+            // labelFolio
+            // 
+            this.labelFolio.AutoSize = true;
+            this.labelFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFolio.Location = new System.Drawing.Point(8, 3);
+            this.labelFolio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelFolio.Name = "labelFolio";
+            this.labelFolio.Size = new System.Drawing.Size(75, 16);
+            this.labelFolio.TabIndex = 58;
+            this.labelFolio.Text = "Folio No. ";
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.Cross;
+            this.buttonCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonCancelar.Location = new System.Drawing.Point(67, 616);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(49, 36);
+            this.buttonCancelar.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.buttonCancelar, "Cancelar Venta");
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // buttonPrint
+            // 
+            this.buttonPrint.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.print;
+            this.buttonPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonPrint.Location = new System.Drawing.Point(122, 616);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(49, 36);
+            this.buttonPrint.TabIndex = 63;
+            this.toolTip1.SetToolTip(this.buttonPrint, "Imprimir");
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
+            // printDocument2
+            // 
+            this.printDocument2.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument2_PrintPage);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Enabled = false;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 298);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(774, 231);
+            this.dataGridView1.TabIndex = 65;
+            // 
+            // labelTotalTotal
+            // 
+            this.labelTotalTotal.AutoSize = true;
+            this.labelTotalTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalTotal.Location = new System.Drawing.Point(695, 636);
+            this.labelTotalTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTotalTotal.Name = "labelTotalTotal";
+            this.labelTotalTotal.Size = new System.Drawing.Size(20, 16);
+            this.labelTotalTotal.TabIndex = 66;
+            this.labelTotalTotal.Text = "---";
+            // 
+            // labelSaldoUsado
+            // 
+            this.labelSaldoUsado.AutoSize = true;
+            this.labelSaldoUsado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSaldoUsado.Location = new System.Drawing.Point(695, 608);
+            this.labelSaldoUsado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSaldoUsado.Name = "labelSaldoUsado";
+            this.labelSaldoUsado.Size = new System.Drawing.Size(20, 16);
+            this.labelSaldoUsado.TabIndex = 67;
+            this.labelSaldoUsado.Text = "---";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(573, 539);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 16);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Sub Total:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(573, 562);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 16);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "Iva:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(573, 586);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 16);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "Total:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(573, 610);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 16);
+            this.label4.TabIndex = 71;
+            this.label4.Text = "Saldo Usado:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(573, 636);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 16);
+            this.label5.TabIndex = 72;
+            this.label5.Text = "Total a pagar:";
+            // 
+            // labelCancelada
+            // 
+            this.labelCancelada.AutoSize = true;
+            this.labelCancelada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCancelada.Location = new System.Drawing.Point(301, 3);
+            this.labelCancelada.Name = "labelCancelada";
+            this.labelCancelada.Size = new System.Drawing.Size(0, 20);
+            this.labelCancelada.TabIndex = 77;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Location = new System.Drawing.Point(11, 26);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(580, 93);
+            this.groupBox2.TabIndex = 78;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Datos de la empresa";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(274, 14);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(287, 29);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Gamers Retail S.A de C.V";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(6, 14);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(290, 60);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "AV. Revolución 20300\r\nGuadalajara, Jal.\r\nTel. 01 800 3454 121 / 01 800 0127 432";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Interfaz_de_usuario.Properties.Resources.logook;
+            this.pictureBox1.Location = new System.Drawing.Point(598, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 79;
+            this.pictureBox1.TabStop = false;
+            // 
             // Consulta_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(797, 561);
+            this.ClientSize = new System.Drawing.Size(797, 661);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.labelCancelada);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -493,7 +550,6 @@
             this.Controls.Add(this.labelSaldoUsado);
             this.Controls.Add(this.labelTotalTotal);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.buttonPrint2);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.groupBox1);
@@ -505,10 +561,12 @@
             this.Controls.Add(this.buttonRegresar);
             this.Controls.Add(this.labelSubTotal);
             this.Controls.Add(this.labelTotal);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(350, 70);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Consulta_Venta";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Consulta de Venta";
             this.Load += new System.EventHandler(this.Consulta_Venta_Load);
             this.groupBoxTipodePago.ResumeLayout(false);
@@ -520,6 +578,9 @@
             this.groupBoxDatosCliente.ResumeLayout(false);
             this.groupBoxDatosCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -543,7 +604,6 @@
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonPrint;
         private System.Drawing.Printing.PrintDocument printDocument2;
-        private System.Windows.Forms.Button buttonPrint2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelTipoPago;
         private System.Windows.Forms.Label labelTotalTotal;
@@ -562,5 +622,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label labelCancelada;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -28,17 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelFolio = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.ID_producto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Cantidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Iva = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonRegresar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -77,10 +73,13 @@
             this.labelIva = new System.Windows.Forms.Label();
             this.labelTotal = new System.Windows.Forms.Label();
             this.labelFolioD = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.labelCancel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -122,51 +121,6 @@
             this.labelFolio.Size = new System.Drawing.Size(74, 18);
             this.labelFolio.TabIndex = 3;
             this.labelFolio.Text = "Folio No. ";
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID_producto,
-            this.Nombre,
-            this.Precio,
-            this.Cantidad,
-            this.Iva,
-            this.total});
-            this.listView1.Location = new System.Drawing.Point(12, 276);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(729, 185);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // ID_producto
-            // 
-            this.ID_producto.Text = "ID producto";
-            this.ID_producto.Width = 76;
-            // 
-            // Nombre
-            // 
-            this.Nombre.Text = "Nombre";
-            this.Nombre.Width = 320;
-            // 
-            // Precio
-            // 
-            this.Precio.Text = "Precio";
-            this.Precio.Width = 81;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.Text = "Cantidad";
-            this.Cantidad.Width = 74;
-            // 
-            // Iva
-            // 
-            this.Iva.Text = "Iva";
-            // 
-            // total
-            // 
-            this.total.Text = "Total";
-            this.total.Width = 116;
             // 
             // buttonCancelar
             // 
@@ -259,260 +213,260 @@
             // labelMunicipioD
             // 
             this.labelMunicipioD.AutoSize = true;
-            this.labelMunicipioD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMunicipioD.Location = new System.Drawing.Point(573, 85);
+            this.labelMunicipioD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMunicipioD.Location = new System.Drawing.Point(612, 88);
             this.labelMunicipioD.Name = "labelMunicipioD";
-            this.labelMunicipioD.Size = new System.Drawing.Size(45, 18);
+            this.labelMunicipioD.Size = new System.Drawing.Size(52, 20);
             this.labelMunicipioD.TabIndex = 17;
             this.labelMunicipioD.Text = "Datos";
             // 
             // labelCPD
             // 
             this.labelCPD.AutoSize = true;
-            this.labelCPD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCPD.Location = new System.Drawing.Point(573, 30);
+            this.labelCPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCPD.Location = new System.Drawing.Point(612, 33);
             this.labelCPD.Name = "labelCPD";
-            this.labelCPD.Size = new System.Drawing.Size(45, 18);
+            this.labelCPD.Size = new System.Drawing.Size(52, 20);
             this.labelCPD.TabIndex = 38;
             this.labelCPD.Text = "Datos";
             // 
             // labelEstadoD
             // 
             this.labelEstadoD.AutoSize = true;
-            this.labelEstadoD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEstadoD.Location = new System.Drawing.Point(573, 66);
+            this.labelEstadoD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstadoD.Location = new System.Drawing.Point(612, 69);
             this.labelEstadoD.Name = "labelEstadoD";
-            this.labelEstadoD.Size = new System.Drawing.Size(45, 18);
+            this.labelEstadoD.Size = new System.Drawing.Size(52, 20);
             this.labelEstadoD.TabIndex = 40;
             this.labelEstadoD.Text = "Datos";
             // 
             // labelPaisD
             // 
             this.labelPaisD.AutoSize = true;
-            this.labelPaisD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPaisD.Location = new System.Drawing.Point(573, 48);
+            this.labelPaisD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPaisD.Location = new System.Drawing.Point(612, 51);
             this.labelPaisD.Name = "labelPaisD";
-            this.labelPaisD.Size = new System.Drawing.Size(45, 18);
+            this.labelPaisD.Size = new System.Drawing.Size(52, 20);
             this.labelPaisD.TabIndex = 39;
             this.labelPaisD.Text = "Datos";
             // 
             // labelDomicilioFiscD
             // 
             this.labelDomicilioFiscD.AutoSize = true;
-            this.labelDomicilioFiscD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDomicilioFiscD.Location = new System.Drawing.Point(573, 11);
+            this.labelDomicilioFiscD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDomicilioFiscD.Location = new System.Drawing.Point(612, 14);
             this.labelDomicilioFiscD.Name = "labelDomicilioFiscD";
-            this.labelDomicilioFiscD.Size = new System.Drawing.Size(45, 18);
+            this.labelDomicilioFiscD.Size = new System.Drawing.Size(52, 20);
             this.labelDomicilioFiscD.TabIndex = 37;
             this.labelDomicilioFiscD.Text = "Datos";
             // 
             // labelRazonSocD
             // 
             this.labelRazonSocD.AutoSize = true;
-            this.labelRazonSocD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRazonSocD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRazonSocD.Location = new System.Drawing.Point(308, 84);
             this.labelRazonSocD.Name = "labelRazonSocD";
-            this.labelRazonSocD.Size = new System.Drawing.Size(45, 18);
+            this.labelRazonSocD.Size = new System.Drawing.Size(52, 20);
             this.labelRazonSocD.TabIndex = 36;
             this.labelRazonSocD.Text = "Datos";
             // 
             // labelRFCD
             // 
             this.labelRFCD.AutoSize = true;
-            this.labelRFCD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRFCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRFCD.Location = new System.Drawing.Point(308, 60);
             this.labelRFCD.Name = "labelRFCD";
-            this.labelRFCD.Size = new System.Drawing.Size(45, 18);
+            this.labelRFCD.Size = new System.Drawing.Size(52, 20);
             this.labelRFCD.TabIndex = 35;
             this.labelRFCD.Text = "Datos";
             // 
             // labelTelD
             // 
             this.labelTelD.AutoSize = true;
-            this.labelTelD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTelD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTelD.Location = new System.Drawing.Point(308, 38);
             this.labelTelD.Name = "labelTelD";
-            this.labelTelD.Size = new System.Drawing.Size(45, 18);
+            this.labelTelD.Size = new System.Drawing.Size(52, 20);
             this.labelTelD.TabIndex = 34;
             this.labelTelD.Text = "Datos";
             // 
             // labelEmailD
             // 
             this.labelEmailD.AutoSize = true;
-            this.labelEmailD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmailD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmailD.Location = new System.Drawing.Point(308, 16);
             this.labelEmailD.Name = "labelEmailD";
-            this.labelEmailD.Size = new System.Drawing.Size(45, 18);
+            this.labelEmailD.Size = new System.Drawing.Size(52, 20);
             this.labelEmailD.TabIndex = 33;
             this.labelEmailD.Text = "Datos";
             // 
             // labelFechaNacD
             // 
             this.labelFechaNacD.AutoSize = true;
-            this.labelFechaNacD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFechaNacD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFechaNacD.Location = new System.Drawing.Point(87, 84);
             this.labelFechaNacD.Name = "labelFechaNacD";
-            this.labelFechaNacD.Size = new System.Drawing.Size(45, 18);
+            this.labelFechaNacD.Size = new System.Drawing.Size(52, 20);
             this.labelFechaNacD.TabIndex = 32;
             this.labelFechaNacD.Text = "Datos";
             // 
             // labelDireccionD
             // 
             this.labelDireccionD.AutoSize = true;
-            this.labelDireccionD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDireccionD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDireccionD.Location = new System.Drawing.Point(87, 60);
             this.labelDireccionD.Name = "labelDireccionD";
-            this.labelDireccionD.Size = new System.Drawing.Size(45, 18);
+            this.labelDireccionD.Size = new System.Drawing.Size(52, 20);
             this.labelDireccionD.TabIndex = 31;
             this.labelDireccionD.Text = "Datos";
             // 
             // labelApellidoD
             // 
             this.labelApellidoD.AutoSize = true;
-            this.labelApellidoD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApellidoD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelApellidoD.Location = new System.Drawing.Point(87, 38);
             this.labelApellidoD.Name = "labelApellidoD";
-            this.labelApellidoD.Size = new System.Drawing.Size(45, 18);
+            this.labelApellidoD.Size = new System.Drawing.Size(52, 20);
             this.labelApellidoD.TabIndex = 30;
             this.labelApellidoD.Text = "Datos";
             // 
             // labelNombreD
             // 
             this.labelNombreD.AutoSize = true;
-            this.labelNombreD.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreD.Location = new System.Drawing.Point(87, 16);
             this.labelNombreD.Name = "labelNombreD";
-            this.labelNombreD.Size = new System.Drawing.Size(45, 18);
+            this.labelNombreD.Size = new System.Drawing.Size(52, 20);
             this.labelNombreD.TabIndex = 29;
             this.labelNombreD.Text = "Datos";
             // 
             // labelCP
             // 
             this.labelCP.AutoSize = true;
-            this.labelCP.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCP.Location = new System.Drawing.Point(471, 30);
+            this.labelCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCP.Location = new System.Drawing.Point(490, 33);
             this.labelCP.Name = "labelCP";
-            this.labelCP.Size = new System.Drawing.Size(96, 18);
+            this.labelCP.Size = new System.Drawing.Size(32, 20);
             this.labelCP.TabIndex = 26;
-            this.labelCP.Text = "Codigo Postal";
+            this.labelCP.Text = "CP";
             // 
             // labelMunicipio
             // 
             this.labelMunicipio.AutoSize = true;
-            this.labelMunicipio.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMunicipio.Location = new System.Drawing.Point(492, 85);
+            this.labelMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMunicipio.Location = new System.Drawing.Point(490, 88);
             this.labelMunicipio.Name = "labelMunicipio";
-            this.labelMunicipio.Size = new System.Drawing.Size(75, 18);
+            this.labelMunicipio.Size = new System.Drawing.Size(84, 20);
             this.labelMunicipio.TabIndex = 28;
             this.labelMunicipio.Text = "Municipio";
             // 
             // labelEstado
             // 
             this.labelEstado.AutoSize = true;
-            this.labelEstado.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEstado.Location = new System.Drawing.Point(515, 66);
+            this.labelEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstado.Location = new System.Drawing.Point(490, 69);
             this.labelEstado.Name = "labelEstado";
-            this.labelEstado.Size = new System.Drawing.Size(52, 18);
+            this.labelEstado.Size = new System.Drawing.Size(66, 20);
             this.labelEstado.TabIndex = 27;
             this.labelEstado.Text = "Estado";
             // 
             // labelPais
             // 
             this.labelPais.AutoSize = true;
-            this.labelPais.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPais.Location = new System.Drawing.Point(531, 48);
+            this.labelPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPais.Location = new System.Drawing.Point(490, 51);
             this.labelPais.Name = "labelPais";
-            this.labelPais.Size = new System.Drawing.Size(36, 18);
+            this.labelPais.Size = new System.Drawing.Size(43, 20);
             this.labelPais.TabIndex = 26;
             this.labelPais.Text = "Pais";
             // 
             // labelDomFisc
             // 
             this.labelDomFisc.AutoSize = true;
-            this.labelDomFisc.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDomFisc.Location = new System.Drawing.Point(451, 11);
+            this.labelDomFisc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDomFisc.Location = new System.Drawing.Point(490, 14);
             this.labelDomFisc.Name = "labelDomFisc";
-            this.labelDomFisc.Size = new System.Drawing.Size(116, 18);
+            this.labelDomFisc.Size = new System.Drawing.Size(103, 20);
             this.labelDomFisc.TabIndex = 25;
-            this.labelDomFisc.Text = "Domicilio Fiscal";
+            this.labelDomFisc.Text = "Dom. Fiscal";
             // 
             // labelRazonSoc
             // 
             this.labelRazonSoc.AutoSize = true;
-            this.labelRazonSoc.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRazonSoc.Location = new System.Drawing.Point(205, 84);
+            this.labelRazonSoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRazonSoc.Location = new System.Drawing.Point(227, 84);
             this.labelRazonSoc.Name = "labelRazonSoc";
-            this.labelRazonSoc.Size = new System.Drawing.Size(92, 18);
+            this.labelRazonSoc.Size = new System.Drawing.Size(81, 20);
             this.labelRazonSoc.TabIndex = 24;
-            this.labelRazonSoc.Text = "Razon Social";
+            this.labelRazonSoc.Text = "R. Social";
             // 
             // labelRFC
             // 
             this.labelRFC.AutoSize = true;
-            this.labelRFC.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRFC.Location = new System.Drawing.Point(255, 60);
+            this.labelRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRFC.Location = new System.Drawing.Point(229, 60);
             this.labelRFC.Name = "labelRFC";
-            this.labelRFC.Size = new System.Drawing.Size(38, 18);
+            this.labelRFC.Size = new System.Drawing.Size(45, 20);
             this.labelRFC.TabIndex = 23;
             this.labelRFC.Text = "RFC";
             // 
             // labelTel
             // 
             this.labelTel.AutoSize = true;
-            this.labelTel.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTel.Location = new System.Drawing.Point(229, 38);
             this.labelTel.Name = "labelTel";
-            this.labelTel.Size = new System.Drawing.Size(64, 18);
+            this.labelTel.Size = new System.Drawing.Size(79, 20);
             this.labelTel.TabIndex = 22;
             this.labelTel.Text = "Teléfono";
             // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(245, 16);
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(229, 16);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(48, 18);
+            this.labelEmail.Size = new System.Drawing.Size(53, 20);
             this.labelEmail.TabIndex = 21;
             this.labelEmail.Text = "Email";
             // 
             // labelFechaNac
             // 
             this.labelFechaNac.AutoSize = true;
-            this.labelFechaNac.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFechaNac.Location = new System.Drawing.Point(6, 84);
             this.labelFechaNac.Name = "labelFechaNac";
-            this.labelFechaNac.Size = new System.Drawing.Size(79, 18);
+            this.labelFechaNac.Size = new System.Drawing.Size(100, 20);
             this.labelFechaNac.TabIndex = 20;
             this.labelFechaNac.Text = "Fecha Nac.";
             // 
             // labelDireccion
             // 
             this.labelDireccion.AutoSize = true;
-            this.labelDireccion.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDireccion.Location = new System.Drawing.Point(15, 60);
+            this.labelDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDireccion.Location = new System.Drawing.Point(5, 60);
             this.labelDireccion.Name = "labelDireccion";
-            this.labelDireccion.Size = new System.Drawing.Size(70, 18);
+            this.labelDireccion.Size = new System.Drawing.Size(84, 20);
             this.labelDireccion.TabIndex = 19;
             this.labelDireccion.Text = "Direccion";
             // 
             // labelApellido
             // 
             this.labelApellido.AutoSize = true;
-            this.labelApellido.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApellido.Location = new System.Drawing.Point(22, 38);
+            this.labelApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApellido.Location = new System.Drawing.Point(6, 38);
             this.labelApellido.Name = "labelApellido";
-            this.labelApellido.Size = new System.Drawing.Size(63, 18);
+            this.labelApellido.Size = new System.Drawing.Size(73, 20);
             this.labelApellido.TabIndex = 18;
             this.labelApellido.Text = "Apellido";
             // 
             // labelNombreC
             // 
             this.labelNombreC.AutoSize = true;
-            this.labelNombreC.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreC.Location = new System.Drawing.Point(27, 16);
+            this.labelNombreC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreC.Location = new System.Drawing.Point(6, 16);
             this.labelNombreC.Name = "labelNombreC";
-            this.labelNombreC.Size = new System.Drawing.Size(58, 18);
+            this.labelNombreC.Size = new System.Drawing.Size(71, 20);
             this.labelNombreC.TabIndex = 17;
             this.labelNombreC.Text = "Nombre";
             // 
@@ -520,7 +474,7 @@
             // 
             this.labelFecha.AutoSize = true;
             this.labelFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFecha.Location = new System.Drawing.Point(42, 21);
+            this.labelFecha.Location = new System.Drawing.Point(16, 24);
             this.labelFecha.Name = "labelFecha";
             this.labelFecha.Size = new System.Drawing.Size(18, 25);
             this.labelFecha.TabIndex = 12;
@@ -576,12 +530,60 @@
             this.labelFolioD.TabIndex = 17;
             this.labelFolioD.Text = "0";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Enabled = false;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 276);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(739, 199);
+            this.dataGridView1.TabIndex = 66;
+            // 
+            // labelCancel
+            // 
+            this.labelCancel.AutoSize = true;
+            this.labelCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCancel.Location = new System.Drawing.Point(330, 92);
+            this.labelCancel.Name = "labelCancel";
+            this.labelCancel.Size = new System.Drawing.Size(149, 25);
+            this.labelCancel.TabIndex = 67;
+            this.labelCancel.Text = "CANCELADA";
+            // 
             // Consulta_Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(753, 555);
+            this.Controls.Add(this.labelCancel);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labelFolioD);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.labelIva);
@@ -591,7 +593,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonRegresar);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.labelFolio);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -606,6 +607,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -617,13 +619,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelFolio;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader ID_producto;
-        private System.Windows.Forms.ColumnHeader Nombre;
-        private System.Windows.Forms.ColumnHeader Precio;
-        private System.Windows.Forms.ColumnHeader Cantidad;
-        private System.Windows.Forms.ColumnHeader Iva;
-        private System.Windows.Forms.ColumnHeader total;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonRegresar;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -662,5 +657,7 @@
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Label labelNombreEmpleado;
         private System.Windows.Forms.Label labelFolioD;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label labelCancel;
     }
 }

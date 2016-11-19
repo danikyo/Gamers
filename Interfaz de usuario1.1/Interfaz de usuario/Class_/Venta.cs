@@ -18,6 +18,11 @@ namespace Interfaz_de_usuario.Class_
         int vCliente_idCliente;
         bool disponible;
 
+        public Venta()
+        {
+
+        }
+
         public Venta(int idVenta, string Fecha, string TipoPago, string VC, bool disponible, string balance, int Empleado_idEmpleado, int Cliente_idCliente)
         {
             this.idVenta = idVenta;
@@ -36,7 +41,7 @@ namespace Interfaz_de_usuario.Class_
             set { idVenta = value; }
         }
 
-        public string Fecha
+        public string Fecha_y_Hora
         {
             get { return vFecha; }
             set { vFecha = value; }
@@ -88,7 +93,7 @@ namespace Interfaz_de_usuario.Class_
         public static IList<Venta> MostrarVentas(MySqlConnection Connection)
         {
             List<Venta> Nventa = new List<Venta>();
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM venta WHERE vDisponible = true AND VC = 'V'"), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM venta WHERE vDisponible = true AND VC = 'V' ORDER BY idVenta DESC  "), Connection);
             MySqlDataReader reader = command.ExecuteReader();
             while(reader.Read())
             {
@@ -101,7 +106,33 @@ namespace Interfaz_de_usuario.Class_
         public static IList<Venta> MostrarCompras(MySqlConnection Connection)
         {
             List<Venta> Nventa = new List<Venta>();
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM venta WHERE vDisponible = true AND VC = 'C'"), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM venta WHERE vDisponible = true AND VC = 'C' ORDER BY idVenta DESC"), Connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Venta venta = new Venta(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetBoolean(4), reader.GetString(5), reader.GetInt32(6), reader.GetInt32(7));
+                Nventa.Add(venta);
+            }
+            return Nventa;
+        }
+
+        public static IList<Venta> MostrarVentasCanceladas(MySqlConnection Connection)
+        {
+            List<Venta> Nventa = new List<Venta>();
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM venta WHERE vDisponible = false AND VC = 'V' ORDER BY idVenta DESC  "), Connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Venta venta = new Venta(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetBoolean(4), reader.GetString(5), reader.GetInt32(6), reader.GetInt32(7));
+                Nventa.Add(venta);
+            }
+            return Nventa;
+        }
+
+        public static IList<Venta> MostrarComprasCanceladas(MySqlConnection Connection)
+        {
+            List<Venta> Nventa = new List<Venta>();
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM venta WHERE vDisponible = false AND VC = 'C' ORDER BY idVenta DESC"), Connection);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {

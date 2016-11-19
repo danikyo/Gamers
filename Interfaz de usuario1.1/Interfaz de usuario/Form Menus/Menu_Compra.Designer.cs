@@ -88,34 +88,37 @@
             // 
             // buttonConfirmar
             // 
-            this.buttonConfirmar.Location = new System.Drawing.Point(672, 446);
+            this.buttonConfirmar.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.Accept;
+            this.buttonConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonConfirmar.Location = new System.Drawing.Point(721, 459);
             this.buttonConfirmar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonConfirmar.Name = "buttonConfirmar";
-            this.buttonConfirmar.Size = new System.Drawing.Size(113, 41);
+            this.buttonConfirmar.Size = new System.Drawing.Size(65, 41);
             this.buttonConfirmar.TabIndex = 16;
-            this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
             // 
             // buttonRegresar
             // 
+            this.buttonRegresar.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.Return;
+            this.buttonRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonRegresar.Location = new System.Drawing.Point(14, 475);
             this.buttonRegresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonRegresar.Name = "buttonRegresar";
-            this.buttonRegresar.Size = new System.Drawing.Size(113, 29);
+            this.buttonRegresar.Size = new System.Drawing.Size(55, 39);
             this.buttonRegresar.TabIndex = 26;
-            this.buttonRegresar.Text = "Regresar";
             this.buttonRegresar.UseVisualStyleBackColor = true;
             this.buttonRegresar.Click += new System.EventHandler(this.buttonRegresar_Click);
             // 
             // buttonLimpiar
             // 
-            this.buttonLimpiar.Location = new System.Drawing.Point(131, 475);
+            this.buttonLimpiar.BackgroundImage = global::Interfaz_de_usuario.Properties.Resources.Clean2;
+            this.buttonLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonLimpiar.Location = new System.Drawing.Point(73, 475);
             this.buttonLimpiar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonLimpiar.Name = "buttonLimpiar";
-            this.buttonLimpiar.Size = new System.Drawing.Size(113, 29);
+            this.buttonLimpiar.Size = new System.Drawing.Size(55, 39);
             this.buttonLimpiar.TabIndex = 35;
-            this.buttonLimpiar.Text = "Limpiar";
             this.buttonLimpiar.UseVisualStyleBackColor = true;
             this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
             // 
@@ -123,7 +126,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(400, 475);
+            this.label3.Location = new System.Drawing.Point(498, 485);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -134,7 +137,7 @@
             // textBoxTotal
             // 
             this.textBoxTotal.Enabled = false;
-            this.textBoxTotal.Location = new System.Drawing.Point(507, 475);
+            this.textBoxTotal.Location = new System.Drawing.Point(605, 485);
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.Size = new System.Drawing.Size(100, 20);
             this.textBoxTotal.TabIndex = 39;
@@ -302,7 +305,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(458, 449);
+            this.label1.Location = new System.Drawing.Point(556, 459);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -313,7 +316,7 @@
             // textBoxBono
             // 
             this.textBoxBono.Enabled = false;
-            this.textBoxBono.Location = new System.Drawing.Point(507, 449);
+            this.textBoxBono.Location = new System.Drawing.Point(605, 459);
             this.textBoxBono.Name = "textBoxBono";
             this.textBoxBono.Size = new System.Drawing.Size(100, 20);
             this.textBoxBono.TabIndex = 61;
@@ -475,7 +478,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(797, 511);
+            this.ClientSize = new System.Drawing.Size(797, 519);
             this.Controls.Add(this.groupBoxDatosCliente);
             this.Controls.Add(this.textBoxBono);
             this.Controls.Add(this.label1);
@@ -490,9 +493,11 @@
             this.Controls.Add(this.buttonRegresar);
             this.Controls.Add(this.buttonConfirmar);
             this.Controls.Add(this.labelFolio);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(350, 100);
             this.Name = "Menu_Compra";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Transaccion Compra";
             this.Load += new System.EventHandler(this.Menu_Compra_Load);
             this.groupBoxDate.ResumeLayout(false);
