@@ -375,11 +375,11 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Snow;
-            this.label15.Location = new System.Drawing.Point(606, 543);
+            this.label15.Location = new System.Drawing.Point(582, 543);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(79, 20);
+            this.label15.Size = new System.Drawing.Size(74, 20);
             this.label15.TabIndex = 68;
-            this.label15.Text = "Teléfono";
+            this.label15.Text = "Consola";
             // 
             // label5
             // 
@@ -395,7 +395,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(530, 520);
+            this.textBox1.Location = new System.Drawing.Point(502, 520);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(225, 20);
             this.textBox1.TabIndex = 69;

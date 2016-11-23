@@ -392,7 +392,7 @@ namespace Interfaz_de_usuario
         private void AddBuy()
         {
             Connection.OpenConnection();
-            Class_.Venta nVenta = new Class_.Venta(1, fecha, comboBoxTipoPago.Text, "C", true, textBoxSaldo.Text, int.Parse(textBoxIDcliente.Text), Empleado.ID);
+            Class_.Venta nVenta = new Class_.Venta(1, fecha, comboBoxTipoPago.Text, "C", true, textBoxSaldo.Text, Empleado.ID, int.Parse(textBoxIDcliente.Text));
             Class_.Venta.AgregarVenta(Connection.myConnection, nVenta);
             MessageBox.Show("Compra Exitosa", "GRACIAS POR SU COMPRA", MessageBoxButtons.OK, MessageBoxIcon.None);
             Connection.CloseConnection();

@@ -48,7 +48,7 @@ namespace Interfaz_de_usuario.Class_
 
         public static int AgregarFactura(MySqlConnection Connection, Factura factura)
         {
-            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO factura (fFecha, fDisponible, venta_IdVenta) VALUES ('{0}', '{1}', true)", factura.Fecha, factura.idVenta), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO factura (fFecha, fDisponible, venta_IdVenta) VALUES ('{0}', true, {1})", factura.Fecha, factura.idVenta), Connection);
             int retorno = command.ExecuteNonQuery();
             return retorno;
         }

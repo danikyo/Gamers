@@ -174,7 +174,16 @@ namespace Interfaz_de_usuario
                 Class_.Producto.AgregarProducto(Connection.myConnection, nProducto);
                 Connection.CloseConnection();
                 MessageBox.Show("Captura Exitosa");
-                this.Close();
+                LoadData();
+
+                textBoxImagen.Clear();
+                textBoxNombreP.Clear();
+                textBoxPrecio.Clear();
+                comboBoxTipo.Text = "";
+                comboBoxConsola.Text = "";
+                comboBoxGenero.Text = "";
+                comboBoxStatus.Text = "";
+                pictureBoxImage.Image = Image.FromFile("C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Interfaz de usuario1.1\\Interfaz de usuario\\Resources\\Question.png");
             }
         }
     }

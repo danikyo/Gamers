@@ -68,13 +68,35 @@ namespace Interfaz_de_usuario
 
         private void buttonGenerar_Click(object sender, EventArgs e)
         {
-            Connection.OpenConnection();
-            string fecha = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            Class_.Factura nFactura = new Class_.Factura(1, fecha, true, Convert.ToInt32(dataGridViewVenta.CurrentRow.Cells[0].Value));
-            Class_.Factura.AgregarFactura(Connection.myConnection, nFactura);
-            Connection.CloseConnection();
-            MessageBox.Show("Factura Generada con exito");
-            this.Close();
+            if (!Repetido(dataGridViewVenta.CurrentRow.Cells[0].Value.ToString()))
+            {
+                Connection.OpenConnection();
+                string fecha = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                Class_.Factura nFactura = new Class_.Factura(1, fecha, true, Convert.ToInt32(dataGridViewVenta.CurrentRow.Cells[0].Value));
+                Class_.Factura.AgregarFactura(Connection.myConnection, nFactura);
+                Connection.CloseConnection();
+                MessageBox.Show("Factura Generada con exito");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ya se ha facturado esta venta");
+            }
+        }
+
+        private bool Repetido(string idSale)
+        {
+            bool flag = false;
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if(row.Cells[3].Value.ToString() == idSale)
+                {
+                    flag = true;
+                }
+            }
+
+            return flag;
         }
 
         private void Menu_Factura_Load(object sender, EventArgs e)

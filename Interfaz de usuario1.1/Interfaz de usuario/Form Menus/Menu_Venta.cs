@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -409,6 +409,7 @@ namespace Interfaz_de_usuario
 
             foreach(DataGridViewRow row in dataGridView1.Rows)
             {
+                ///Si i es igual al numero de rows en el datagrid rompe el ciclo
                 if(i == dataGridView1.RowCount-1)
                     break;
 
