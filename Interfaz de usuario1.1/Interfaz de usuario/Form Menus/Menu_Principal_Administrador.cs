@@ -31,6 +31,7 @@ namespace Interfaz_de_usuario
             panelMenu.Location = new Point(panelMenu.Location.X, ancho);
 
             labelDate.Text = DateTime.Now.ToShortDateString();
+            labelTime.Text = DateTime.Now.ToLongTimeString();
             labelName.Text = "Bienvenido\n" + Empleado.Nombre + " " + Empleado.Apellido;
         }
 
@@ -175,6 +176,11 @@ namespace Interfaz_de_usuario
         private void pBreturn_MouseLeave(object sender, EventArgs e)
         {
             pBreturn.BackgroundImageLayout = ImageLayout.Zoom;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelTime.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

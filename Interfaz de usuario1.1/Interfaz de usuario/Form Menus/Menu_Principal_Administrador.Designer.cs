@@ -47,6 +47,8 @@
             this.pBreport = new System.Windows.Forms.PictureBox();
             this.pBcustomer = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.labelTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelUp.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -90,6 +92,7 @@
             // 
             this.panelUp.BackColor = System.Drawing.Color.Gainsboro;
             this.panelUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelUp.Controls.Add(this.labelTime);
             this.panelUp.Controls.Add(this.buttonExit);
             this.panelUp.Controls.Add(this.buttonMinimized);
             this.panelUp.Controls.Add(this.labelDate);
@@ -138,9 +141,9 @@
             this.labelDate.ForeColor = System.Drawing.Color.Black;
             this.labelDate.Location = new System.Drawing.Point(709, 11);
             this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(57, 20);
+            this.labelDate.Size = new System.Drawing.Size(59, 20);
             this.labelDate.TabIndex = 13;
-            this.labelDate.Text = "label1";
+            this.labelDate.Text = "Fecha";
             // 
             // panelLeft
             // 
@@ -298,6 +301,25 @@
             this.pBcustomer.MouseLeave += new System.EventHandler(this.pBcustomer_MouseLeave);
             this.pBcustomer.MouseHover += new System.EventHandler(this.pBcustomer_MouseHover);
             // 
+            // labelTime
+            // 
+            this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTime.AutoSize = true;
+            this.labelTime.BackColor = System.Drawing.Color.Transparent;
+            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTime.ForeColor = System.Drawing.Color.Black;
+            this.labelTime.Location = new System.Drawing.Point(566, 11);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(48, 20);
+            this.labelTime.TabIndex = 17;
+            this.labelTime.Text = "Hora";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Menu_Principal_Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,5 +373,7 @@
         private System.Windows.Forms.PictureBox pBbill;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.PictureBox pBreturn;
+        private System.Windows.Forms.Label labelTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

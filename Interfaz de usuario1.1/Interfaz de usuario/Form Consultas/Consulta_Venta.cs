@@ -84,7 +84,14 @@ namespace Interfaz_de_usuario
             labelIva.Text = "$" + IVA.ToString();
             labelSubTotal.Text = "$" + subTotal.ToString();
             labelTotal.Text = "$" + total.ToString();
-            labelSaldoUsado.Text = saldo;
+            if (labelTipoPago.Text == "Electrónico")
+            {
+                labelSaldoUsado.Text = saldo;
+            }
+            else
+            {
+                labelSaldoUsado.Text = "0";
+            }
             labelTotalTotal.Text = (total - decimal.Parse(saldo)).ToString();
 
             if (labelTipoPago.Text == "Electrónico") { labelSaldoUsado.Text = labelSaldo.Text; }
