@@ -43,7 +43,14 @@ namespace Interfaz_de_usuario
         private void Menu_Inventario_Load(object sender, EventArgs e)
         {
             LoadData();
-            labelIDproducto.Text = "ID " + MaxId().ToString();
+            try
+            {
+                labelIDproducto.Text = "ID " + MaxId().ToString();
+            }
+            catch(Exception)
+            {
+                labelIDproducto.Text = "0";
+            }
         }
 
         private void LoadData()

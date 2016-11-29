@@ -76,13 +76,20 @@ namespace Interfaz_de_usuario
         private int MaxId()
         {
             int max = 1;
-            Connection.OpenConnection();
-            MySqlDataReader reader = Class_.Venta.BuscarMaxId(Connection.myConnection);
-            if (reader.Read())
+            try
             {
-                if (!reader.IsDBNull(0)) { max = reader.GetInt32(0); max++; }
+                Connection.OpenConnection();
+                MySqlDataReader reader = Class_.Venta.BuscarMaxId(Connection.myConnection);
+                if (reader.Read())
+                {
+                    if (!reader.IsDBNull(0)) { max = reader.GetInt32(0); max++; }
+                }
+                Connection.CloseConnection();
             }
-            Connection.CloseConnection();
+            catch(Exception)
+            {
+
+            }
             return max;
         }
 

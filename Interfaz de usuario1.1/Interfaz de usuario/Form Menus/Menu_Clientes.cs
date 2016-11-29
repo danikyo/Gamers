@@ -102,7 +102,7 @@ namespace Interfaz_de_usuario
         {
             int max = 1;
             CConnection.OpenConnection();
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT MAX(idCliente) AS idCliente FROM Cliente"), CConnection.myConnection);
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT MAX(idCliente) AS idCliente FROM cliente"), CConnection.myConnection);
             MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
@@ -115,7 +115,14 @@ namespace Interfaz_de_usuario
         private void Menu_Clientes_Load(object sender, EventArgs e)
         {
             LoadData();
-            labelIDCliente.Text = "ID " + MaxId().ToString();
+            try
+            {
+                labelIDCliente.Text = "ID " + MaxId().ToString();
+            }
+            catch(Exception)
+            {
+                labelIDCliente.Text = "1";
+            }
         }
 
         private void LoadData()

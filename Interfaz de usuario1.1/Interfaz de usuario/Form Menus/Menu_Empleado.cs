@@ -41,7 +41,14 @@ namespace Interfaz_de_usuario
         private void Menu_Empleado_Load(object sender, EventArgs e)
         {
             LoadData();
-            labelIDempleado.Text = "ID " + MaxId().ToString();
+            try
+            {
+                labelIDempleado.Text = "ID " + MaxId().ToString();
+            }
+            catch(Exception)
+            {
+                labelIDempleado.Text = "0";
+            }
         }
 
         private void LoadData()
