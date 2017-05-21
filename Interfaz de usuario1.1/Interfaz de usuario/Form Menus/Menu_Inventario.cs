@@ -22,24 +22,6 @@ namespace Interfaz_de_usuario
             this.Connection = Connection;
         }
 
-        private void buttonAgregarP_Click(object sender, EventArgs e)
-        {
-            if (textBoxNombreP.Text == "" || textBoxPrecio.Text == "" || comboBoxTipo.Text == "" || comboBoxConsola.Text == "" || comboBoxGenero.Text == "" || comboBoxStatus.Text == "" || textBoxImagen.Text == "")
-            {
-                MessageBox.Show("Rellenar todos los campos");
-            }
-            else
-            {
-                textBoxImagen.Text = textBoxImagen.Text.Replace(@"\", @"\\");
-                Connection.OpenConnection();
-                Class_.Producto nProducto = new Class_.Producto(1, textBoxNombreP.Text, comboBoxTipo.Text, comboBoxConsola.Text,comboBoxGenero.Text, comboBoxStatus.Text, float.Parse(textBoxPrecio.Text), 0, textBoxImagen.Text, true);
-                Class_.Producto.AgregarProducto(Connection.myConnection, nProducto);
-                Connection.CloseConnection();
-                MessageBox.Show("Captura Exitosa");
-                this.Close();
-            }
-        }
-
         private void Menu_Inventario_Load(object sender, EventArgs e)
         {
             LoadData();
@@ -63,8 +45,18 @@ namespace Interfaz_de_usuario
             Connection.CloseConnection();
             if (dataGridView1.RowCount > 0)
             {
-                string imagen = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-                pictureBoxRimage.Image = Image.FromFile(imagen);
+                try
+                {
+                    string imagen = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                    pictureBoxRimage.Image = Image.FromFile(imagen);
+                }
+                catch(Exception)
+                {
+                    if (dataGridView1.CurrentRow.Cells[9].Value.ToString() != "")
+                    {
+                        MessageBox.Show("Carátulas de videojuegos almacenadas en otro PC\nNo se mostraran las imagenes");
+                    }
+                }
             }
         }
 
@@ -102,8 +94,12 @@ namespace Interfaz_de_usuario
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string imagen = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            pictureBoxRimage.Image = Image.FromFile(imagen);
+            try
+            {
+                string imagen = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                pictureBoxRimage.Image = Image.FromFile(imagen);
+            }
+            catch (Exception) { }
         }
 
         private void comboBoxTipo_KeyPress(object sender, KeyPressEventArgs e)
@@ -169,7 +165,7 @@ namespace Interfaz_de_usuario
 
         private void buttonAgregarC_Click(object sender, EventArgs e)
         {
-            if (textBoxNombreP.Text == "" || textBoxPrecio.Text == "" || comboBoxTipo.Text == "" || comboBoxConsola.Text == "" || comboBoxGenero.Text == "" || comboBoxStatus.Text == "" || textBoxImagen.Text == "")
+            if (textBoxNombreP.Text == "" || textBoxPrecio.Text == "" || comboBoxTipo.Text == "" || comboBoxConsola.Text == "" || comboBoxGenero.Text == "" || comboBoxStatus.Text == "")
             {
                 MessageBox.Show("Rellenar todos los campos");
             }
@@ -182,6 +178,7 @@ namespace Interfaz_de_usuario
                 Connection.CloseConnection();
                 MessageBox.Show("Captura Exitosa");
                 LoadData();
+                labelIDproducto.Text = "ID " + MaxId().ToString();
 
                 textBoxImagen.Clear();
                 textBoxNombreP.Clear();
@@ -190,7 +187,7 @@ namespace Interfaz_de_usuario
                 comboBoxConsola.Text = "";
                 comboBoxGenero.Text = "";
                 comboBoxStatus.Text = "";
-                pictureBoxImage.Image = Image.FromFile("C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Interfaz de usuario1.1\\Interfaz de usuario\\Resources\\Question.png");
+                //pictureBoxImage.Image = Image.FromFile("C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Interfaz de usuario1.1\\Interfaz de usuario\\Resources\\Question.png");
             }
         }
     }

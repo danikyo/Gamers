@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -63,6 +64,7 @@
             this.textBoxIDCliente = new System.Windows.Forms.TextBox();
             this.buttonReturn = new System.Windows.Forms.Button();
             this.pictureBoxRimage = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
@@ -294,6 +296,7 @@
             this.buttonAgregarC.Name = "buttonAgregarC";
             this.buttonAgregarC.Size = new System.Drawing.Size(64, 58);
             this.buttonAgregarC.TabIndex = 64;
+            this.toolTip1.SetToolTip(this.buttonAgregarC, "Registrar Producto");
             this.buttonAgregarC.UseVisualStyleBackColor = false;
             this.buttonAgregarC.Click += new System.EventHandler(this.buttonAgregarC_Click);
             // 
@@ -350,6 +353,7 @@
             this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxImage.TabIndex = 59;
             this.pictureBoxImage.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBoxImage, "Portada de videojuego");
             // 
             // panel1
             // 
@@ -423,6 +427,7 @@
             this.buttonConsultaC.Name = "buttonConsultaC";
             this.buttonConsultaC.Size = new System.Drawing.Size(66, 53);
             this.buttonConsultaC.TabIndex = 66;
+            this.toolTip1.SetToolTip(this.buttonConsultaC, "Buscar Seleccionado");
             this.buttonConsultaC.UseVisualStyleBackColor = false;
             this.buttonConsultaC.Click += new System.EventHandler(this.buttonConsultaC_Click);
             // 
@@ -444,6 +449,7 @@
             this.buttonReturn.Size = new System.Drawing.Size(56, 46);
             this.buttonReturn.TabIndex = 19;
             this.buttonReturn.Text = "X";
+            this.toolTip1.SetToolTip(this.buttonReturn, "Cerrar Ventana");
             this.buttonReturn.UseVisualStyleBackColor = false;
             this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
@@ -464,7 +470,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(954, 572);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(280, 100);
             this.Name = "Menu_Inventario";
@@ -513,5 +519,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonConsultaC;
         private System.Windows.Forms.TextBox textBoxIDCliente;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

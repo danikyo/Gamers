@@ -118,7 +118,13 @@ namespace Interfaz_de_usuario
             buttonCancel.Visible = false;
             buttonAccept.Visible = false;
 
-            pictureBoxImage.Image = Image.FromFile(imagen);
+            try
+            {
+                pictureBoxImage.Image = Image.FromFile(imagen);
+            }
+            catch(Exception)
+            {
+            }
         }
 
         public void unlock()

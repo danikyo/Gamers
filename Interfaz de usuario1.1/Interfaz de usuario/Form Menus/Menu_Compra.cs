@@ -93,11 +93,6 @@ namespace Interfaz_de_usuario
             return max;
         }
 
-        private void buttonComprobar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void comboBoxTipoPago_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -119,18 +114,9 @@ namespace Interfaz_de_usuario
                     int Stock = CheckStock(idProducto2);
                     Connection.CloseConnection();
 
-                    if (Quantity > Stock)
-                    {
-                        MessageBox.Show("No hay suficiente Stock");
-                        this.dataGridView1.CurrentRow.Cells[3].Value = 1;
                         UpdateQuantity();
                         Total(comboBoxTipoPago.Text);
-                    }
-                    else
-                    {
-                        UpdateQuantity();
-                        Total(comboBoxTipoPago.Text);
-                    }
+                    
                 }
                 else
                 {
@@ -180,12 +166,7 @@ namespace Interfaz_de_usuario
                         Connection.CloseConnection();
                         Connection.OpenConnection();
 
-                        if (1 > producto.Stock)
-                        {
-                            MessageBox.Show("No hay suficiente Stock");
-                        }
-                        else
-                        {
+                        
                             if (flag)
                             {
                                 AddQuantity(idProducto2);
@@ -194,7 +175,7 @@ namespace Interfaz_de_usuario
                             {
                                 dataGridView1.Rows.Add(idProducto2, producto.Nombre, producto.Status, 1, PrecioCompra, PrecioCompra);
                             }
-                        }
+                        
                     }
                     else
                     {
@@ -274,8 +255,8 @@ namespace Interfaz_de_usuario
                     currentQuantity = Convert.ToInt32(Row.Cells["Cantidad"].Value);
                     price = Convert.ToDecimal(Row.Cells["Precio"].Value);
 
-                    if (QuantityProduct > currentQuantity)
-                    {
+                    //if (QuantityProduct > currentQuantity)
+                    //{
                         currentQuantity++;
                         if (currentQuantity > 10)
                         {
@@ -284,11 +265,11 @@ namespace Interfaz_de_usuario
                         }
                         Row.Cells["Cantidad"].Value = currentQuantity;
                         Row.Cells["Importe"].Value = price * currentQuantity;
-                    }
-                    else
-                    {
-                        MessageBox.Show("No hay mas stock");
-                    }
+                    //}
+                    //else
+                    //{
+                      //  MessageBox.Show("No hay mas stock");
+                    //}
                 }
             }        
         }

@@ -30,8 +30,7 @@ namespace Interfaz_de_usuario
 
         private void buttonAgregarC_Click(object sender, EventArgs e)
         {
-            if (textBoxNombreC.Text == "" || textBoxApellidosC.Text == "" || textBoxDireccionC.Text == "" || textBoxEmailC.Text == "" || textBoxTel.Text == "" || textBoxRFC.Text == ""
-                || textBoxRazSoc.Text == "" || textBoxDomFisc.Text == "" || textBoxCP.Text == "" || textBoxPais.Text == "" || textBoxEstado.Text == "" || textBoxMunicipio.Text == "")
+            if (textBoxNombreC.Text == "" || textBoxApellidosC.Text == "" || textBoxDireccionC.Text == "" || textBoxEmailC.Text == "" || textBoxTel.Text == "")
             {
                 MessageBox.Show("Favor de llenar\nlos campos requeridos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

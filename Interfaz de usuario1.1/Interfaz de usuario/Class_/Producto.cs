@@ -104,7 +104,7 @@ namespace Interfaz_de_usuario.Class_
         public static IList<Producto> MostrarProductos(MySqlConnection Connection)
         {
             List<Producto> Nproducto = new List<Producto>();
-            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM producto WHERE pDisponible = true"), Connection);
+            MySqlCommand command = new MySqlCommand(String.Format("SELECT * FROM producto WHERE pDisponible = true ORDER BY idProducto DESC"), Connection);
             MySqlDataReader reader = command.ExecuteReader();
             while(reader.Read())
             {

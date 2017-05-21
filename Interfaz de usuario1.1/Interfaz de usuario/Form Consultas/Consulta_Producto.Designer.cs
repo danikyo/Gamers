@@ -280,6 +280,7 @@
             // 
             this.pictureBoxImage.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxImage.Image = global::Interfaz_de_usuario.Properties.Resources.Cross;
             this.pictureBoxImage.Location = new System.Drawing.Point(527, 30);
             this.pictureBoxImage.Name = "pictureBoxImage";
             this.pictureBoxImage.Size = new System.Drawing.Size(217, 267);
