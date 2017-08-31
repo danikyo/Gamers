@@ -50,3 +50,6 @@ C:\Users\kyo_9\Desktop\Gamers\Interfaz de usuario1.1\Interfaz de usuario\obj\Deb
 C:\Users\kyo_9\Desktop\Gamers\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.Consulta_Venta.resources
 C:\Users\kyo_9\Desktop\Gamers\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\Interfaz_de_usuario.ReportesVentaCompra.resources
 C:\Users\kyo_9\Desktop\Gamers\Interfaz de usuario1.1\Interfaz de usuario\obj\Debug\VideogamesStore.csproj.GenerateResource.Cache
+C:\Users\kyo_9\Documents\GitHub\Gamers\Proyecto\Interfaz de usuario\bin\Debug\Interfaz de usuario.exe.config
+C:\Users\kyo_9\Documents\GitHub\Gamers\Proyecto\Interfaz de usuario\obj\Debug\Interfaz de usuario.exe
+C:\Users\kyo_9\Documents\GitHub\Gamers\Proyecto\Interfaz de usuario\obj\Debug\Interfaz de usuario.pdb
