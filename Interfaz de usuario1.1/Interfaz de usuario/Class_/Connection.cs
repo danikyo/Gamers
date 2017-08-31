@@ -13,7 +13,10 @@ namespace Interfaz_de_usuario.Class_
 
         public Connection()
         {
-            myConnection = new MySqlConnection("server = db4free.net; port = 3306; database = databasedm94; Uid = danikyo; pwd = abc123");
+            //Remote conection 
+            //myConnection = new MySqlConnection("server = db4free.net; port = 3306; database = databasedm94; Uid = danikyo; pwd = abc123");
+            //Local Conection
+            myConnection = new MySqlConnection("server = localhost; port = 3306; database = gamers; Uid = root; pwd = ");
         }
 
         public bool OpenConnection()
