@@ -28,7 +28,7 @@ Uid.- Nombre de usuario de tu conexión de base de datos.
 pwd.- Password de tu conexión de base de datos.
 
 ### Para editar
-* Abrir el proyecto desde VisualStudio (dentro de la carpeta "Interfaz de Usuario 1.1" el archivo "VideogamesStore.sln")
+* Abrir el proyecto desde VisualStudio (dentro de la carpeta "Proyecto" el archivo "VideogamesStore.sln")
 
 ### Para probar
 * Abrir el archivo exe (llamado Gamers.exe)
